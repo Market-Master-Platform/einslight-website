@@ -1,4 +1,8 @@
+import { useTranslations } from "next-intl";
+
 const useNavbar = () => {
+  const t = useTranslations("Index")
+
   const navItems = [
     {
       imageSrc:

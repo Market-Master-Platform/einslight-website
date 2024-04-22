@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface ImageProps {
   src: string;
   alt: string;
@@ -7,7 +5,7 @@ interface ImageProps {
 }
 
 const CustomImage: React.FC<ImageProps> = ({ src, alt, className }) => (
-  <Image loading="lazy" src={src} alt={alt} className={className} />
+  <img loading="lazy" src={src} alt={alt} className={className} />
 );
 
 export default CustomImage;

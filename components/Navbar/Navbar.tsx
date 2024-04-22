@@ -2,6 +2,7 @@ import * as React from "react";
 import CustomImage from "../CustomImage";
 import ImageNavItem from "../ImageNavItem";
 import useNavbar from "./useNavbar";
+import { useTranslations } from "next-intl";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -16,15 +17,17 @@ const NavItem: React.FC<NavItemProps> = ({ children, className }) => (
 
 function Navbar() {
   const { navItems } = useNavbar();
+  const t = useTranslations("Index");
 
   return (
-    <header className="flex gap-5 justify-center px-20 py-3 text-lg font-bold leading-8 text-white bg-zinc-900 max-md:flex-wrap max-md:px-5">
+    <header className="flex gap-5 justify-center px-20 py-3 text-lg font-bold leading-8 text-white bg-zinc-900 max-md:flex-wrap max-md:px-5 bg-[#9c0000]">
       <CustomImage
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e3a34b04234bd2d2c63fa344c333c34c2f7276ede0524675ad1d10cdd5a9899?apiKey=d22700435c194df19375f24bbe85f4c5&"
         alt="Company logo"
         className="shrink-0 max-w-full aspect-[4] w-[195px]"
       />
       <nav className="flex gap-5 justify-center my-auto max-md:flex-wrap">
+        <h1>{t("title")}</h1>
         {navItems.map((item, index) =>
           item.imageSrc ? (
             <ImageNavItem
