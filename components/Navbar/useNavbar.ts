@@ -1,23 +1,22 @@
-import { useTranslations } from "next-intl";
+export interface NavItemValues {
+  text: string;
+  hasSubItems?: boolean;
+  href?: string;
+}
 
 const useNavbar = () => {
-  const t = useTranslations("Index")
-
-  const navItems = [
+  const navItems: NavItemValues[] = [
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/049f7f29902670d0aad42d5687d6bfa197a35c0ae98110666af53a32f5c30bde?apiKey=d22700435c194df19375f24bbe85f4c5&",
-      imageAlt: "Our offering",
-      text: "Our offering",
+      text: "our_offering",
+      hasSubItems: true,
     },
     {
-      text: "Customer cases",
+      text: "customer_cases",
+      href: `en/case-study`,
     },
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/73cf0fff0fc51952131d27cccf822061f9d6bceb4cf9753dba54fc7771ffa18c?apiKey=d22700435c194df19375f24bbe85f4c5&",
-      imageAlt: "Contact",
-      text: "Contact",
+      text: "contact",
+      href: `en/contact-us`,
     },
   ];
 
