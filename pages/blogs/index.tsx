@@ -169,18 +169,50 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
   );
 };
 
+const articles = [
+  {
+    title: "Forging your path",
+    category: "Business",
+    date: "29th May",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/4e0fedc8427743b40773d7d4e9bd7743920f6257aac920d7d957c1ffe70657d9?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+  },
+  {
+    title: "Basics of a proper UI",
+    category: "Design",
+    date: "25th May",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/e2cc6ae5bfd5a91044dc33762aeeac12f4e08a52412ed200b53bc6ab4be48449?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+  },
+  {
+    title: "Planning for change",
+    category: "Finance",
+    date: "15th May",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/0aad55d6a3ae7b76ce4019190a9ec58ff9fe73f9a33006c33cf038e190784a3f?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+  },
+];
+
 interface ArticleProps {
   title: string;
   category: string;
   date: string;
+  image: string;
 }
 
-const Article: React.FC<ArticleProps> = ({ title, category, date }) => (
-  <article>
-    <h3 className="text-2xl font-semibold leading-7 text-white">{title}</h3>
-    <div className="flex gap-5 mt-5 text-lg leading-5">
-      <div className="text-blue-500">{category}</div>
-      <div className="text-gray-400">{date}</div>
+const Article: React.FC<ArticleProps> = ({ title, category, date, image }) => (
+  <article className="flex mb-7">
+    <div>
+      <Image src={image} alt={title} className="aspect-square w-28" />
+    </div>
+    <div className="my-auto ml-5">
+      <h3 className="text-2xl font-semibold leading-7 text-white mb-3">
+        {title}
+      </h3>
+      <div className="flex gap-5 text-lg leading-5">
+        <div className="text-blue-500">{category}</div>
+        <div className="text-gray-400">{date}</div>
+      </div>
     </div>
   </article>
 );
@@ -194,19 +226,6 @@ interface ImageProps {
 const Image: React.FC<ImageProps> = ({ src, alt, className }) => (
   <img loading="lazy" src={src} alt={alt} className={className} />
 );
-
-const articles = [
-  {
-    title: "Forging your path",
-    category: "Business",
-    date: "29th May",
-  },
-  {
-    title: "Basics of a proper UI",
-    category: "Design",
-    date: "25th May",
-  },
-];
 
 export default function Blogs() {
   const categories = [
@@ -250,76 +269,38 @@ export default function Blogs() {
           {/* <Pagination currentPage={1} totalPages={3} /> */}
         </div>
         <div className="col-span-full lg:col-span-4 p-5">
-          <h2 className="text-2xl font-semibold leading-7 text-white">
-            Newsletter
-          </h2>
-          <form>
-            <label htmlFor="email" className="sr-only">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email Address"
-              className="justify-center items-start px-6 py-7 mt-8 w-full text-xl font-medium leading-6 text-gray-400 rounded-sm border-2 border-solid bg-neutral-800 border-zinc-800 max-md:px-5"
-              aria-label="Email Address"
-            />
-            <button
-              type="submit"
-              className="justify-center items-center px-16 py-7 mt-5 text-xl font-semibold leading-6 text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 w-full"
-            >
-              Subscribe
-            </button>
-          </form>
-          <p className="mt-7 text-lg font-medium leading-5 text-gray-400">
-            We'll never share your details. See our{" "}
-          </p>
-          <div className="mt-20 max-md:mt-10">
-            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-              <div className="flex flex-col w-[31%] max-md:ml-0 max-md:w-full">
-                <div className="flex flex-col grow items-center text-2xl font-semibold leading-7 text-white whitespace-nowrap max-md:mt-6">
-                  <h3 className="self-stretch">Popular</h3>
-                  <Image
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e0fedc8427743b40773d7d4e9bd7743920f6257aac920d7d957c1ffe70657d9?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-                    alt="Popular image 1"
-                    className="mt-12 aspect-[1.1] w-[117px] max-md:mt-10"
-                  />
-                  <Image
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2cc6ae5bfd5a91044dc33762aeeac12f4e08a52412ed200b53bc6ab4be48449?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-                    alt="Popular image 2"
-                    className="mt-10 aspect-[1.1] w-[117px]"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col ml-5 w-[69%] max-md:ml-0 max-md:w-full">
-                <div className="flex flex-col mt-24 text-2xl font-semibold leading-7 max-md:mt-10">
-                  {articles.map((article, index) => (
-                    <Article key={index} {...article} />
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div>
+            <h2 className="text-2xl font-semibold leading-7 text-white">
+              Newsletter
+            </h2>
+            <form>
+              <label htmlFor="email" className="sr-only">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                className="justify-center items-start px-6 py-7 mt-8 w-full text-xl font-medium leading-6 text-gray-400 rounded-sm border-2 border-solid bg-neutral-800 border-zinc-800 max-md:px-5"
+                aria-label="Email Address"
+              />
+              <button
+                type="submit"
+                className="justify-center items-center px-16 py-7 mt-5 text-xl font-semibold leading-6 text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 w-full"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p className="mt-7 text-lg font-medium leading-5 text-gray-400">
+              We'll never share your details. See our{" "}
+            </p>
           </div>
-          <div className="mt-10">
-            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-              <div className="flex flex-col w-[28%] max-md:ml-0 max-md:w-full">
-                <Image
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/0aad55d6a3ae7b76ce4019190a9ec58ff9fe73f9a33006c33cf038e190784a3f?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-                  alt="Planning for change"
-                  className="shrink-0 max-w-full aspect-square w-[106px] max-md:mt-6"
-                />
-              </div>
-              <div className="flex flex-col ml-5 w-[72%] max-md:ml-0 max-md:w-full">
-                <div className="flex flex-col self-stretch my-auto font-semibold max-md:mt-10">
-                  <h3 className="text-2xl leading-7 text-white">
-                    Planning for change
-                  </h3>
-                  <div className="flex gap-5 mt-5 text-lg leading-5">
-                    <div className="text-blue-500">Finance</div>
-                    <div className="text-gray-400">15th May</div>
-                  </div>
-                </div>
-              </div>
+          <div className="text-2xl font-semibold leading-7 text-white whitespace-nowrap mt-20">
+            <h3 className="self-stretch">Popular</h3>
+            <div className="flex flex-col text-2xl font-semibold leading-7 mt-10">
+              {articles.map((article, index) => (
+                <Article key={index} {...article} />
+              ))}
             </div>
           </div>
         </div>
