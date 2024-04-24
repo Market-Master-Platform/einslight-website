@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import "../globals.css";
 
 interface CategoryItemProps {
@@ -115,14 +116,9 @@ const BlogPost: React.FC<BlogPostProps> = ({
             <p className="mt-10 font-medium leading-8 text-gray-400 max-md:mt-10 max-md:max-w-full">
               {description}
             </p>
-            <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:flex-wrap max-md:pr-5">
-              <span className="flex-auto">Read story</span>
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0c1d53ed11699885e9e364553cd97c0b05370c1cb889940e02675065ac6dcb4?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-                alt=""
-                className="shrink-0 w-5 aspect-[1.05] fill-blue-500"
-              />
+            <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:flex-wrap max-md:pr-5 cursor-pointer">
+              <span>Read story</span>
+              <ArrowRightIcon className="h-6 w-6 text-blue-500 shrink-0" />
             </div>
           </div>
         </div>
