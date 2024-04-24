@@ -17,10 +17,12 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
       className="shrink-0 self-start w-8 aspect-square"
     />
     <div className="flex flex-col">
-      <div className="text-2xl font-bold leading-7 text-neutral-50">
+      <div className="max-md:text-lg text-2xl font-bold leading-7 text-neutral-50">
         {title}
       </div>
-      <div className="mt-2 text-lg leading-6 text-zinc-500">{description}</div>
+      <div className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500">
+        {description}
+      </div>
     </div>
   </div>
 );
@@ -130,15 +132,15 @@ const serviceItemsForDesktop: ServiceItemProps[] = [
 function ServiceOffering() {
   return (
     <div className="flex md:flex-wrap justify-center bg-neutral-800">
-      <main className="flex max-md:flex-col relative self-center w-full max-md:my-10 max-md:max-w-full text-lg font-bold leading-8 text-neutral-100 px-20">
-        <div className="max-lg:w-full w-[51%] md:border-r-2 md:border-[#333333] flex max-md:justify-start justify-center px-8">
-          <div className="mt-14 mb-16 flex flex-col gap-10">
+      <main className="flex max-md:flex-col relative self-center w-full md:my-10 max-md:max-w-full text-lg font-bold leading-8 text-neutral-100 md:px-20">
+        <div className="max-lg:w-full w-[51%] md:border-r-2 md:border-[#333333] flex max-md:justify-start justify-center md:px-8">
+          <div className="max-md:mt-8 mt-14 max-md:mb-8 mb-16 flex flex-col max-md:gap-1 gap-10">
             <div>Service Offering</div>
 
             <section className="flex flex-col max-md:ml-0 max-md:w-full">
               <div className="flex grow gap-6 justify-even px-px max-md:flex-wrap max-md:mt-8">
                 <div className="flex flex-col items-center self-start gap-10">
-                  <div className="flex px-px text-2xl font-bold leading-7 text-neutral-50 gap-6">
+                  <div className="flex px-px max-md:text-lg text-2xl font-bold leading-7 text-neutral-50 gap-6">
                     <div className="h-full flex items-start">
                       <img
                         loading="lazy"
@@ -151,62 +153,62 @@ function ServiceOffering() {
                       <h2 className="max-md:max-w-full">
                         System implementation
                       </h2>
-                      <p className="mt-2 text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex px-px text-2xl font-bold leading-7 text-neutral-50 gap-6">
+                  <div className="flex px-px max-md:text-lg text-2xl font-bold leading-7 text-neutral-50 gap-6">
                     <div className="h-full flex items-start">
                       <img
                         loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/43dfcc84b88028c00461f150150a830d8b787cf1dbc4059704c987c9cf3e8ad6?apiKey=75125e4600594754a9020f21650a7c7d&"
                         alt=""
-                        className="w-8 aspect-square max-md:mt-10"
+                        className="w-8 aspect-square"
                       />
                     </div>
                     <div>
                       <h2 className="max-md:max-w-full">Integration</h2>
-                      <p className="mt-2 text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex px-px text-2xl font-bold leading-7 text-neutral-50 gap-6">
+                  <div className="flex px-px max-md:text-lg text-2xl font-bold leading-7 text-neutral-50 gap-6">
                     <div className="h-full flex items-start">
                       <img
                         loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/b88e139ebc28b432a44cfe05dd28244891f53eb695930bf81b69fa27b1b26c54?apiKey=75125e4600594754a9020f21650a7c7d&"
                         alt=""
-                        className="w-8 aspect-square max-md:mt-10"
+                        className="w-8 aspect-square"
                       />
                     </div>
                     <div>
                       <h2 className="max-md:max-w-full">
                         Dedicated teams & resources
                       </h2>
-                      <p className="mt-2 text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex px-px text-2xl font-bold leading-7 text-neutral-50 gap-6">
+                  <div className="flex px-px max-md:text-lg text-2xl font-bold leading-7 text-neutral-50 gap-6">
                     <div className="h-full flex items-start">
                       <img
                         loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c39c7f6712d29bdfdc2feb771e00cbfaede2c2767bbbb6451b5dfced5c145c4?apiKey=75125e4600594754a9020f21650a7c7d&"
                         alt=""
-                        className="w-8 aspect-square max-md:mt-10"
+                        className="w-8 aspect-square"
                       />
                     </div>
                     <div className="">
                       <h2 className="max-md:max-w-full">
                         Support & Maintenance
                       </h2>
-                      <p className="mt-2 text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </p>
                     </div>
@@ -217,8 +219,8 @@ function ServiceOffering() {
           </div>
         </div>
 
-        <div className="max-lg:w-full w-[48%] flex max-md:justify-start justify-center px-8">
-          <div className="mt-14 mb-16 flex flex-col gap-10">
+        <div className="max-lg:w-full w-[48%] flex max-md:justify-start justify-center md:px-8">
+          <div className="max-md:mt-8 mt-14 max-md:mb-8 mb-16 flex flex-col max-md:gap-1 gap-10">
             <div>System</div>
 
             <section className="flex max-lg:flex-col max-md:ml-0 max-md:w-full gap-12">
@@ -239,11 +241,6 @@ function ServiceOffering() {
             </section>
           </div>
         </div>
-
-        {/* <div className="flex gap-5 max-w-full text-lg font-bold leading-8 text-neutral-100 max-md:max-w-full max-md:flex-wrap px-5"></div>
-        <div className="px-5 mt-10 max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col max-md:gap-0"></div>
-        </div> */}
       </main>
     </div>
   );
