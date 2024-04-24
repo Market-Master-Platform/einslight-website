@@ -49,33 +49,33 @@ const blogPosts = [
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4fcd3b0f251ee9841aa8b81a17c87a97a0c44913563a732058f145466a47b2d2?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
     altText: "How to start earning",
   },
-  {
-    date: "11th May",
-    title: "How to start earning",
-    description:
-      "The right priorities help us in the direction of our potential which is why it is important for earnings.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/e0d7c6c2f32205f1dd00d03603ad8ab7f5450fa36869346f769cf7fc89bf9352?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
-    altText: "How to start earning",
-  },
-  {
-    date: "10th May",
-    title: "Designing startup",
-    description:
-      "The main task of a startup is not to be like others. This requires good money and an idea.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/81defd0cf7582dbdf2119a428f653ebebf36c111023fd0634317b61ab0dee098?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
-    altText: "Designing startup",
-  },
-  {
-    date: "10th May",
-    title: "Designing startup",
-    description:
-      "The main task of a startup is not to be like others. This requires good money and an idea.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/73101070848350ae22dcd0f9e296381b597d38126d2191e444b224e24a76ca86?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
-    altText: "Designing startup",
-  },
+  // {
+  //   date: "11th May",
+  //   title: "How to start earning",
+  //   description:
+  //     "The right priorities help us in the direction of our potential which is why it is important for earnings.",
+  //   imageUrl:
+  //     "https://cdn.builder.io/api/v1/image/assets/TEMP/e0d7c6c2f32205f1dd00d03603ad8ab7f5450fa36869346f769cf7fc89bf9352?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+  //   altText: "How to start earning",
+  // },
+  // {
+  //   date: "10th May",
+  //   title: "Designing startup",
+  //   description:
+  //     "The main task of a startup is not to be like others. This requires good money and an idea.",
+  //   imageUrl:
+  //     "https://cdn.builder.io/api/v1/image/assets/TEMP/81defd0cf7582dbdf2119a428f653ebebf36c111023fd0634317b61ab0dee098?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+  //   altText: "Designing startup",
+  // },
+  // {
+  //   date: "10th May",
+  //   title: "Designing startup",
+  //   description:
+  //     "The main task of a startup is not to be like others. This requires good money and an idea.",
+  //   imageUrl:
+  //     "https://cdn.builder.io/api/v1/image/assets/TEMP/73101070848350ae22dcd0f9e296381b597d38126d2191e444b224e24a76ca86?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+  //   altText: "Designing startup",
+  // },
 ];
 
 interface BlogPostProps {
@@ -94,18 +94,18 @@ const BlogPost: React.FC<BlogPostProps> = ({
   altText,
 }) => {
   return (
-    <article className="mt-12 rounded-sm border-2 border-solid shadow-2xl bg-neutral-800 border-zinc-800 max-md:mt-10 max-md:max-w-full">
+    <article className="rounded-sm border-2 border-solid shadow-2xl bg-neutral-800 border-zinc-800 mb-10 max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
         <div className="flex flex-col w-[42%] max-md:ml-0 max-md:w-full">
           <img
             loading="lazy"
             src={imageUrl}
             alt={altText}
-            className="grow w-full aspect-[0.78] max-md:mt-10"
+            className="grow w-full aspect-auto"
           />
         </div>
-        <div className="flex flex-col ml-5 w-[58%] max-md:ml-0 max-md:w-full">
-          <div className="flex flex-col self-stretch my-auto text-lg font-semibold max-md:mt-10 max-md:max-w-full">
+        <div className="flex flex-col ml-5 w-[50%] max-md:ml-0 max-md:w-full my-auto">
+          <div className="flex flex-col self-stretch text-lg font-semibold max-md:max-w-full m-5">
             <time className="text-gray-400 leading-[122%] max-md:max-w-full">
               {date}
             </time>
@@ -233,7 +233,7 @@ export default function Blogs() {
           </p>
         </div>
       </section>
-      <div className="flex gap-x-4 gap-y-1 py-2 px-2 justify-center items-center text-md font-semibold text-gray-400 max-lg:flex-wrap">
+      <nav className="flex gap-x-6 gap-y-1 py-2 px-2 justify-center items-center text-md font-semibold text-gray-400 max-lg:flex-wrap">
         {categories.map((category, index) => (
           <CategoryItem
             text={category}
@@ -241,15 +241,15 @@ export default function Blogs() {
             key={index}
           />
         ))}
-      </div>
-      <div className="grid grid-cols-10">
-        <div className="col-span-full lg:col-span-6">
+      </nav>
+      <section className="grid grid-cols-10 max-w-screen-xl mx-auto">
+        <div className="col-span-6 max-lg:col-span-full p-5">
           {blogPosts.map((post, index) => (
             <BlogPost key={index} {...post} />
           ))}
-          <Pagination currentPage={1} totalPages={3} />
+          {/* <Pagination currentPage={1} totalPages={3} /> */}
         </div>
-        <div className="col-span-full lg:col-span-4">
+        <div className="col-span-full lg:col-span-4 ">
           <h2 className="text-2xl font-semibold leading-7 text-white">
             Newsletter
           </h2>
@@ -323,7 +323,7 @@ export default function Blogs() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
