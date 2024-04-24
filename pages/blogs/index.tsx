@@ -249,7 +249,7 @@ export default function Blogs() {
           ))}
           {/* <Pagination currentPage={1} totalPages={3} /> */}
         </div>
-        <div className="col-span-full lg:col-span-4 ">
+        <div className="col-span-full lg:col-span-4 p-5">
           <h2 className="text-2xl font-semibold leading-7 text-white">
             Newsletter
           </h2>
@@ -261,12 +261,12 @@ export default function Blogs() {
               type="email"
               id="email"
               placeholder="Email Address"
-              className="justify-center items-start px-6 py-7 mt-8 text-xl font-medium leading-6 text-gray-400 rounded-sm border-2 border-solid bg-neutral-800 border-zinc-800 max-md:px-5"
+              className="justify-center items-start px-6 py-7 mt-8 w-full text-xl font-medium leading-6 text-gray-400 rounded-sm border-2 border-solid bg-neutral-800 border-zinc-800 max-md:px-5"
               aria-label="Email Address"
             />
             <button
               type="submit"
-              className="justify-center items-center px-16 py-7 mt-5 text-xl font-semibold leading-6 text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5"
+              className="justify-center items-center px-16 py-7 mt-5 text-xl font-semibold leading-6 text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 w-full"
             >
               Subscribe
             </button>
