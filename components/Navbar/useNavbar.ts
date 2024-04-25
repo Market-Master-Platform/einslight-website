@@ -14,11 +14,11 @@ const useNavbar = () => {
 
   const handleToggleServiceOffering = () => {
     setOpenServiceOffering((currentState) => !currentState);
+    setOpenNavbarMenu(false);
   };
 
   const handleToggleNavbarMenu = () => {
     setOpenNavbarMenu((currentState) => !currentState);
-    setOpenServiceOffering(false);
   };
 
   const navItems: NavItemValues[] = [
