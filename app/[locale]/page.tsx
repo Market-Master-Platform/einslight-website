@@ -1,4 +1,3 @@
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import * as React from "react";
 
 const specializations = [
@@ -23,14 +22,12 @@ const Logo: React.FC<LogoProps> = ({ src, alt, className }) => (
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex flex-col">
+    <main className="flex min-h-screen flex-col items-center justify-between">
+      <div className="flex flex-col w-full">
         <div className="flex flex-col justify-center w-full bg-gray-50 max-md:max-w-full">
-            <div className="flex overflow-hidden relative flex-col justify-center w-full min-h-[720px] max-md:max-w-full">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9dbbffc43c870b7d5a994e55cfd21fb1db3ca434dc988f21b808b03de298ddfd?apiKey=fd011477b5724ce38ff2cc24ae257b18&" alt="Background" className="object-cover absolute inset-0 size-full" />
-            <div className="flex overflow-hidden relative flex-col justify-center w-full min-h-[720px] max-md:max-w-full">
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/827b0192f63fd7cc4d3b4760635de82ec4875cd52a9ad0045bc45dbfcf2d343e?apiKey=fd011477b5724ce38ff2cc24ae257b18&" alt="Background" className="object-cover absolute inset-0 size-full" />
-                <header className="flex relative flex-col items-center px-5 pb-9 w-full bg-zinc-900 max-md:max-w-full">
+            <div className="flex overflow-hidden flex-col justify-center w-full min-h-full max-md:max-w-full">
+            <div className="flex overflow-hidden  flex-col justify-center w-full min-h-full max-md:max-w-full">
+                <header className="flex flex-col items-center px-5 pb-9 w-full bg-zinc-900 max-md:max-w-full">
                 <div className="flex overflow-hidden flex-col items-center px-20 pt-20 pb-4 mt-0 w-full text-lg leading-6 text-center text-white max-w-[1240px] max-md:px-5 max-md:max-w-full">
                     <h1 className="mt-2 max-md:max-w-full">Full-service tech partner</h1>
                     <p className="mt-4 text-6xl font-extrabold leading-[72px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
@@ -42,7 +39,7 @@ export default function Home() {
                     <button className="justify-center px-14 py-7 mt-8 font-bold text-white bg-blue-500 leading-[178%] rounded-[41px] max-md:px-5">
                     Contact Us
                     </button>
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a6dc1d6fe48bbbf6d5b9d54f3a1d4dcbe5881de4089c94f98a0e01520c6facee?apiKey=fd011477b5724ce38ff2cc24ae257b18&" alt="Arrow down" className="mt-8 w-9 aspect-square" />
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a6dc1d6fe48bbbf6d5b9d54f3a1d4dcbe5881de4089c94f98a0e01520c6facee?apiKey=fd011477b5724ce38ff2cc24ae257b18&" alt="Arrow down" className="mt-12 w-9 aspect-square" />
                 </div>
                 <div className="mt-8 text-sm leading-4 text-center text-white">Specialized in</div>
                 <div className="flex gap-5 justify-between mt-4 max-md:flex-wrap">
@@ -60,7 +57,7 @@ export default function Home() {
             </div>
         </div>
         <section className="flex flex-col items-center px-16 pt-20 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full">
-            <div className="z-10 justify-center mb-0 w-full max-w-[1230px] max-md:max-w-full">
+            <div className="z-50 justify-center mb-0 w-full max-w-[1230px] max-md:max-w-full">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
                 <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col self-stretch my-auto text-gray-200 max-md:mt-10 max-md:max-w-full">
@@ -84,8 +81,6 @@ export default function Home() {
             </button>
             </div>
             <hr className="shrink-0 mt-20 max-w-full h-0.5 bg-neutral-800 w-[1247px] max-md:mt-10" />
-            <div className="flex gap-5 justify-between mt-32 mb-9 w-full font-medium text-gray-400 max-w-[1247px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
-            </div>
         </footer>
       </div>
     </main>
