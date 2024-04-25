@@ -1,5 +1,15 @@
 import * as React from "react";
 
+interface ImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+const Image: React.FC<ImageProps> = ({ src, alt, className }) => (
+  <img loading="lazy" src={src} alt={alt} className={className} />
+);
+
 const specializations = [
   { src: "https://cdn.builder.io/api/v1/image/assets/TEMP/1a8f681287204cc4d2b9ad6e3b8c7c7d6af907482f223e9b83ec6c5396589539?apiKey=fd011477b5724ce38ff2cc24ae257b18&", alt: "Specialization 1", className: "shrink-0 w-32 max-w-full aspect-[1.82]" },
   { src: "https://cdn.builder.io/api/v1/image/assets/TEMP/a4a2c544ca8b2fd668f309c0955537cac0f0946b081f8d7c4bb2aaf421f0ae07?apiKey=fd011477b5724ce38ff2cc24ae257b18&", alt: "Specialization 2", className: "shrink-0 max-w-full aspect-[1.89] w-[132px]" },
@@ -19,6 +29,84 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ src, alt, className }) => (
   <img loading="lazy" src={src} alt={alt} className={className} />
 );
+
+interface TextBlockProps {
+  title: string;
+  description: string;
+  className?: string;
+}
+
+const TextBlock: React.FC<TextBlockProps> = ({ title, description, className }) => (
+  <div className={`flex flex-col grow items-start py-7 pr-20 pl-6 w-full font-semibold bg-neutral-800 ${className}`}>
+    <div className="text-3xl leading-8 text-white max-md:max-w-full">{title}</div>
+    <div className="mt-2 text-xl leading-6 text-gray-400 max-md:max-w-full">{description}</div>
+  </div>
+);
+
+const articles = [
+  {
+    title: "Great People Application",
+    description: "Searching for talented and self-propelled developers",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/bab67fba603e4232d5d943422d0d3f7fdf941b4cb11fcf3e960c0ecf1ab92f9a?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+  },
+  {
+    title: "iGoterra",
+    description: "Record wildlife observations with any device",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/3a1145e6cc83903ae217e8ed5193cabe81824876fc237b7d9c7437904efa5562?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+  },
+  {
+    title: "TimeEdit",
+    description: "Great academia requires great software",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/70736ac0be4823d6ed2d2ed92435ce73633b16ae387a7c997cf6de47d7c4aa39?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+  },
+  {
+    title: "ChromaWay",
+    description: "Making sense of the blockchain",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/dd58e135a7af5f15267040f100e51d02bb1c3210e9c9ce16fe717cb71f848fb5?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+  },
+  {
+    title: "AppSpotr",
+    description: "Appspotr the leading low-code app-builder",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/bc6734ea199d322938ce8a3f25f15bc32078413f12a9aedfaf88ba6f8042ffac?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+  },
+  {
+    title: "EF Academy",
+    description: "Mobile apps for boarding school students",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/45adcc8f8ef7df04c2952e0610634a82ab3b3c8cf32c68e883c3061a26ad74ee?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+  },
+]
+
+interface ArticleProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const Article: React.FC<ArticleProps> = ({ title, description, image }) => (
+  <article className="flex gap-5 max-md:flex-col max-md:gap-0 ">
+    <div className="flex flex-col w-full max-md:ml-0 max-md:w-full ">
+      <div className="relative">
+        <Image src={image} alt={title} className="grow w-full aspect-[1.32] max-md:mt-8 max-md:max-w-full hover:opacity-25"/>
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100">
+          <span className="text-blue-500 text-lg font-bold">Read case {">"}</span>
+        </div>
+      </div>
+        <div className="flex gap-5 w-full font-semibold max-w-[1242px] max-md:flex-wrap max-md:max-w-full h-full">
+            <TextBlock 
+              title={title}
+              description={description}
+              className="flex-1 grow shrink-0 p-4 basis-0 w-fit max-md:pr-5 max-md:max-w-full"/>
+        </div>
+    </div>
+  </article>
+);
+
 
 export default function Home() {
   return (
@@ -73,6 +161,22 @@ export default function Home() {
             </div>
             </div>
         </section>
+        <div className="flex flex-col items-center p-20 bg-zinc-900 max-md:px-5">
+          <h1 className="mt-2 text-3xl font-bold text-center text-white max-md:max-w-full">
+            Our portfolio which we are happy to show you
+          </h1>
+
+
+
+          <div className="px-px mt-20 w-full max-w-[1242px] max-md:mt-10 max-md:max-w-full grid grid-cols-2 gap-4">
+            {articles.map((article, index) => (
+              <Article key={index} {...article}/>
+            ))}
+          </div>
+
+
+
+        </div>
         <footer className="flex flex-col items-center p-20 w-full bg-zinc-900 mt-[2047px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
             <div className="flex gap-5 mt-6 w-full font-semibold max-w-[1247px] max-md:flex-wrap max-md:max-w-full">
             <h2 className="flex-auto my-auto text-3xl leading-10 text-white">Hey, how can we help?</h2>
