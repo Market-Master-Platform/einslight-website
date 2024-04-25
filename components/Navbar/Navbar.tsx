@@ -89,6 +89,16 @@ function Navbar() {
 
       {/* Navigation menu for mobile */}
       <NavbarMenu
+        isActive={isOpenServiceOffering}
+        className="md:hidden absolute inset-x-0 top-30 overflow-auto"
+      >
+        <ServiceOffering
+          handleToggleServiceOffering={handleToggleServiceOffering}
+        />
+      </NavbarMenu>
+
+      {/* Navigation for mobile */}
+      <NavbarMenu
         isActive={isOpenNavbarMenu}
         className="md:hidden absolute inset-x-0 bg-neutral-800 overflow-auto max-h-[600px]"
       >
