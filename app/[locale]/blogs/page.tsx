@@ -287,7 +287,7 @@ const Blogs = () => {
               </button>
             </form>
             <p className="mt-7 text-lg font-medium leading-5 text-gray-400">
-              We'll never share your details. See our{" "}
+              {"We'll"} never share your details. See our{" "}
             </p>
           </div>
           <div className="text-2xl font-semibold leading-7 text-white whitespace-nowrap mt-20">
