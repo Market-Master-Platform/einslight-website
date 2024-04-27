@@ -89,7 +89,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
   handleToggleServiceOffering,
 }) => {
   return (
-    <div className="flex max-md:flex-col md:flex-wrap justify-center bg-neutral-800">
+    <div className="flex max-md:flex-col md:flex-wrap justify-center bg-neutral-800 h-full">
       <div className="md:hidden flex justify-end items-center p-8">
         <XMarkIcon
           width={30}
@@ -99,9 +99,9 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
         />
       </div>
 
-      <main className="flex max-md:flex-col relative self-center w-full md:my-10 max-md:max-w-full text-lg font-bold leading-8 text-neutral-100 px-5 md:px-20">
-        <div className="max-lg:w-full w-[51%] md:border-r-2 md:border-[#333333] flex max-md:justify-start justify-center md:px-8">
-          <div className="max-md:mt-0 mt-14 max-md:mb-8 mb-16 flex flex-col max-md:gap-1 gap-10">
+      <main className="flex max-md:flex-col relative self-center w-full md:mb-10 max-md:max-w-full text-lg font-bold leading-8 text-neutral-100 px-5 md:px-20">
+        <div className="max-lg:w-full w-[51%] md:border-r-2 md:border-[#333333] flex justify-start md:px-8">
+          <div className="max-md:mb-8 mb-16 flex flex-col max-md:gap-1 gap-10">
             <div>Service Offering</div>
 
             <section className="flex flex-col max-md:ml-0 max-md:w-full">
@@ -186,8 +186,8 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
           </div>
         </div>
 
-        <div className="max-lg:w-full w-[48%] flex max-md:justify-start justify-center md:px-8">
-          <div className="max-md:mt-8 mt-14 max-md:mb-8 mb-16 flex flex-col max-md:gap-1 gap-10">
+        <div className="max-lg:w-full w-[48%] flex justify-start md:px-8">
+          <div className="max-md:mb-8 mb-16 flex flex-col max-md:gap-1 gap-10">
             <div>System</div>
 
             <section className="flex max-lg:flex-col max-md:ml-0 max-md:w-full gap-12">

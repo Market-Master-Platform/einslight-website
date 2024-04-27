@@ -1,18 +1,34 @@
+"use client";
+
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
+import { Fragment, useState } from "react";
 
 export default function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [isActiveNavbar, setIsActiveNavbar] = useState<boolean>(false);
+
+  const handleToggleActiveNavbar = () => {
+    setIsActiveNavbar((current) => !current);
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar
+        handleToggleActiveNavbar={handleToggleActiveNavbar}
+        isActiveNavbar={isActiveNavbar}
+      />
 
-      {children}
+      {!isActiveNavbar && (
+        <Fragment>
+          {children}
 
-      <Footer />
+          <Footer />
+        </Fragment>
+      )}
     </>
   );
 }
