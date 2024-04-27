@@ -8,14 +8,7 @@ export interface NavItemValues {
 }
 
 const useNavbar = () => {
-  const [isOpenServiceOffering, setOpenServiceOffering] =
-    useState<boolean>(false);
   const [isOpenNavbarMenu, setOpenNavbarMenu] = useState<boolean>(false);
-
-  const handleToggleServiceOffering = () => {
-    setOpenServiceOffering((currentState) => !currentState);
-    setOpenNavbarMenu(false);
-  };
 
   const handleToggleNavbarMenu = () => {
     setOpenNavbarMenu((currentState) => !currentState);
@@ -25,7 +18,6 @@ const useNavbar = () => {
     {
       text: "Our offering",
       hasSubItems: true,
-      onClick: handleToggleServiceOffering,
     },
     {
       text: "Customer cases",
@@ -39,10 +31,9 @@ const useNavbar = () => {
 
   return {
     navItems,
-    isOpenServiceOffering,
     isOpenNavbarMenu,
     handleToggleNavbarMenu,
-    handleToggleServiceOffering,
+    setOpenNavbarMenu,
   };
 };
 
