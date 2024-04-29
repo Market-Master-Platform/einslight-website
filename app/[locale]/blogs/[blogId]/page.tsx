@@ -4,8 +4,8 @@ const BlogArticle = () => {
   return (
     <main className="bg-[#12141D]">
       <section className="bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(0,0,0,0.9)),url('/blogs/blog-article-header.png')] text-white h-[40vh] bg-center bg-no-repeat flex flex-col justify-end items-center">
-        <div className="max-w-screen-lg flex justify-between w-full mb-10 px-5">
-          <div className="flex py-4 px-8 bg-[#808080] bg-opacity-50 rounded-full">
+        <div className="max-w-screen-lg flex max-sm:flex-wrap justify-between w-full mb-10 px-10">
+          <div className="flex py-4 px-8 bg-[#808080] bg-opacity-50 rounded-full max-sm:mb-3">
             <span className="text-[#808080] font-medium">News</span>
             <ChevronRightIcon
               className="text-[#808080] mx-1 font-bold"
