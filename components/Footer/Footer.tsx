@@ -51,7 +51,7 @@ function Footer() {
         </div>
       </div>
       <div className="shrink-0 mt-20 max-w-full h-0.5 bg-neutral-800 w-[1247px] max-md:mt-10" />
-      <div className="flex gap-5 justify-between mt-32 w-full font-medium text-gray-400 max-w-[1247px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+      <div className="flex gap-5 max-md:gap-20 justify-between mt-32 w-full font-medium text-gray-400 max-w-[1247px] max-md:flex-col max-md:mt-10 max-md:max-w-full">
         <div className="flex flex-col mt-1.5 max-md:max-w-full">
           <CustomImage
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/aae82bef0966aec0efb920aec9555286b8a15cb0a70fb1bd73475499250dd4b9?apiKey=d22700435c194df19375f24bbe85f4c5&"
@@ -69,7 +69,7 @@ function Footer() {
             © 2023 Copyright Einslight.
           </div>
         </div>
-        <div className="flex gap-5 justify-between self-start text-xl leading-6">
+        <div className="flex max-md max-md:flex-col gap-5 max-md:gap-10 justify-between self-start text-xl leading-6">
           <FooterLinkSection title="Company">
             {companyLinks.map((link, index) => (
               <LinkItem key={index}>{link.label}</LinkItem>

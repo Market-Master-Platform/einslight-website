@@ -60,12 +60,12 @@ const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <React.Fragment>
-      <div className="sticky top-0 z-[51]">
-        <header className="flex gap-5 justify-between px-20 py-3 text-lg font-bold leading-8 text-white bg-zinc-900 max-md:px-5">
+      <div className="fixed w-full top-0 z-[51]">
+        <header className="flex gap-5 justify-between px-10 max-md:px-5 py-3 text-lg font-bold leading-8 text-white bg-zinc-900">
           <CustomImage
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e3a34b04234bd2d2c63fa344c333c34c2f7276ede0524675ad1d10cdd5a9899?apiKey=d22700435c194df19375f24bbe85f4c5&"
             alt="Company logo"
-            className="shrink-0 max-w-full aspect-[4] w-[195px]"
+            className="shrink max-w-full aspect-[4] w-[195px] max-sm:w-[40%]"
           />
 
           {/* Navigation for mobile */}
@@ -77,7 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Navigation for desktop */}
-          <nav className="flex gap-10 justify-center my-auto max-md:hidden">
+          <nav className="flex gap-10 justify-center my-auto max-md:hidden text-white">
             {navItems.map((item, index) => (
               <NavItem
                 href={item?.href}
@@ -93,30 +93,11 @@ const Navbar: React.FC<NavbarProps> = ({
             ))}
           </nav>
         </header>
-      </div>
-      <div>
-        {/* Navigation menu for desktop */}
-        <NavbarMenu
-          isActive={isActiveNavbar}
-          className="max-md:hidden absolute inset-x-0 overflow-auto top-[76px] bottom-0"
-        >
-          <ServiceOffering />
-        </NavbarMenu>
-
-        {/* Navigation menu for mobile */}
-        <NavbarMenu
-          isActive={isActiveNavbar}
-          className="md:hidden absolute inset-x-0 top-30 overflow-auto"
-        >
-          <ServiceOffering
-            handleToggleServiceOffering={handleToggleServiceOffering}
-          />
-        </NavbarMenu>
 
         {/* Navigation for mobile */}
         <NavbarMenu
           isActive={isOpenNavbarMenu}
-          className="md:hidden absolute inset-x-0 top-[76px] bottom-0 bg-neutral-800 overflow-auto max-h-[600px]"
+          className="md:hidden inset-x-0 top-[76px] bottom-0 bg-[#000] overflow-auto max-h-[600px] text-white"
         >
           <nav className="flex flex-col gap-10 pt-10 pb-6">
             {navItems.map((item, index) => (
@@ -133,6 +114,27 @@ const Navbar: React.FC<NavbarProps> = ({
               </NavItem>
             ))}
           </nav>
+        </NavbarMenu>
+      </div>
+      <div className="pt-[68px]">
+        {/* Navigation menu for mobile */}
+        {isActiveNavbar ? (
+          <NavbarMenu
+            isActive={true}
+            className="md:hidden overflow-auto text-white"
+          >
+            <ServiceOffering
+              handleToggleServiceOffering={handleToggleServiceOffering}
+            />
+          </NavbarMenu>
+        ) : null}
+
+        {/* Navigation menu for desktop */}
+        <NavbarMenu
+          isActive={isActiveNavbar}
+          className="max-md:hidden overflow-auto text-white"
+        >
+          <ServiceOffering />
         </NavbarMenu>
       </div>
     </React.Fragment>

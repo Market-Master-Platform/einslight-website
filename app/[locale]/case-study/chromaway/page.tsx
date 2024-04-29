@@ -68,8 +68,8 @@ const CaseStudyChromaway: React.FC = () => (
       description="ChromaWay - builder of relational blockchain solutions"
     />
 
-    <div className="flex justify-even p-14 bg-zinc-900 max-md:px-5">
-      <div className="mt-11 w-full max-w-[1254px] max-md:mt-10 max-md:max-w-full">
+    <div className="flex justify-even p-14 bg-zinc-900 max-md:px-5 max-md:pt-0">
+      <div className="md:mt-11 w-full max-w-[1254px] max-md:max-w-full">
         <div className="flex gap-16 max-md:flex-col max-md:gap-0">
           <TechStack />
           <div className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">

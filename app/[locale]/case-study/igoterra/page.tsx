@@ -83,8 +83,8 @@ function CaseStudyIGoterra() {
         description="iGoterra"
       />
 
-      <div className="flex flex-col items-end p-20 bg-zinc-900 max-md:px-5">
-        <div className="self-center mt-11 w-full max-w-[1250px] max-md:mt-10 max-md:max-w-full">
+      <div className="flex justify-even p-14 bg-zinc-900 max-md:px-5 max-md:pt-0">
+        <div className="md:mt-11 w-full max-w-[1254px] max-md:max-w-full">
           <div className="flex gap-16 max-md:flex-col max-md:gap-0">
             <div className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
               <div className="pl-8 pr-4 py-12 w-full rounded-2xl border-2 border-solid bg-zinc-900 border-neutral-800 max-md:px-5 max-md:mt-10 max-md:max-w-full">
