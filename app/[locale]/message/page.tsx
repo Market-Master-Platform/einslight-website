@@ -1,5 +1,17 @@
 import * as React from "react";
 
+
+interface ContactCheckIconProps {
+  icon: string;
+}
+
+const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({icon}) => {
+  return icon ? (
+    <img src={icon} alt="" className="shrink-0 w-5 aspect-[1.05] fill-blue-500" />
+  ) : <></>
+}
+
+
 interface ContactCardProps {
   imageSrc: string;
   title: string;
@@ -24,7 +36,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
       </p>
       <div className="flex gap-5 mt-6 text-xl font-semibold leading-6 text-blue-500">
         <span className="flex-auto">{ctaText}</span>
-        <img src={ctaIcon} alt="" className="shrink-0 w-5 aspect-[1.05] fill-blue-500" />
+        <ContactCheckIcon icon={ctaIcon}></ContactCheckIcon>
       </div>
     </div>
   );
@@ -68,14 +80,16 @@ const ContactPage: React.FC = () => {
           Contact us if you have any questions about our company or products. We
           will try to provide an answer within a few days.
         </p>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/12fa7334836edbe6e0fb489240d7e4cc9c0045537bf10578951bd243083b3a12?apiKey=fd011477b5724ce38ff2cc24ae257b18&"
-          alt="Contact us banner"
-          className="mt-20 mb-5 w-full aspect-[2.17] max-w-[1240px] max-md:mt-10 max-md:max-w-full"
-        />
+        <a href={process.env.MAP_LOCATION_LINK}>
+          <img
+            src="https://i.ibb.co/hfNn5hb/test.png"
+            alt="Contact us banner"
+            className="mt-20 w-full aspect-[2.17] max-w-[1240px] max-md:mt-10 max-md:max-w-full"
+          />
+        </a>
       </header>
-      <section className="flex justify-center items-center px-16 py-20 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full">
-        <div className="mt-11 mb-5 w-full max-w-[1240px] max-md:mt-10 max-md:max-w-full">
+      <section className="flex justify-center items-center px-16 pb-20 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full">
+        <div className="mb-5 w-full max-w-[1240px] max-md:mt-10 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             {contactCardsData.map((card, index) => (
               <div
