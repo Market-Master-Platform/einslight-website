@@ -89,7 +89,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
   handleToggleServiceOffering,
 }) => {
   return (
-    <div className="flex max-md:flex-col md:flex-wrap justify-center bg-neutral-800 h-full">
+    <div className="flex max-md:flex-col md:flex-wrap justify-center bg-neutral-800 h-full md:pt-20">
       <div className="md:hidden flex justify-end items-center p-8">
         <XMarkIcon
           width={30}

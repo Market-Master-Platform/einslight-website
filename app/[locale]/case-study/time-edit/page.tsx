@@ -7,14 +7,18 @@ interface TechStackItemProps {
 }
 
 const TechStackItem: React.FC<TechStackItemProps> = ({ label, value }) => (
-  <>
-    <div className="mt-6 text-xl font-semibold leading-6 text-white max-md:mt-10">
-      {label}
+  <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+    <div className="flex flex-col w-[40%] max-md:ml-0 max-md:w-full">
+      <div className="flex flex-col text-xl font-semibold leading-6 text-white max-md:mt-10">
+        {label}
+      </div>
     </div>
-    <div className="mt-5 text-xl font-medium leading-6 text-gray-400">
-      {value}
+    <div className="flex flex-col ml-5 w-[60%] max-md:ml-0 max-md:w-full">
+      <div className="flex flex-col grow text-xl font-medium leading-6 text-gray-400 max-md:mt-10">
+        {value}
+      </div>
     </div>
-  </>
+  </div>
 );
 
 const techStackData = [
@@ -34,34 +38,20 @@ function CaseStudyTimeEdit() {
         description="TimeEdit - the leading provider of administrative academic software solutions"
       />
 
-      <main className="flex flex-col items-center p-20 bg-zinc-900 max-md:px-5">
-        <section className="mt-11 w-full max-w-[1244px] max-md:mt-10 max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-            <aside className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
-              <div className="px-11 py-12 w-full rounded-2xl border-2 border-solid bg-zinc-900 border-neutral-800 max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-                  <div className="flex flex-col w-[37%] max-md:ml-0 max-md:w-full">
-                    <div className="flex flex-col grow text-xl font-semibold leading-6 text-white max-md:mt-10">
-                      {techStackData.map(({ label }) => (
-                        <div key={label}>{label}</div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex flex-col ml-5 w-[63%] max-md:ml-0 max-md:w-full">
-                    <div className="flex flex-col grow text-xl font-medium leading-6 text-gray-400 max-md:mt-10">
-                      {techStackData.map(({ label, value }) => (
-                        <TechStackItem
-                          key={label}
-                          label={label}
-                          value={value}
-                        />
-                      ))}
-                      <div className="mt-9 text-blue-500">timeedit.com</div>
-                    </div>
+      <div className="flex justify-even p-14 bg-zinc-900 max-md:px-5 max-md:pt-0">
+        <div className="md:mt-11 w-full max-w-[1254px] max-md:max-w-full">
+          <div className="flex gap-16 max-md:flex-col max-md:gap-0">
+            <div className="flex flex-col w-[36%] max-md:ml-0 max-md:w-full">
+              <div className="pl-8 pr-4 py-12 w-full rounded-2xl border-2 border-solid bg-zinc-900 border-neutral-800 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+                <div className="flex gap-2 max-md:flex-col max-md:gap-0">
+                  <div className="flex flex-col gap-8 w-full">
+                    {techStackData.map(({ label, value }) => (
+                      <TechStackItem key={label} label={label} value={value} />
+                    ))}
                   </div>
                 </div>
               </div>
-            </aside>
+            </div>
             <article className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-4xl font-semibold leading-10 text-white max-md:max-w-full">
@@ -81,44 +71,46 @@ function CaseStudyTimeEdit() {
                   <span className="font-bold">Einslight</span>.
                 </p>
               </div>
+
+              <section>
+                <h2 className="mt-11 text-3xl font-semibold leading-8 text-white max-md:mt-10">
+                  Solutions
+                </h2>
+                <p className="self-end mt-8 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
+                  <span className="font-bold">Einslight</span> offered the
+                  combination that TimeEdit was looking for.
+                  <br />
+                  <br />
+                  TimeEdit started with 2 FLEX developers over nine months
+                  (25h/w) and now TimeEdit is working effectivity and
+                  successfully with a team of 5 full-time developers, all of
+                  whom are located at{" "}
+                  <span className="font-bold">Einslight</span>'s office in
+                  central Saigon, as part of the{" "}
+                  <span className="font-bold">Einslight</span> Community.
+                  <br />
+                  <br />
+                  <span className="font-bold">Einslight</span> headhunted every
+                  individual team member including a team leader to build a team
+                  that could work closely together. It took 4 weeks to find the
+                  Talents and the developers were able to start in 2-8 weeks.
+                </p>
+              </section>
+              <section>
+                <h2 className="mt-12 text-3xl font-semibold leading-8 text-white max-md:mt-10">
+                  Results
+                </h2>
+                <p className="self-end mt-8 mr-20 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
+                  The excellence in <span className="font-bold">Einslight</span>
+                  's team together with their internal tech team enabled rapid
+                  development and continued growth. As TimeEdit expands quickly,
+                  they are in the greatest need of a well-functioning tech team.
+                </p>
+              </section>
             </article>
           </div>
-        </section>
-        <section>
-          <h2 className="mt-11 text-3xl font-semibold leading-8 text-white max-md:mt-10">
-            Solutions
-          </h2>
-          <p className="self-end mt-8 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-            <span className="font-bold">Einslight</span> offered the combination
-            that TimeEdit was looking for.
-            <br />
-            <br />
-            TimeEdit started with 2 FLEX developers over nine months (25h/w) and
-            now TimeEdit is working effectivity and successfully with a team of
-            5 full-time developers, all of whom are located at{" "}
-            <span className="font-bold">Einslight</span>'s office in central
-            Saigon, as part of the <span className="font-bold">Einslight</span>{" "}
-            Community.
-            <br />
-            <br />
-            <span className="font-bold">Einslight</span> headhunted every
-            individual team member including a team leader to build a team that
-            could work closely together. It took 4 weeks to find the Talents and
-            the developers were able to start in 2-8 weeks.
-          </p>
-        </section>
-        <section>
-          <h2 className="mt-12 text-3xl font-semibold leading-8 text-white max-md:mt-10">
-            Results
-          </h2>
-          <p className="self-end mt-8 mr-20 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-            The excellence in <span className="font-bold">Einslight</span>'s
-            team together with their internal tech team enabled rapid
-            development and continued growth. As TimeEdit expands quickly, they
-            are in the greatest need of a well-functioning tech team.
-          </p>
-        </section>
-      </main>
+        </div>
+      </div>
     </Fragment>
   );
 }

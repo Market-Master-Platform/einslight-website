@@ -10,7 +10,7 @@ const CustomBanner: React.FC<CustomBannerProps> = ({
   description,
 }) => {
   return (
-    <section className="flex overflow-hidden relative flex-col justify-center text-white min-h-[449px]">
+    <section className="flex overflow-hidden flex-col justify-center text-white min-h-[449px]">
       <div className="flex overflow-hidden relative flex-col justify-center w-full min-h-[449px] max-md:max-w-full">
         <img
           loading="lazy"

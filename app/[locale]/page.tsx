@@ -1,5 +1,5 @@
-import * as React from "react";
 import CustomImage from "@/components/CustomImage";
+import Link from "next/link";
 
 const specializations = [
   {
@@ -68,36 +68,42 @@ const articles = [
     description: "Searching for talented and self-propelled developers",
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/bab67fba603e4232d5d943422d0d3f7fdf941b4cb11fcf3e960c0ecf1ab92f9a?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    href: "/en/case-study/chromaway",
   },
   {
     title: "iGoterra",
     description: "Record wildlife observations with any device",
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/3a1145e6cc83903ae217e8ed5193cabe81824876fc237b7d9c7437904efa5562?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    href: "/en/case-study/igoterra",
   },
   {
     title: "TimeEdit",
     description: "Great academia requires great software",
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/70736ac0be4823d6ed2d2ed92435ce73633b16ae387a7c997cf6de47d7c4aa39?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    href: "/en/case-study/time-edit",
   },
   {
     title: "ChromaWay",
     description: "Making sense of the blockchain",
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/dd58e135a7af5f15267040f100e51d02bb1c3210e9c9ce16fe717cb71f848fb5?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    href: "/en/case-study/chromaway",
   },
   {
     title: "AppSpotr",
     description: "Appspotr the leading low-code app-builder",
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/bc6734ea199d322938ce8a3f25f15bc32078413f12a9aedfaf88ba6f8042ffac?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    href: "/en/case-study/app-sport",
   },
   {
     title: "EF Academy",
     description: "Mobile apps for boarding school students",
     image:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/45adcc8f8ef7df04c2952e0610634a82ab3b3c8cf32c68e883c3061a26ad74ee?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    href: "/en/case-study/ef-academy",
   },
 ];
 
@@ -105,12 +111,18 @@ interface ArticleProps {
   title: string;
   description: string;
   image: string;
+  href: string;
 }
 
-const Article: React.FC<ArticleProps> = ({ title, description, image }) => (
+const Article: React.FC<ArticleProps> = ({
+  title,
+  description,
+  image,
+  href,
+}) => (
   <article className="flex gap-5 max-md:flex-col max-md:gap-0 ">
     <div className="flex flex-col w-full max-md:ml-0 max-md:w-full ">
-      <div className="relative">
+      <Link href={href} className="relative">
         <CustomImage
           src={image}
           alt={title}
@@ -121,7 +133,7 @@ const Article: React.FC<ArticleProps> = ({ title, description, image }) => (
             Read case {">"}
           </span>
         </div>
-      </div>
+      </Link>
       <div className="flex gap-5 w-full font-semibold max-w-[1242px] max-md:flex-wrap max-md:max-w-full h-full">
         <TextBlock
           title={title}
@@ -140,8 +152,8 @@ export default function Home() {
         <div className="flex flex-col justify-center w-full bg-gray-50 max-md:max-w-full">
           <div className="flex overflow-hidden flex-col justify-center w-full min-h-full max-md:max-w-full">
             <div className="flex overflow-hidden flex-col justify-center w-full min-h-full max-md:max-w-full">
-              <header className="flex flex-col items-center px-5 pb-9 w-full bg-zinc-900 max-md:max-w-full">
-                <div className="flex overflow-hidden flex-col items-center px-20 pt-20 pb-4 mt-0 w-full text-lg leading-6 text-center text-white max-w-[1240px] max-md:px-5 max-md:max-w-full">
+              <div className="flex flex-col items-center px-5 pb-9 w-full bg-zinc-900 max-md:max-w-full">
+                <div className="flex overflow-hidden flex-col items-center px-20 md:pt-20 pt-10 pb-4 mt-0 w-full text-lg leading-6 text-center text-white max-w-[1240px] max-md:px-5 max-md:max-w-full">
                   <h1 className="mt-2 max-md:max-w-full">
                     Full-service tech partner
                   </h1>
@@ -174,7 +186,7 @@ export default function Home() {
                     />
                   ))}
                 </div>
-              </header>
+              </div>
             </div>
           </div>
         </div>
@@ -210,7 +222,7 @@ export default function Home() {
             Our portfolio which we are happy to show you
           </h1>
 
-          <div className="px-px mt-20 w-full max-w-[1242px] max-md:mt-10 max-md:max-w-full grid grid-cols-2 gap-4">
+          <div className="px-px mt-20 w-full max-md:mt-10 max-md:max-w-full grid md:grid-cols-2 grid-cols-1 gap-4">
             {articles.map((article, index) => (
               <Article key={index} {...article} />
             ))}
