@@ -124,11 +124,32 @@ const BlogArticle = () => {
           </p>
         </div>
       </section>
-      <section>
-        <div className="m-auto max-w-screen-lg rounded-md border-solid border-2 border-blue-400 text-white flex justify-between p-10">
-          <div>Share this article:</div>
-          <div>
-            <ChatBubbleLeftRightIcon width={12} />
+      <section className="px-10">
+        <div className="m-auto max-w-screen-lg px-10 max-md:px-0">
+          <div className="rounded-lg border-solid border-2 border-blue-400 text-white flex justify-between p-10 max-md:p-5">
+            <div className="font-semibold">Share this article:</div>
+            <div className="flex">
+              <ChatBubbleLeftRightIcon
+                className="ml-3"
+                color="#B0B7C3"
+                width={24}
+              />
+              <ChatBubbleLeftRightIcon
+                className="ml-3"
+                color="#B0B7C3"
+                width={24}
+              />
+              <ChatBubbleLeftRightIcon
+                className="ml-3"
+                color="#B0B7C3"
+                width={24}
+              />
+              <ChatBubbleLeftRightIcon
+                className="ml-3"
+                color="#B0B7C3"
+                width={24}
+              />
+            </div>
           </div>
         </div>
       </section>
