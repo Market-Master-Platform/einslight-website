@@ -32,18 +32,11 @@ const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({icon, id, text}) => 
       </div>
     )
   } else {
-    return(<></>)
+    return(<div className="flex gap-5 mt-6 text-xl font-semibold leading-6 text-blue-500">
+    <span className="flex-auto">{text}</span>
+  </div>)
   }
-  // return icon ? (
-  //   <img src={icon} alt="" className="shrink-0 w-5 aspect-[1.05] fill-blue-500" hre/>
-  // ) : <></>
 }
-
-// const ContactButtonId: React.FC<ContactButtonIdProps> = ({id}) => {
-//   if (id === 'chat') {
-//     return ()
-//   }
-// }
 
 interface ContactCardProps {
   id: number,
