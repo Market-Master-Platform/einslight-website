@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({
           <CustomImage
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e3a34b04234bd2d2c63fa344c333c34c2f7276ede0524675ad1d10cdd5a9899?apiKey=d22700435c194df19375f24bbe85f4c5&"
             alt="Company logo"
-            className="shrink max-w-full aspect-[4] w-[195px] max-sm:w-[40%]"
+            className="shrink max-w-full aspect-[4] w-[195px] max-sm:w-[45%]"
           />
 
           {/* Navigation for mobile */}
@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({
         {/* Navigation for mobile */}
         <NavbarMenu
           isActive={isOpenNavbarMenu}
-          className="md:hidden inset-x-0 top-[76px] bottom-0 bg-[#000] overflow-auto max-h-[600px] text-white"
+          className="md:hidden bg-[#000] overflow-auto max-h-[600px] text-white"
         >
           <nav className="flex flex-col gap-10 pt-10 pb-6">
             {navItems.map((item, index) => (
@@ -116,7 +116,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </nav>
         </NavbarMenu>
       </div>
-      <div className="pt-[68px]">
+      <div className="pt-[68px] max-sm:pt-[50px]">
         {/* Navigation menu for mobile */}
         {isActiveNavbar ? (
           <NavbarMenu
