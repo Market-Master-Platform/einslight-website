@@ -165,26 +165,20 @@ export default function Home() {
           <h1 className="mt-2 text-3xl font-bold text-center text-white max-md:max-w-full">
             Our portfolio which we are happy to show you
           </h1>
-
-
-
           <div className="px-px mt-20 w-full max-w-[1242px] max-md:mt-10 max-md:max-w-full grid grid-cols-2 gap-4">
             {articles.map((article, index) => (
               <Article key={index} {...article}/>
             ))}
           </div>
-
-
-
-        </div>
-        <footer className="flex flex-col items-center p-20 w-full bg-zinc-900 mt-[2047px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
-            <div className="flex gap-5 mt-6 w-full font-semibold max-w-[1247px] max-md:flex-wrap max-md:max-w-full">
+          <div className="flex gap-5 mt-52 w-full font-semibold max-w-[1247px] max-md:flex-wrap max-md:max-w-full ">
             <h2 className="flex-auto my-auto text-3xl leading-10 text-white">Hey, how can we help?</h2>
             <button className="justify-center items-center px-16 py-6 text-xl leading-6 text-center text-white bg-blue-500 max-md:px-5">
                 Send message
             </button>
-            </div>
+          </div>
             <hr className="shrink-0 mt-20 max-w-full h-0.5 bg-neutral-800 w-[1247px] max-md:mt-10" />
+        </div>
+        <footer className="flex flex-col items-center p-20 w-full bg-zinc-900 mt-[2047px] max-md:px-5 max-md:mt-10 max-md:max-w-full">
         </footer>
       </div>
     </main>
