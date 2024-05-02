@@ -12,37 +12,37 @@ const Image: React.FC<ImageProps> = ({ src, alt, className }) => (
 
 const specializations = [
   {
-    src: "home/hubspot-icon.svg",
+    src: "/static/images/home/hubspot-icon.svg",
     alt: "Specialization 1",
     className: "shrink-0 w-32 max-w-full aspect-[1.82]",
   },
   {
-    src: "home/shopify-icon.svg",
+    src: "/static/images/home/shopify-icon.svg",
     alt: "Specialization 2",
     className: "shrink-0 max-w-full aspect-[1.89] w-[132px]",
   },
   {
-    src: "home/stripe-icon.svg",
+    src: "/static/images/home/stripe-icon.svg",
     alt: "Specialization 3",
     className: "shrink-0 max-w-full aspect-[2.17] w-[152px]",
   },
   {
-    src: "home/sap-icon.svg",
+    src: "/static/images/home/sap-icon.svg",
     alt: "Specialization 4",
     className: "shrink-0 aspect-[1.39] w-[97px]",
   },
   {
-    src: "home/magento-icon.svg",
+    src: "/static/images/home/magento-icon.svg",
     alt: "Specialization 5",
     className: "shrink-0 max-w-full aspect-[2.17] w-[152px]",
   },
   {
-    src: "home/visma-icon.svg",
+    src: "/static/images/home/visma-icon.svg",
     alt: "Specialization 6",
     className: "shrink-0 max-w-full aspect-[2.17] w-[152px]",
   },
   {
-    src: "home/microsoft-icon.svg",
+    src: "/static/images/home/microsoft-icon.svg",
     alt: "Specialization 7",
     className: "shrink-0 max-w-full aspect-[2.17] w-[152px]",
   },
@@ -85,32 +85,32 @@ const articles = [
   {
     title: "Great People Application",
     description: "Searching for talented and self-propelled developers",
-    image: "home/great-people-application.png",
+    image: "/static/images/home/great-people-application.png",
   },
   {
     title: "iGoterra",
     description: "Record wildlife observations with any device",
-    image: "home/igoterra.png",
+    image: "/static/images/home/igoterra.png",
   },
   {
     title: "TimeEdit",
     description: "Great academia requires great software",
-    image: "home/timeedit.png",
+    image: "/static/images/home/timeedit.png",
   },
   {
     title: "ChromaWay",
     description: "Making sense of the blockchain",
-    image: "home/chromaway.png",
+    image: "/static/images/home/chromaway.png",
   },
   {
     title: "AppSpotr",
     description: "Appspotr the leading low-code app-builder",
-    image: "home/appspotr.png",
+    image: "/static/images/home/appspotr.png",
   },
   {
     title: "EF Academy",
     description: "Mobile apps for boarding school students",
-    image: "home/ef-academy.png",
+    image: "/static/images/home/ef-academy.png",
   },
 ];
 
@@ -170,7 +170,7 @@ export default function Home() {
                   </button>
                   <img
                     loading="lazy"
-                    src="home/arrow-down-icon.svg"
+                    src="/static/images/home/arrow-down-icon.svg"
                     alt="Arrow down"
                     className="mt-12 w-9 aspect-square"
                   />
@@ -211,7 +211,7 @@ export default function Home() {
               <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                 <img
                   loading="lazy"
-                  src="home/workflow.svg"
+                  src="/static/images/home/workflow.svg"
                   alt="Workflow"
                   className="grow w-full aspect-[0.85] max-md:mt-5 max-md:max-w-full"
                 />
