@@ -121,7 +121,8 @@ const BlogArticle = () => {
           </p>
           <img
             loading="lazy"
-            src={"/static/images/blog-articles/blog-articles-content.png"}
+            alt="Working"
+            src={"/static/images/blog-articles/blog-article-content.png"}
             className="w-full my-[1rem] rounded-md"
           />
           <p className="leading-relaxed my-2">
