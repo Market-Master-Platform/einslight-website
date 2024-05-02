@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 interface CategoryItemProps {
   text: string;
@@ -29,6 +30,7 @@ const blogPosts = [
       "The right priorities help us in the direction of our potential which is why it is important for earnings.",
     imageUrl: "/static/images/blogs/how-to-start-earning.png",
     altText: "How to start earning",
+    href: "/en/blogs/1",
   },
   {
     date: "14th May",
@@ -37,6 +39,7 @@ const blogPosts = [
       "Each of us has a different favorite and not so much color so it is worth starting with it.",
     imageUrl: "/static/images/blogs/color-palette.png",
     altText: "Color palette",
+    href: "/en/blogs/1",
   },
   {
     date: "11th May",
@@ -45,6 +48,7 @@ const blogPosts = [
       "The right priorities help us in the direction of our potential which is why it is important for earnings.",
     imageUrl: "/static/images/blogs/how-to-start-earning-2.png",
     altText: "How to start earning",
+    href: "/en/blogs/1",
   },
   // {
   //   date: "11th May",
@@ -81,6 +85,7 @@ interface BlogPostProps {
   description: string;
   imageUrl: string;
   altText: string;
+  href: string;
 }
 
 const BlogPost: React.FC<BlogPostProps> = ({
@@ -89,6 +94,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
   description,
   imageUrl,
   altText,
+  href,
 }) => {
   return (
     <article className="rounded-sm border-2 border-solid shadow-2xl bg-neutral-800 border-zinc-800 mb-10 max-md:max-w-full">
@@ -112,10 +118,12 @@ const BlogPost: React.FC<BlogPostProps> = ({
             <p className="mt-10 font-medium leading-8 text-gray-400 max-md:mt-10 max-md:max-w-full">
               {description}
             </p>
-            <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:flex-wrap max-md:pr-5 cursor-pointer">
-              <span>Read story</span>
-              <ArrowRightIcon className="h-6 w-6 text-blue-500 shrink-0" />
-            </div>
+            <Link href={href} className="relative">
+              <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:flex-wrap max-md:pr-5">
+                <span>Read story</span>
+                <ArrowRightIcon className="h-6 w-6 text-blue-500 shrink-0" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -167,18 +175,21 @@ const articles = [
     category: "Business",
     date: "29th May",
     image: "/static/images/blogs/forging-your-path.png",
+    href: "/en/blogs/1",
   },
   {
     title: "Basics of a proper UI",
     category: "Design",
     date: "25th May",
     image: "/static/images/blogs/basics-of-a-proper-ui.png",
+    href: "/en/blogs/1",
   },
   {
     title: "Planning for change",
     category: "Finance",
     date: "15th May",
     image: "/static/images/blogs/planning-for-change.png",
+    href: "/en/blogs/1",
   },
 ];
 
@@ -187,23 +198,32 @@ interface ArticleProps {
   category: string;
   date: string;
   image: string;
+  href: string;
 }
 
-const Article: React.FC<ArticleProps> = ({ title, category, date, image }) => (
-  <article className="flex mb-7">
-    <div>
-      <Image src={image} alt={title} className="aspect-square w-28" />
-    </div>
-    <div className="my-auto ml-5">
-      <h3 className="text-2xl font-semibold leading-7 text-white mb-3">
-        {title}
-      </h3>
-      <div className="flex gap-5 text-lg leading-5">
-        <div className="text-blue-500">{category}</div>
-        <div className="text-gray-400">{date}</div>
+const Article: React.FC<ArticleProps> = ({
+  title,
+  category,
+  date,
+  image,
+  href,
+}) => (
+  <Link href={href} className="relative">
+    <article className="flex mb-7">
+      <div>
+        <Image src={image} alt={title} className="aspect-square w-28" />
       </div>
-    </div>
-  </article>
+      <div className="my-auto ml-5">
+        <h3 className="text-2xl font-semibold leading-7 text-white mb-3">
+          {title}
+        </h3>
+        <div className="flex gap-5 text-lg leading-5">
+          <div className="text-blue-500">{category}</div>
+          <div className="text-gray-400">{date}</div>
+        </div>
+      </div>
+    </article>
+  </Link>
 );
 
 interface ImageProps {
