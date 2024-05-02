@@ -1,7 +1,11 @@
 {
     "common": {
         "our_offering": "Our offering",
-        "contact_us": "Contact Us"
+        "contact_us": "Contact Us",
+        "this_site_uses_cookies": "This site uses cookies to offer you a better browsing experience. By using our site consent cookies.",
+        "learn_more": "Laern more",
+        "allow_cookies": "Allow cookies",
+        "decline": "Decline"
     },
     "navbar": {
         "customer_cases": "Customer cases",

@@ -3,12 +3,17 @@
 import * as React from "react";
 import CustomImage from "../CustomImage";
 import { useDictionary } from "@/context/dictionary-provider";
+import Link from "next/link";
 interface LinkItemProps {
   children: React.ReactNode;
 }
 
 const LinkItem: React.FC<LinkItemProps> = ({ children }) => {
-  return <div className="mt-6 md:mt-7">{children}</div>;
+  return (
+    <Link href="" className="mt-6 md:mt-7">
+      {children}
+    </Link>
+  );
 };
 
 interface FooterLinkSectionProps {

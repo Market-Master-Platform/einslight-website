@@ -1,7 +1,11 @@
 {
     "common": {
         "our_offering": "Dịch vụ của chúng tôi",
-        "contact_us": "Liên hệ chúng tôi"    
+        "contact_us": "Liên hệ chúng tôi",
+        "this_site_uses_cookies": "Trang web này sử dụng cookie để cung cấp trải nghiệm duyệt web tốt hơn cho bạn. Bằng cách sử dụng trang web của chúng tôi, bạn đồng ý với việc sử dụng cookie.",
+        "learn_more": "Tìm hiểu thêm",
+        "allow_cookies": "Cho phép cookie",
+        "decline": "Từ chối" 
     },
     "navbar": {
         "customer_cases": "Dự án của khách hàng",

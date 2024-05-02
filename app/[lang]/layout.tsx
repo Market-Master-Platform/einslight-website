@@ -1,3 +1,4 @@
+import CookiePopup from "@/components/CookiesPopup/CookiesPopup";
 import NavbarLayout from "@/components/Navbar/NavbarLayout";
 import DictionaryProvider from "@/context/dictionary-provider";
 import { Locale } from "@/i18n.config";
@@ -15,6 +16,8 @@ export default async function MainLayout({
   return (
     <DictionaryProvider dictionary={dictionary}>
       <NavbarLayout>{children}</NavbarLayout>
+
+      <CookiePopup />
     </DictionaryProvider>
   );
 }
