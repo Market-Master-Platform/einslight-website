@@ -1,3 +1,4 @@
+import { useDictionary } from "@/context/dictionary-provider";
 import { useState } from "react";
 
 export interface NavItemValues {
@@ -8,41 +9,34 @@ export interface NavItemValues {
 }
 
 const useNavbar = () => {
-  const [isOpenServiceOffering, setOpenServiceOffering] =
-    useState<boolean>(false);
   const [isOpenNavbarMenu, setOpenNavbarMenu] = useState<boolean>(false);
-
-  const handleToggleServiceOffering = () => {
-    setOpenServiceOffering((currentState) => !currentState);
-  };
 
   const handleToggleNavbarMenu = () => {
     setOpenNavbarMenu((currentState) => !currentState);
-    setOpenServiceOffering(false);
   };
+
+  const dictionary = useDictionary();
 
   const navItems: NavItemValues[] = [
     {
-      text: "Our offering",
+      text: dictionary.common.our_offering,
       hasSubItems: true,
-      onClick: handleToggleServiceOffering,
     },
     {
-      text: "Customer cases",
-      href: `en/case-study`,
+      text: dictionary.navbar.customer_cases,
+      href: `/en/case-study`,
     },
     {
-      text: "Contact",
-      href: `en/contact-us`,
+      text: dictionary.navbar.contact,
+      href: `/en/contact-us`,
     },
   ];
 
   return {
     navItems,
-    isOpenServiceOffering,
     isOpenNavbarMenu,
     handleToggleNavbarMenu,
-    handleToggleServiceOffering,
+    setOpenNavbarMenu,
   };
 };
 
