@@ -9,6 +9,5 @@ const dictionaries = {
 // export const getDictionary = async (locale: Locale) => dictionaries[locale]();
 
 export const getDictionary = async (locale: Locale) => {
-  console.log({ locale });
   return locale === "en" ? dictionaries.en() : dictionaries.vi();
 };

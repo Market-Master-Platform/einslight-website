@@ -1,6 +1,5 @@
 import * as React from "react";
 
-
 interface ContactCheckIconProps {
   icon: string;
   id: number;
@@ -11,35 +10,64 @@ interface ContactCheckIconProps {
 //   id: string;
 // }
 
-const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({icon, id, text}) => {
+const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({
+  icon,
+  id,
+  text,
+}) => {
   if (id === 1) {
     return (
       <div className="flex gap-5 mt-6 text-xl font-semibold leading-6 text-blue-500">
-        <span className="flex-auto"> <a href="#message-section">{text}</a></span>
+        <span className="flex-auto">
+          {" "}
+          <a href="#message-section">{text}</a>
+        </span>
         <a href="#message-section">
-          <img src={icon} alt="" className="shrink-0 w-5 aspect-[1.05] fill-blue-500"/>
+          <img
+            src={icon}
+            alt=""
+            className="shrink-0 w-5 aspect-[1.05] fill-blue-500"
+          />
         </a>
       </div>
-      
-    )
+    );
   } else if (id === 2) {
     return (
       <div className="flex gap-5 mt-6 text-xl font-semibold leading-6 text-blue-500">
-        <span className="flex-auto"> <a target="_blank" rel="noopener noreferrer" href={process.env.MAP_LOCATION_LINK}>{text}</a></span>
-        <a target="_blank" rel="noopener noreferrer"  href={process.env.MAP_LOCATION_LINK}>
-          <img src={icon} alt="" className="shrink-0 w-5 aspect-[1.05] fill-blue-500"/>
+        <span className="flex-auto">
+          {" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={process.env.MAP_LOCATION_LINK}
+          >
+            {text}
+          </a>
+        </span>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={process.env.MAP_LOCATION_LINK}
+        >
+          <img
+            src={icon}
+            alt=""
+            className="shrink-0 w-5 aspect-[1.05] fill-blue-500"
+          />
         </a>
       </div>
-    )
+    );
   } else {
-    return(<div className="flex gap-5 mt-6 text-xl font-semibold leading-6 text-blue-500">
-    <span className="flex-auto">{text}</span>
-  </div>)
+    return (
+      <div className="flex gap-5 mt-6 text-xl font-semibold leading-6 text-blue-500">
+        <span className="flex-auto">{text}</span>
+      </div>
+    );
   }
-}
+};
 
 interface ContactCardProps {
-  id: number,
+  id: number;
   imageSrc: string;
   title: string;
   description: string;
@@ -63,7 +91,11 @@ const ContactCard: React.FC<ContactCardProps> = ({
         {description}
       </p>
       {/* <span className="flex-auto">{ctaText}</span> */}
-      <ContactCheckIcon icon={ctaIcon} text={ctaText} id={id}></ContactCheckIcon>
+      <ContactCheckIcon
+        icon={ctaIcon}
+        text={ctaText}
+        id={id}
+      ></ContactCheckIcon>
     </div>
   );
 };
@@ -71,28 +103,32 @@ const ContactCard: React.FC<ContactCardProps> = ({
 const contactCardsData = [
   {
     id: 1,
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/aa116877621568d0035e8344274276b926e48f63cb8ad5b541ba68afd36957b2?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    imageSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/aa116877621568d0035e8344274276b926e48f63cb8ad5b541ba68afd36957b2?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
     title: "Chat with us",
     description:
       "Ask us a question by email and we will respond within a few days.",
     ctaText: "Leave a message",
-    ctaIcon: "https://cdn.builder.io/api/v1/image/assets/TEMP/380ce8cc605368c00c9d3f980394f3afd7e28915e67039adabe3fb8ad1536a85?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    ctaIcon:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/380ce8cc605368c00c9d3f980394f3afd7e28915e67039adabe3fb8ad1536a85?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
   },
   {
     id: 2,
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/09d38ba245e48991b160d90a1f467d9970151ce62ac75216f7b43169724517ee?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    imageSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/09d38ba245e48991b160d90a1f467d9970151ce62ac75216f7b43169724517ee?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
     title: "Drop in",
     description:
       "You can meet us at our office and discuss the details of your question.",
     ctaText: "Get directions",
-    ctaIcon: "https://cdn.builder.io/api/v1/image/assets/TEMP/380ce8cc605368c00c9d3f980394f3afd7e28915e67039adabe3fb8ad1536a85?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    ctaIcon:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/380ce8cc605368c00c9d3f980394f3afd7e28915e67039adabe3fb8ad1536a85?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
   },
   {
     id: 3,
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/f87c86172fcc9705b76250d0aec1cdca9c46be691db92d32f8a7f98abfd64191?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    imageSrc:
+      "https://cdn.builder.io/api/v1/image/assets/TEMP/f87c86172fcc9705b76250d0aec1cdca9c46be691db92d32f8a7f98abfd64191?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
     title: "Call us",
-    description:
-      "Call us if your question requires an immediate response.",
+    description: "Call us if your question requires an immediate response.",
     ctaText: "0707704358",
     ctaIcon: "",
   },
@@ -109,7 +145,11 @@ const ContactPage: React.FC = () => {
           Contact us if you have any questions about our company or products. We
           will try to provide an answer within a few days.
         </p>
-        <a target="_blank" rel="noopener noreferrer" href={process.env.MAP_LOCATION_LINK}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={process.env.MAP_LOCATION_LINK}
+        >
           <img
             src="https://i.ibb.co/hfNn5hb/test.png"
             alt="Contact us banner"
@@ -131,7 +171,10 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-      <section id="message-section" className="flex flex-col items-center px-16 pt-20 pb-11 w-full text-xl leading-6 bg-zinc-900 max-md:px-5 max-md:max-w-full">
+      <section
+        id="message-section"
+        className="flex flex-col items-center px-16 pt-20 pb-11 w-full text-xl leading-6 bg-zinc-900 max-md:px-5 max-md:max-w-full"
+      >
         <div className="flex flex-col mt-12 max-w-full w-[817px] max-md:mt-10">
           <h2 className="self-center text-5xl font-bold text-white leading-[58.08px] max-md:text-4xl">
             Leave a message
