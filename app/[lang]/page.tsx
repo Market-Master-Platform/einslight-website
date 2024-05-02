@@ -140,7 +140,7 @@ export default function Home() {
     {
       title: "EF Academy",
       description: dictionary.homepage.efacademy_description,
-      image: "ef-academy.png",
+      image: "/static/images/home/ef-academy.png",
       href: "/en/case-study/ef-academy",
     },
   ];
