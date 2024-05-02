@@ -27,8 +27,7 @@ const blogPosts = [
     title: "How to start earning",
     description:
       "The right priorities help us in the direction of our potential which is why it is important for earnings.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/be8437d6c1b85cff701b8cde99bb4c54cdbca1f9ed325d43739ffa8ba06f12b1?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    imageUrl: "/static/images/blogs/how-to-start-earning.png",
     altText: "How to start earning",
   },
   {
@@ -36,8 +35,7 @@ const blogPosts = [
     title: "Color palette",
     description:
       "Each of us has a different favorite and not so much color so it is worth starting with it.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/63e225ab5d6b48270d09d3703fd86ab73775162839b81f1ed42939007cc61cfe?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    imageUrl: "/static/images/blogs/color-palette.png",
     altText: "Color palette",
   },
   {
@@ -45,8 +43,7 @@ const blogPosts = [
     title: "How to start earning",
     description:
       "The right priorities help us in the direction of our potential which is why it is important for earnings.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4fcd3b0f251ee9841aa8b81a17c87a97a0c44913563a732058f145466a47b2d2?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    imageUrl: "/static/images/blogs/how-to-start-earning-2.png",
     altText: "How to start earning",
   },
   // {
@@ -131,60 +128,57 @@ interface PaginationProps {
   totalPages: number;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
-  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+// const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
+//   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
-  return (
-    <nav className="flex gap-2.5 self-center mt-16 text-2xl font-semibold leading-7 text-gray-400 whitespace-nowrap max-md:mt-10">
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8df532a8de2f1d562a86b2480ea727bb93422cc8828c45cfef72c24c95ae7f6?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-        alt=""
-        className="shrink-0 aspect-square w-[50px]"
-      />
-      {pages.map((page) => (
-        <div
-          key={page}
-          className={`justify-center items-center px-5 rounded-2xl h-[50px] w-[50px] ${
-            page === currentPage
-              ? "text-white bg-blue-500"
-              : "border-2 border-solid bg-neutral-800 border-zinc-800"
-          }`}
-        >
-          {page}
-        </div>
-      ))}
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d5f07230d8f0271ab3008d449c5f32e827c0515082e7e8c9d8c1df8fa218f45?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-        alt=""
-        className="shrink-0 aspect-square w-[50px]"
-      />
-    </nav>
-  );
-};
+//   return (
+//     <nav className="flex gap-2.5 self-center mt-16 text-2xl font-semibold leading-7 text-gray-400 whitespace-nowrap max-md:mt-10">
+//       <img
+//         loading="lazy"
+//         src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8df532a8de2f1d562a86b2480ea727bb93422cc8828c45cfef72c24c95ae7f6?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
+//         alt=""
+//         className="shrink-0 aspect-square w-[50px]"
+//       />
+//       {pages.map((page) => (
+//         <div
+//           key={page}
+//           className={`justify-center items-center px-5 rounded-2xl h-[50px] w-[50px] ${
+//             page === currentPage
+//               ? "text-white bg-blue-500"
+//               : "border-2 border-solid bg-neutral-800 border-zinc-800"
+//           }`}
+//         >
+//           {page}
+//         </div>
+//       ))}
+//       <img
+//         loading="lazy"
+//         src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d5f07230d8f0271ab3008d449c5f32e827c0515082e7e8c9d8c1df8fa218f45?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
+//         alt=""
+//         className="shrink-0 aspect-square w-[50px]"
+//       />
+//     </nav>
+//   );
+// };
 
 const articles = [
   {
     title: "Forging your path",
     category: "Business",
     date: "29th May",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4e0fedc8427743b40773d7d4e9bd7743920f6257aac920d7d957c1ffe70657d9?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    image: "/static/images/blogs/forging-your-path.png",
   },
   {
     title: "Basics of a proper UI",
     category: "Design",
     date: "25th May",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/e2cc6ae5bfd5a91044dc33762aeeac12f4e08a52412ed200b53bc6ab4be48449?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    image: "/static/images/blogs/basics-of-a-proper-ui.png",
   },
   {
     title: "Planning for change",
     category: "Finance",
     date: "15th May",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/0aad55d6a3ae7b76ce4019190a9ec58ff9fe73f9a33006c33cf038e190784a3f?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    image: "/static/images/blogs/planning-for-change.png",
   },
 ];
 
