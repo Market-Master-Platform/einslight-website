@@ -125,29 +125,29 @@ const BlogArticle = () => {
         </div>
       </section>
       <section className="px-10">
-        <div className="m-auto max-w-screen-lg px-10 max-md:px-0">
-          <div className="rounded-lg border-solid border-2 border-blue-400 text-white flex justify-between p-10 max-md:p-5">
+        <div className="m-auto max-w-screen-lg px-10 max-md:px-0 pb-20">
+          <div className="rounded-lg border-solid border-2 border-[#1E2029] text-white flex justify-between p-10 max-md:p-5">
             <div className="font-semibold">Share this article:</div>
-            <div className="flex">
-              <ChatBubbleLeftRightIcon
-                className="ml-3"
-                color="#B0B7C3"
-                width={24}
+            <div className="flex w-1/2 max-md:w-2/3 justify-between">
+              <img
+                src="/blogs/dribbble-icon.svg"
+                className="mx-1"
+                alt="Share to Dribbble"
               />
-              <ChatBubbleLeftRightIcon
-                className="ml-3"
-                color="#B0B7C3"
-                width={24}
+              <img
+                src="/blogs/facebook-icon.svg"
+                className="mx-1"
+                alt="Share to Facebook"
               />
-              <ChatBubbleLeftRightIcon
-                className="ml-3"
-                color="#B0B7C3"
-                width={24}
+              <img
+                src="/blogs/twitter-icon.svg"
+                className="mx-1"
+                alt="Share to Twitter"
               />
-              <ChatBubbleLeftRightIcon
-                className="ml-3"
-                color="#B0B7C3"
-                width={24}
+              <img
+                src="/blogs/youtube-icon.svg"
+                className="mx-1"
+                alt="Share to Youtube"
               />
             </div>
           </div>
