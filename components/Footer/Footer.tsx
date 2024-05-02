@@ -1,6 +1,8 @@
+"use client";
+
 import * as React from "react";
 import CustomImage from "../CustomImage";
-
+import { useDictionary } from "@/context/dictionary-provider";
 interface LinkItemProps {
   children: React.ReactNode;
 }
@@ -26,28 +28,30 @@ const FooterLinkSection: React.FC<FooterLinkSectionProps> = ({
   );
 };
 
-const companyLinks = [
-  { label: "Our Offering" },
-  { label: "Cases" },
-  { label: "Contact Us" },
-];
-
-const resourceLinks = [
-  { label: "Blogs" },
-  { label: "Privacy & Policy" },
-  { label: "Terms Condition" },
-  { label: "Cookies Settings" },
-];
-
 function Footer() {
+  const dictionary = useDictionary();
+
+  const companyLinks = [
+    { label: dictionary.common.our_offering },
+    { label: dictionary.footer.cases },
+    { label: dictionary.common.contact_us },
+  ];
+
+  const resourceLinks = [
+    { label: dictionary.footer.blogs },
+    { label: dictionary.footer.privacy_and_policy },
+    { label: dictionary.footer.terms_condition },
+    { label: dictionary.footer.cookies_settings },
+  ];
+
   return (
     <div className="flex flex-col items-center p-20 bg-zinc-900 max-md:px-5">
       <div className="flex gap-5 mt-6 w-full font-semibold max-w-[1247px] max-md:flex-wrap max-md:max-w-full">
         <div className="flex-auto my-auto text-3xl leading-10 text-white">
-          Hej, how can we help?
+          {dictionary.footer.how_can_we_help}
         </div>
         <div className="justify-center items-center px-16 py-6 text-xl leading-6 text-center text-white bg-blue-500 max-md:px-5">
-          Send message
+          {dictionary.footer.send_message}
         </div>
       </div>
       <div className="shrink-0 mt-20 max-w-full h-0.5 bg-neutral-800 w-[1247px] max-md:mt-10" />
@@ -70,12 +74,12 @@ function Footer() {
           </div>
         </div>
         <div className="flex max-md max-md:flex-col gap-5 max-md:gap-10 justify-between self-start text-xl leading-6">
-          <FooterLinkSection title="Company">
+          <FooterLinkSection title={dictionary.footer.company}>
             {companyLinks.map((link, index) => (
               <LinkItem key={index}>{link.label}</LinkItem>
             ))}
           </FooterLinkSection>
-          <FooterLinkSection title="Resources">
+          <FooterLinkSection title={dictionary.footer.resources}>
             {resourceLinks.map((link, index) => (
               <LinkItem key={index}>{link.label}</LinkItem>
             ))}

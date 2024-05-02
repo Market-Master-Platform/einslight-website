@@ -1,3 +1,4 @@
+import { useDictionary } from "@/context/dictionary-provider";
 import { useState } from "react";
 
 export interface NavItemValues {
@@ -14,18 +15,20 @@ const useNavbar = () => {
     setOpenNavbarMenu((currentState) => !currentState);
   };
 
+  const dictionary = useDictionary();
+
   const navItems: NavItemValues[] = [
     {
-      text: "Our offering",
+      text: dictionary.common.our_offering,
       hasSubItems: true,
     },
     {
-      text: "Customer cases",
-      href: `en/case-study`,
+      text: dictionary.navbar.customer_cases,
+      href: `/en/case-study`,
     },
     {
-      text: "Contact",
-      href: `en/contact-us`,
+      text: dictionary.navbar.contact,
+      href: `/en/contact-us`,
     },
   ];
 
