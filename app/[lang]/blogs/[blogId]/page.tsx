@@ -6,7 +6,7 @@ import {
 const BlogArticle = () => {
   return (
     <main className="bg-[#12141D]">
-      <section className="bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(0,0,0,0.9)),url('/blogs/blog-article-header.png')] text-white h-[40vh] bg-center bg-no-repeat flex flex-col justify-end items-center">
+      <section className="bg-[linear-gradient(to_bottom,rgba(0,0,0,0),rgba(0,0,0,0.9)),url('/static/images/blog-articles/blog-articles-header.png')] text-white h-[40vh] bg-center bg-no-repeat flex flex-col justify-end items-center">
         <div className="max-w-screen-lg flex max-sm:flex-wrap justify-between w-full mb-10 px-10">
           <div className="flex py-4 px-8 bg-[#808080] bg-opacity-50 rounded-full max-sm:mb-3">
             <span className="text-[#808080] font-medium">News</span>
@@ -20,7 +20,7 @@ const BlogArticle = () => {
             <img
               loading="lazy"
               className="rounded-full w-14"
-              src={"/blogs/author-image.png"}
+              src={"/static/images/blog-articles/author-image.png"}
             />
             <div className="flex flex-col justify-center pl-3">
               <p className="font-medium">Sergei Filatov</p>
@@ -63,7 +63,7 @@ const BlogArticle = () => {
           </p>
           <img
             loading="lazy"
-            src={"/blogs/blog-article-content.png"}
+            src={"/static/images/blog-articles/blog-articles-content.png"}
             className="w-full my-[1rem] rounded-md"
           />
           <p className="leading-relaxed my-2">
@@ -130,22 +130,22 @@ const BlogArticle = () => {
             <div className="font-semibold">Share this article:</div>
             <div className="flex w-1/2 max-md:w-2/3 justify-between">
               <img
-                src="/blogs/dribbble-icon.svg"
+                src="/static/images/blog-articles/dribbble-icon.svg"
                 className="mx-1"
                 alt="Share to Dribbble"
               />
               <img
-                src="/blogs/facebook-icon.svg"
+                src="/static/images/blog-articles/facebook-icon.svg"
                 className="mx-1"
                 alt="Share to Facebook"
               />
               <img
-                src="/blogs/twitter-icon.svg"
+                src="/static/images/blog-articles/twitter-icon.svg"
                 className="mx-1"
                 alt="Share to Twitter"
               />
               <img
-                src="/blogs/youtube-icon.svg"
+                src="/static/images/blog-articles/youtube-icon.svg"
                 className="mx-1"
                 alt="Share to Youtube"
               />
