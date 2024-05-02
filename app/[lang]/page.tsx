@@ -1,4 +1,7 @@
+"use client";
+
 import CustomImage from "@/components/CustomImage";
+import { useDictionary } from "@/context/dictionary-provider";
 import Link from "next/link";
 
 const specializations = [
@@ -62,51 +65,6 @@ const TextBlock: React.FC<TextBlockProps> = ({
   </div>
 );
 
-const articles = [
-  {
-    title: "Great People Application",
-    description: "Searching for talented and self-propelled developers",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/bab67fba603e4232d5d943422d0d3f7fdf941b4cb11fcf3e960c0ecf1ab92f9a?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    href: "/en/case-study/chromaway",
-  },
-  {
-    title: "iGoterra",
-    description: "Record wildlife observations with any device",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/3a1145e6cc83903ae217e8ed5193cabe81824876fc237b7d9c7437904efa5562?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    href: "/en/case-study/igoterra",
-  },
-  {
-    title: "TimeEdit",
-    description: "Great academia requires great software",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/70736ac0be4823d6ed2d2ed92435ce73633b16ae387a7c997cf6de47d7c4aa39?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    href: "/en/case-study/time-edit",
-  },
-  {
-    title: "ChromaWay",
-    description: "Making sense of the blockchain",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/dd58e135a7af5f15267040f100e51d02bb1c3210e9c9ce16fe717cb71f848fb5?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    href: "/en/case-study/chromaway",
-  },
-  {
-    title: "AppSpotr",
-    description: "Appspotr the leading low-code app-builder",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/bc6734ea199d322938ce8a3f25f15bc32078413f12a9aedfaf88ba6f8042ffac?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    href: "/en/case-study/app-sport",
-  },
-  {
-    title: "EF Academy",
-    description: "Mobile apps for boarding school students",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/45adcc8f8ef7df04c2952e0610634a82ab3b3c8cf32c68e883c3061a26ad74ee?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    href: "/en/case-study/ef-academy",
-  },
-];
-
 interface ArticleProps {
   title: string;
   description: string;
@@ -146,6 +104,53 @@ const Article: React.FC<ArticleProps> = ({
 );
 
 export default function Home() {
+  const dictionary = useDictionary();
+
+  const articles = [
+    {
+      title: "Great People Application",
+      description: dictionary.homepage.great_people_application_description,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/bab67fba603e4232d5d943422d0d3f7fdf941b4cb11fcf3e960c0ecf1ab92f9a?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      href: "/en/case-study/chromaway",
+    },
+    {
+      title: "iGoterra",
+      description: dictionary.homepage.igoterra_description,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/3a1145e6cc83903ae217e8ed5193cabe81824876fc237b7d9c7437904efa5562?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      href: "/en/case-study/igoterra",
+    },
+    {
+      title: "TimeEdit",
+      description: dictionary.homepage["timeedit_description"],
+      image:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/70736ac0be4823d6ed2d2ed92435ce73633b16ae387a7c997cf6de47d7c4aa39?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      href: "/en/case-study/time-edit",
+    },
+    {
+      title: "ChromaWay",
+      description: dictionary.homepage.chromaway_description,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/dd58e135a7af5f15267040f100e51d02bb1c3210e9c9ce16fe717cb71f848fb5?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      href: "/en/case-study/chromaway",
+    },
+    {
+      title: "AppSpotr",
+      description: dictionary.homepage.appsport_description,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/bc6734ea199d322938ce8a3f25f15bc32078413f12a9aedfaf88ba6f8042ffac?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      href: "/en/case-study/app-sport",
+    },
+    {
+      title: "EF Academy",
+      description: dictionary.homepage.efacademy_description,
+      image:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/45adcc8f8ef7df04c2952e0610634a82ab3b3c8cf32c68e883c3061a26ad74ee?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      href: "/en/case-study/ef-academy",
+    },
+  ];
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="flex flex-col w-full">
@@ -155,17 +160,16 @@ export default function Home() {
               <div className="flex flex-col items-center px-5 pb-9 w-full bg-zinc-900 max-md:max-w-full">
                 <div className="flex overflow-hidden flex-col items-center px-20 md:pt-20 pt-10 pb-4 mt-0 w-full text-lg leading-6 text-center text-white max-w-[1240px] max-md:px-5 max-md:max-w-full">
                   <h1 className="mt-2 max-md:max-w-full">
-                    Full-service tech partner
+                    {dictionary.homepage.full_service_tech_partner}
                   </h1>
                   <p className="mt-4 text-6xl font-extrabold leading-[72px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
-                    Software development for brands that want to achieve more.
+                    {dictionary.homepage.software_development_for_brands}
                   </p>
                   <p className="mt-4 max-md:max-w-full">
-                    Our team develops apps, e-com, web and custom applications
-                    using best in class software.
+                    {dictionary.homepage.our_team_develops_apps}
                   </p>
                   <button className="justify-center px-14 py-7 mt-8 font-bold text-white bg-blue-500 leading-[178%] rounded-[41px] max-md:px-5">
-                    Contact Us
+                    {dictionary.common.contact_us}
                   </button>
                   <CustomImage
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/a6dc1d6fe48bbbf6d5b9d54f3a1d4dcbe5881de4089c94f98a0e01520c6facee?apiKey=fd011477b5724ce38ff2cc24ae257b18&"
@@ -174,7 +178,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="mt-8 text-sm leading-4 text-center text-white">
-                  Specialized in
+                  {dictionary.homepage.specialized_in}
                 </div>
                 <div className="flex gap-5 justify-between mt-4 max-md:flex-wrap">
                   {specializations.map((specialization, index) => (
@@ -196,13 +200,10 @@ export default function Home() {
               <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col self-stretch my-auto text-gray-200 max-md:mt-10 max-md:max-w-full">
                   <h2 className="text-3xl font-bold max-md:max-w-full">
-                    Create frictionless workflows
+                    {dictionary.homepage.create_frictionless_workflows}
                   </h2>
                   <p className="mt-4 text-lg leading-6 max-md:max-w-full">
-                    There is no way around the fact that both employees and
-                    customers expect a user centric digital experience. We help
-                    clients that have decided to make the digital opportunity
-                    their main priorty and competitive advantage.
+                    {dictionary.homepage.there_is_no_way_around}
                   </p>
                 </div>
               </div>
@@ -219,7 +220,7 @@ export default function Home() {
         </section>
         <div className="flex flex-col items-center p-20 bg-zinc-900 max-md:px-5">
           <h1 className="mt-2 text-3xl font-bold text-center text-white max-md:max-w-full">
-            Our portfolio which we are happy to show you
+            {dictionary.homepage.our_portfolio_which_we_are_happy}
           </h1>
 
           <div className="px-px mt-20 w-full max-md:mt-10 max-md:max-w-full grid md:grid-cols-2 grid-cols-1 gap-4">
