@@ -33,7 +33,7 @@ function CaseStudyTimeEdit() {
   return (
     <Fragment>
       <CustomBanner
-        imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/889576192ee3c4450f123ae146816c9606db450cb7a5f26e63955033bc376da9?apiKey=d22700435c194df19375f24bbe85f4c5&"
+        imgSrc="/static/images/case-study/timeedit.png"
         title="Great academia requires great software"
         description="TimeEdit - the leading provider of administrative academic software solutions"
       />

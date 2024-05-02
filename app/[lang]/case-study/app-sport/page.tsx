@@ -41,7 +41,7 @@ function CaseStudyAppSport() {
   return (
     <Fragment>
       <CustomBanner
-        imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/acd6b68871a8d0271ca7f4b257a821a0d36cb059688905891fee01ca632e1d0e?apiKey=d22700435c194df19375f24bbe85f4c5&"
+        imgSrc="/static/images/case-study/appspotr.png"
         title="Great academia requires great software"
         description="TimeEdit - the leading provider of administrative academic software solutions"
       />

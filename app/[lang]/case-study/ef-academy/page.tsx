@@ -32,7 +32,7 @@ function CaseStudyEfAcademy() {
   return (
     <Fragment>
       <CustomBanner
-        imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/5c58bf6afbc3a885975491d80258964c9aaceaebbe9f32adcb2c9e26968c353c?apiKey=d22700435c194df19375f24bbe85f4c5&"
+        imgSrc="/static/images/case-study/ef-academy.png"
         title="Connecting students to great technology"
         description="EF Academy"
       />

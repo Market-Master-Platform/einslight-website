@@ -63,7 +63,7 @@ const Testimonial: React.FC = () => (
 const CaseStudyChromaway: React.FC = () => (
   <Fragment>
     <CustomBanner
-      imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/8f14615a1671fe01858b585e13b43ce6178e8de6a4f8599a62d42b966816033c?apiKey=d22700435c194df19375f24bbe85f4c5&"
+      imgSrc="/static/images/case-study/chromaway.png"
       title="Making sense of the blockchain"
       description="ChromaWay - builder of relational blockchain solutions"
     />
