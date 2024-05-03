@@ -27,7 +27,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:pr-5">
           <div className="flex-auto">Read story</div>
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/380ce8cc605368c00c9d3f980394f3afd7e28915e67039adabe3fb8ad1536a85?apiKey=d22700435c194df19375f24bbe85f4c5&"
+            src="/static/images/message/arrow-right-icon.svg"
             alt=""
             className="shrink-0 w-5 aspect-[1.05] fill-blue-500"
           />
@@ -44,24 +44,21 @@ export default function CaseStudyLayout({
 }) {
   const articles: ArticleCardProps[] = [
     {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/422b477926cf2139a4c1bad74ac4b6dd219c347301a0c946f0276566106cd170?apiKey=d22700435c194df19375f24bbe85f4c5&",
+      imageUrl: "/static/images/suggests/planning-for-change-1.png",
       date: "15th May",
       title: "Planning for change",
       description:
         "When planning changes the main thing is to consider your investment as well as what you will get in the end.",
     },
     {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/989f99e9dd2f2c1355f316b741e9cc819c1899c6649cc8d4bd73dc2739f959de?apiKey=d22700435c194df19375f24bbe85f4c5&",
+      imageUrl: "/static/images/suggests/planning-for-change-2.png",
       date: "15th May",
       title: "Planning for change",
       description:
         "When planning changes the main thing is to consider your investment as well as what you will get in the end.",
     },
     {
-      imageUrl:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/025640f4acbf4c0c1202fc74bb2ceb073fbf70f216315ece1276214692ee4c37?apiKey=d22700435c194df19375f24bbe85f4c5&",
+      imageUrl: "/static/images/suggests/color-palette.png",
       date: "12th May",
       title: "Color palette",
       description:

@@ -23,8 +23,8 @@ const useNavbar = () => {
       hasSubItems: true,
     },
     {
-      text: dictionary.navbar.customer_cases,
-      href: `/en/case-study`,
+      text: dictionary.footer.blogs,
+      href: `/en/blogs`,
     },
     {
       text: dictionary.navbar.contact,

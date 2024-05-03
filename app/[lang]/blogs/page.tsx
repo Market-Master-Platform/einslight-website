@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 interface CategoryItemProps {
   text: string;
@@ -27,27 +28,27 @@ const blogPosts = [
     title: "How to start earning",
     description:
       "The right priorities help us in the direction of our potential which is why it is important for earnings.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/be8437d6c1b85cff701b8cde99bb4c54cdbca1f9ed325d43739ffa8ba06f12b1?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    imageUrl: "/static/images/blogs/how-to-start-earning.png",
     altText: "How to start earning",
+    href: "/en/blogs/1",
   },
   {
     date: "14th May",
     title: "Color palette",
     description:
       "Each of us has a different favorite and not so much color so it is worth starting with it.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/63e225ab5d6b48270d09d3703fd86ab73775162839b81f1ed42939007cc61cfe?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    imageUrl: "/static/images/blogs/color-palette.png",
     altText: "Color palette",
+    href: "/en/blogs/1",
   },
   {
     date: "11th May",
     title: "How to start earning",
     description:
       "The right priorities help us in the direction of our potential which is why it is important for earnings.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4fcd3b0f251ee9841aa8b81a17c87a97a0c44913563a732058f145466a47b2d2?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    imageUrl: "/static/images/blogs/how-to-start-earning-2.png",
     altText: "How to start earning",
+    href: "/en/blogs/1",
   },
   // {
   //   date: "11th May",
@@ -84,6 +85,7 @@ interface BlogPostProps {
   description: string;
   imageUrl: string;
   altText: string;
+  href: string;
 }
 
 const BlogPost: React.FC<BlogPostProps> = ({
@@ -92,6 +94,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
   description,
   imageUrl,
   altText,
+  href,
 }) => {
   return (
     <article className="rounded-sm border-2 border-solid shadow-2xl bg-neutral-800 border-zinc-800 mb-10 max-md:max-w-full">
@@ -115,10 +118,12 @@ const BlogPost: React.FC<BlogPostProps> = ({
             <p className="mt-10 font-medium leading-8 text-gray-400 max-md:mt-10 max-md:max-w-full">
               {description}
             </p>
-            <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:flex-wrap max-md:pr-5 cursor-pointer">
-              <span>Read story</span>
-              <ArrowRightIcon className="h-6 w-6 text-blue-500 shrink-0" />
-            </div>
+            <Link href={href} className="relative">
+              <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:flex-wrap max-md:pr-5">
+                <span>Read story</span>
+                <ArrowRightIcon className="h-6 w-6 text-blue-500 shrink-0" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -131,60 +136,60 @@ interface PaginationProps {
   totalPages: number;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
-  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+// const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
+//   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
-  return (
-    <nav className="flex gap-2.5 self-center mt-16 text-2xl font-semibold leading-7 text-gray-400 whitespace-nowrap max-md:mt-10">
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8df532a8de2f1d562a86b2480ea727bb93422cc8828c45cfef72c24c95ae7f6?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-        alt=""
-        className="shrink-0 aspect-square w-[50px]"
-      />
-      {pages.map((page) => (
-        <div
-          key={page}
-          className={`justify-center items-center px-5 rounded-2xl h-[50px] w-[50px] ${
-            page === currentPage
-              ? "text-white bg-blue-500"
-              : "border-2 border-solid bg-neutral-800 border-zinc-800"
-          }`}
-        >
-          {page}
-        </div>
-      ))}
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d5f07230d8f0271ab3008d449c5f32e827c0515082e7e8c9d8c1df8fa218f45?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-        alt=""
-        className="shrink-0 aspect-square w-[50px]"
-      />
-    </nav>
-  );
-};
+//   return (
+//     <nav className="flex gap-2.5 self-center mt-16 text-2xl font-semibold leading-7 text-gray-400 whitespace-nowrap max-md:mt-10">
+//       <img
+//         loading="lazy"
+//         src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8df532a8de2f1d562a86b2480ea727bb93422cc8828c45cfef72c24c95ae7f6?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
+//         alt=""
+//         className="shrink-0 aspect-square w-[50px]"
+//       />
+//       {pages.map((page) => (
+//         <div
+//           key={page}
+//           className={`justify-center items-center px-5 rounded-2xl h-[50px] w-[50px] ${
+//             page === currentPage
+//               ? "text-white bg-blue-500"
+//               : "border-2 border-solid bg-neutral-800 border-zinc-800"
+//           }`}
+//         >
+//           {page}
+//         </div>
+//       ))}
+//       <img
+//         loading="lazy"
+//         src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d5f07230d8f0271ab3008d449c5f32e827c0515082e7e8c9d8c1df8fa218f45?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
+//         alt=""
+//         className="shrink-0 aspect-square w-[50px]"
+//       />
+//     </nav>
+//   );
+// };
 
 const articles = [
   {
     title: "Forging your path",
     category: "Business",
     date: "29th May",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4e0fedc8427743b40773d7d4e9bd7743920f6257aac920d7d957c1ffe70657d9?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    image: "/static/images/blogs/forging-your-path.png",
+    href: "/en/blogs/1",
   },
   {
     title: "Basics of a proper UI",
     category: "Design",
     date: "25th May",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/e2cc6ae5bfd5a91044dc33762aeeac12f4e08a52412ed200b53bc6ab4be48449?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    image: "/static/images/blogs/basics-of-a-proper-ui.png",
+    href: "/en/blogs/1",
   },
   {
     title: "Planning for change",
     category: "Finance",
     date: "15th May",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/0aad55d6a3ae7b76ce4019190a9ec58ff9fe73f9a33006c33cf038e190784a3f?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
+    image: "/static/images/blogs/planning-for-change.png",
+    href: "/en/blogs/1",
   },
 ];
 
@@ -193,23 +198,32 @@ interface ArticleProps {
   category: string;
   date: string;
   image: string;
+  href: string;
 }
 
-const Article: React.FC<ArticleProps> = ({ title, category, date, image }) => (
-  <article className="flex mb-7">
-    <div>
-      <Image src={image} alt={title} className="aspect-square w-28" />
-    </div>
-    <div className="my-auto ml-5">
-      <h3 className="text-2xl font-semibold leading-7 text-white mb-3">
-        {title}
-      </h3>
-      <div className="flex gap-5 text-lg leading-5">
-        <div className="text-blue-500">{category}</div>
-        <div className="text-gray-400">{date}</div>
+const Article: React.FC<ArticleProps> = ({
+  title,
+  category,
+  date,
+  image,
+  href,
+}) => (
+  <Link href={href} className="relative">
+    <article className="flex mb-7">
+      <div>
+        <Image src={image} alt={title} className="aspect-square w-28" />
       </div>
-    </div>
-  </article>
+      <div className="my-auto ml-5">
+        <h3 className="text-2xl font-semibold leading-7 text-white mb-3">
+          {title}
+        </h3>
+        <div className="flex gap-5 text-lg leading-5">
+          <div className="text-blue-500">{category}</div>
+          <div className="text-gray-400">{date}</div>
+        </div>
+      </div>
+    </article>
+  </Link>
 );
 
 interface ImageProps {

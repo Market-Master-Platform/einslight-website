@@ -6,38 +6,38 @@ import Link from "next/link";
 
 const specializations = [
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/1a8f681287204cc4d2b9ad6e3b8c7c7d6af907482f223e9b83ec6c5396589539?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    src: "/static/images/home/hubspot-icon.svg",
     alt: "Specialization 1",
     className: "shrink-0 w-32 max-w-full aspect-[1.82]",
   },
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/a4a2c544ca8b2fd668f309c0955537cac0f0946b081f8d7c4bb2aaf421f0ae07?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    alt: "Specialization 2",
+    src: "/static/images/home/shopify-icon.svg",
+    alt: "Shopify",
     className: "shrink-0 max-w-full aspect-[1.89] w-[132px]",
   },
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/2a93a5b295298d5930b99aa42f510f60876cc47b8efef96b0e03bdd514ea3fc4?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    alt: "Specialization 3",
+    src: "/static/images/home/stripe-icon.svg",
+    alt: "Stripe",
     className: "shrink-0 max-w-full aspect-[2.17] w-[152px]",
   },
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/2fd91fd10b5e63d7e462b811810c7468d98bc8977d543f96ac269a6a83784ea6?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    alt: "Specialization 4",
+    src: "/static/images/home/sap-icon.svg",
+    alt: "SAP ERP",
     className: "shrink-0 aspect-[1.39] w-[97px]",
   },
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/c3c4ffcfd1fcf5d25038d7890e4313eded99d62fcc9ac6a541c91eba2788bb80?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    alt: "Specialization 5",
+    src: "/static/images/home/magento-icon.svg",
+    alt: "Magento",
     className: "shrink-0 max-w-full aspect-[2.17] w-[152px]",
   },
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/45b35c8213ba4c6031460d5d0302d3e193241de5ae9e527d3951f7bcf70ca035?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    alt: "Specialization 6",
+    src: "/static/images/home/visma-icon.svg",
+    alt: "Visma",
     className: "shrink-0 max-w-full aspect-[2.17] w-[152px]",
   },
   {
-    src: "https://cdn.builder.io/api/v1/image/assets/TEMP/ae0165b8b05dec5386c76e6dadb330a765eb854f60bb05829f441db68cb561da?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
-    alt: "Specialization 7",
+    src: "/static/images/home/microsoft-icon.svg",
+    alt: "Microsoft",
     className: "shrink-0 max-w-full aspect-[2.17] w-[152px]",
   },
 ];
@@ -110,43 +110,37 @@ export default function Home() {
     {
       title: "Great People Application",
       description: dictionary.homepage.great_people_application_description,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/bab67fba603e4232d5d943422d0d3f7fdf941b4cb11fcf3e960c0ecf1ab92f9a?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      image: "/static/images/home/great-people-application.png",
       href: "/en/case-study/chromaway",
     },
     {
       title: "iGoterra",
       description: dictionary.homepage.igoterra_description,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/3a1145e6cc83903ae217e8ed5193cabe81824876fc237b7d9c7437904efa5562?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      image: "/static/images/home/igoterra.png",
       href: "/en/case-study/igoterra",
     },
     {
       title: "TimeEdit",
       description: dictionary.homepage["timeedit_description"],
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/70736ac0be4823d6ed2d2ed92435ce73633b16ae387a7c997cf6de47d7c4aa39?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      image: "/static/images/home/timeedit.png",
       href: "/en/case-study/time-edit",
     },
     {
       title: "ChromaWay",
       description: dictionary.homepage.chromaway_description,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/dd58e135a7af5f15267040f100e51d02bb1c3210e9c9ce16fe717cb71f848fb5?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      image: "/static/images/home/chromaway.png",
       href: "/en/case-study/chromaway",
     },
     {
       title: "AppSpotr",
       description: dictionary.homepage.appsport_description,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/bc6734ea199d322938ce8a3f25f15bc32078413f12a9aedfaf88ba6f8042ffac?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      image: "/static/images/home/appspotr.png",
       href: "/en/case-study/app-sport",
     },
     {
       title: "EF Academy",
       description: dictionary.homepage.efacademy_description,
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/45adcc8f8ef7df04c2952e0610634a82ab3b3c8cf32c68e883c3061a26ad74ee?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+      image: "/static/images/home/ef-academy.png",
       href: "/en/case-study/ef-academy",
     },
   ];
@@ -172,7 +166,7 @@ export default function Home() {
                     {dictionary.common.contact_us}
                   </button>
                   <CustomImage
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/a6dc1d6fe48bbbf6d5b9d54f3a1d4dcbe5881de4089c94f98a0e01520c6facee?apiKey=fd011477b5724ce38ff2cc24ae257b18&"
+                    src="/static/images/home/arrow-down-icon.svg"
                     alt="Arrow down"
                     className="mt-12 w-9 aspect-square"
                   />
@@ -210,7 +204,7 @@ export default function Home() {
               <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                 <CustomImage
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a7ffce1c698f94ba9aacf3adcc964a4a97cb76a1f5032ef1682a40963c79eb5?apiKey=fd011477b5724ce38ff2cc24ae257b18&"
+                  src="/static/images/home/workflow.svg"
                   alt="Workflow"
                   className="grow w-full aspect-[0.85] max-md:mt-5 max-md:max-w-full"
                 />

@@ -103,30 +103,25 @@ const ContactCard: React.FC<ContactCardProps> = ({
 const contactCardsData = [
   {
     id: 1,
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/aa116877621568d0035e8344274276b926e48f63cb8ad5b541ba68afd36957b2?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    imageSrc: "/static/images/message/chat-with-us.svg",
     title: "Chat with us",
     description:
       "Ask us a question by email and we will respond within a few days.",
     ctaText: "Leave a message",
-    ctaIcon:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/380ce8cc605368c00c9d3f980394f3afd7e28915e67039adabe3fb8ad1536a85?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    ctaIcon: "/static/images/message/arrow-right-icon.svg",
   },
   {
     id: 2,
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/09d38ba245e48991b160d90a1f467d9970151ce62ac75216f7b43169724517ee?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    imageSrc: "/static/images/message/drop-in.svg",
     title: "Drop in",
     description:
       "You can meet us at our office and discuss the details of your question.",
     ctaText: "Get directions",
-    ctaIcon:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/380ce8cc605368c00c9d3f980394f3afd7e28915e67039adabe3fb8ad1536a85?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    ctaIcon: "/static/images/message/arrow-right-icon.svg",
   },
   {
     id: 3,
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/f87c86172fcc9705b76250d0aec1cdca9c46be691db92d32f8a7f98abfd64191?apiKey=fd011477b5724ce38ff2cc24ae257b18&",
+    imageSrc: "/static/images/message/call-us.svg",
     title: "Call us",
     description: "Call us if your question requires an immediate response.",
     ctaText: "0707704358",
@@ -151,7 +146,7 @@ const ContactPage: React.FC = () => {
           href={process.env.MAP_LOCATION_LINK}
         >
           <img
-            src="https://i.ibb.co/hfNn5hb/test.png"
+            src="/static/images/message/map.png"
             alt="Contact us banner"
             className="mt-20 w-full aspect-[2.17] max-w-[1240px] max-md:mt-10 max-md:max-w-full"
           />

@@ -37,50 +37,42 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
 
 const serviceItems: ServiceItemProps[] = [
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/1c13787f75f4228376fbae209b7eab5f7da66f8f2ea6022f9fdfbc7559a140d0?apiKey=75125e4600594754a9020f21650a7c7d&",
+    imageSrc: "/static/images/navbar/crm.svg",
     title: "CRM",
     description: "Hubsot",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/bdcd106a479fda0f1f2038a5d55ead9de3b0f5a87c27eb9c594484095f0b922f?apiKey=75125e4600594754a9020f21650a7c7d&",
+    imageSrc: "/static/images/navbar/erp.svg",
     title: "ERP",
     description: "SAP - Visma",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/0a5f8b6bee2919a611ae867f05b5b765daea89d870a3a0d5d24a6e092407b011?apiKey=75125e4600594754a9020f21650a7c7d&",
+    imageSrc: "/static/images/navbar/mobile.svg",
     title: "Mobile",
     description: "iOS - Android - Firebase",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/695f6c88f20d2587b180e312545ec80c39b13670a575a21ec1147f1ca5b38686?apiKey=75125e4600594754a9020f21650a7c7d&",
+    imageSrc: "/static/images/navbar/payments.svg",
     title: "Payments",
     description: "Klarna - Stripe - Ayden",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/43723cdd3d8c01c275714dc67e8422a2f6087c0b910dca4d74efe869e2ee8e8d?apiKey=75125e4600594754a9020f21650a7c7d&",
+    imageSrc: "/static/images/navbar/accounting.svg",
     title: "Accounting",
     description: "Fortnox",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/e16b5954450be95644bd08a8363454b713ccb53df149a0c074707743f28ad255?apiKey=75125e4600594754a9020f21650a7c7d&",
+    imageSrc: "/static/images/navbar/productivity.svg",
     title: "Productivity",
     description: "Office 365 - Google Apps",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/de5bdd80bb476076ca38dac7ad60ee8e400fec82d20a26fc7b0d4de3aa4a9ef4?apiKey=75125e4600594754a9020f21650a7c7d&",
+    imageSrc: "/static/images/navbar/bi.svg",
     title: "Business Intellegience",
     description: "Power BI - Qlik",
   },
   {
-    imageSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/2132ddcd19b800d793439b93559719845dd8560c928ac8aab7ba03494d7431f0?apiKey=75125e4600594754a9020f21650a7c7d&",
+    imageSrc: "/static/images/navbar/ecommerce.svg",
     title: "Ecommerce",
     description: "Power BI - Qlik",
   },
@@ -114,7 +106,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                     <div className="h-full flex items-start">
                       <img
                         loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c064cc5226d689cd4c8d0e8c9a499e05a9601dd6ff3795ebabf0c8ea5c251613?apiKey=75125e4600594754a9020f21650a7c7d&"
+                        src="/static/images/navbar/system-implementation.svg"
                         alt=""
                         className="w-8 aspect-square"
                       />
@@ -133,7 +125,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                     <div className="h-full flex items-start">
                       <img
                         loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/43dfcc84b88028c00461f150150a830d8b787cf1dbc4059704c987c9cf3e8ad6?apiKey=75125e4600594754a9020f21650a7c7d&"
+                        src="/static/images/navbar/integration.svg"
                         alt=""
                         className="w-8 aspect-square"
                       />
@@ -152,7 +144,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                     <div className="h-full flex items-start">
                       <img
                         loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b88e139ebc28b432a44cfe05dd28244891f53eb695930bf81b69fa27b1b26c54?apiKey=75125e4600594754a9020f21650a7c7d&"
+                        src="/static/images/navbar/dedicated-teams-and-resources.svg"
                         alt=""
                         className="w-8 aspect-square"
                       />
@@ -171,7 +163,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                     <div className="h-full flex items-start">
                       <img
                         loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c39c7f6712d29bdfdc2feb771e00cbfaede2c2767bbbb6451b5dfced5c145c4?apiKey=75125e4600594754a9020f21650a7c7d&"
+                        src="/static/images/navbar/support-and-maintenance.svg"
                         alt=""
                         className="w-8 aspect-square"
                       />

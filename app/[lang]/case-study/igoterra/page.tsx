@@ -78,7 +78,7 @@ function CaseStudyIGoterra() {
   return (
     <Fragment>
       <CustomBanner
-        imgSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/a6de88aa1a62831c63806383e0df53a787429a1e2af2c15681b6fb208a17c131?apiKey=d22700435c194df19375f24bbe85f4c5&"
+        imgSrc="/static/images/case-study/igoterra.png"
         title="Building the global hub for wildlife observations"
         description="iGoterra"
       />

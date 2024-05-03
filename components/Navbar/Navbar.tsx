@@ -63,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({
       <div className="fixed w-full top-0 z-[51]">
         <header className="flex gap-5 justify-between px-10 max-md:px-5 py-3 text-lg font-bold leading-8 text-white bg-zinc-900">
           <CustomImage
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e3a34b04234bd2d2c63fa344c333c34c2f7276ede0524675ad1d10cdd5a9899?apiKey=d22700435c194df19375f24bbe85f4c5&"
+            src="/static/images/company-logo.svg"
             alt="Company logo"
             className="shrink max-w-full aspect-[4] w-[195px] max-sm:w-[45%]"
           />
