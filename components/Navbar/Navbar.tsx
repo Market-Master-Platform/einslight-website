@@ -6,6 +6,7 @@ import useNavbar from "./useNavbar";
 import ServiceOffering from "./ServiceOffering";
 import NavbarMenu from "./NavbarMenu";
 import NavItem from "./NavItem";
+import Link from "next/link";
 
 interface HamburgerProps {
   isActive: boolean;
@@ -62,11 +63,13 @@ const Navbar: React.FC<NavbarProps> = ({
     <React.Fragment>
       <div className="fixed w-full top-0 z-[51]">
         <header className="flex gap-5 justify-between px-10 max-md:px-5 py-3 text-lg font-semibold leading-8 text-white bg-zinc-900">
-          <CustomImage
-            src="/static/images/company-logo.svg"
-            alt="Company logo"
-            className="shrink max-w-full aspect-[4] w-[195px] max-sm:w-[45%]"
-          />
+          <Link href="/" className="max-md:w-full pt-1">
+            <CustomImage
+              src="/static/images/company-logo.svg"
+              alt="Company logo"
+              className="shrink max-w-full aspect-[4] w-[195px] max-sm:w-[45%]"
+            />
+          </Link>
 
           {/* Navigation for mobile */}
           <div className="md:hidden flex justify-center items-center">

@@ -28,7 +28,7 @@ const useNavbar = () => {
     },
     {
       text: dictionary.navbar.contact,
-      href: `/en/contact-us`,
+      href: `/en/message`,
     },
   ];
 
