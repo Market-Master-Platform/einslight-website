@@ -49,8 +49,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
     }
 
     await transporter.sendMail({
-      to: 'info@someemail.com.au',
-      from: 'info@someemail.com.au',
+      to: 'vinhviral@gmail.com',
+      from: 'vinhviral1@gmail.com',
       replyTo: email,
       subject: `Hello from ${name}`,
       text: message,
