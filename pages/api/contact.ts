@@ -61,7 +61,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
       to: 'vinhviral@gmail.com',
       from: 'einslight.co@gmail.com',
       replyTo: email,
-      subject: `${name} đã gửi yêu cầu`,
+      subject: `
+      ${name} đã gửi yêu cầu
+      Email: ${email}
+      Số điện thoại: ${phone}
+      Tên công ty: ${company}
+      Lời nhắn: ${message}`,
       text: message,
     });
 
