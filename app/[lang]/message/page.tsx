@@ -2,6 +2,9 @@
 
 import * as React from "react";
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 interface ContactCheckIconProps {
   icon: string;
@@ -131,12 +134,12 @@ const contactCardsData = [
 
 const sendEmail = async (
   name: string,
-  message: string,
-  phone: string,
   email: string,
+  phone: string,
   company: string,
+  message: string,
 ) => {
-  return axios({
+  const res = axios({
     method: 'post',
     url: '/api/contact',
     data: {
@@ -146,49 +149,101 @@ const sendEmail = async (
       company: company,
       message: message,
     },
-  });
+  }).catch(function (error) {
+    if (error.response) {
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+      toast.error("Oops something went wrong! That's on us.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false
+      })
+    } else if (error.request) {
+      console.log(error.request);
+      toast.error("Oops something went wrong! That's on us.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false
+      })
+    } else {
+      console.log('Error', error.message);
+      toast.error("Oops something went wrong! That's on us.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false
+      })
+    }
+    console.log(error.config);
+  }).then();
+  return res;
 };
 
 const useContactForm = () => {
+  const [ischeck, setIsCheck] = React.useState(false)
+  let checkbox: boolean = ischeck;
+  const [isdisabled, setIsDisabled] = React.useState(true)
+  const [isempty, setIsEmpty] = React.useState(true);
+  let empty: boolean = isempty;
   const [values, setValues] = React.useState({
-    email: '',
     name: '',
+    email: '',
     phone: '',
     company: '',
     message: '',
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = async (e: any) => {
+    if (e.target.id == 'terms') {
+      checkbox = e.target.checked;
+      setIsCheck(checkbox)
+    } 
     setValues(prevState => {
       return {
         ...prevState,
         [e.target.id]: e.target.value,
       };
     });
+    if(e.target.value.trim().length < 1 && e.target.id !== 'terms') { 
+      empty = true;
+      setIsEmpty(true) 
+    } else if(e.target.value.trim().length > 1 && e.target.id !== 'terms'){
+      empty = false;
+      setIsEmpty(false)
+    }
+
+    if (checkbox === false) {
+      setIsDisabled(true) 
+    } else if (checkbox === true && empty === true) {
+      setIsDisabled(true)
+    } else {
+      setIsDisabled(false)
+    }
+    
   };
 
-  return {values, handleChange};
+  return {values, handleChange, isdisabled };
 };
 
 const ContactPage: React.FC = () => {
-  const {values, handleChange} = useContactForm();
-  const [responseMessage, setResponseMessage] = React.useState(
-      {isSuccessful: false, message: ''});
+  const {values, handleChange, isdisabled} = useContactForm();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const req = await sendEmail(values.email, values.name, values.message, values.phone, values.company);
-      if (req.status === 250) {
-        setResponseMessage(
-            {isSuccessful: true, message: 'Thank you for your message.'});
-      }
+      const req = await sendEmail(values.name, values.email, values.phone, values.company, values.message);
+      if (req) toast.success("We got your info and will contact as soon as possible.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false
+      })
     } catch (e) {
       console.log(e);
-      setResponseMessage({
-        isSuccessful: false,
-        message: 'Oops something went wrong. Please try again.',
-      });
+      toast.error("Oops something went wrong! That's on us.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false
+      })
     }
   };
   return (
@@ -305,6 +360,7 @@ const ContactPage: React.FC = () => {
                   type="checkbox"
                   id="terms"
                   className="shrink-0 aspect-[1.03] fill-blue-500 w-[34px]"
+                  onChange={handleChange}
                 />
                 <label htmlFor="terms" className="flex-auto my-auto">
                   I agree to the Terms & Conditions
@@ -312,11 +368,13 @@ const ContactPage: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="justify-center items-center px-16 py-7 font-semibold text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5"
+                className="justify-center items-center px-16 py-7 font-semibold text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 disabled:bg-gray-300"
+                disabled={isdisabled}
               >
                 Submit
               </button>
             </div>
+            <ToastContainer/>
           </form>
         </div>
       </section>

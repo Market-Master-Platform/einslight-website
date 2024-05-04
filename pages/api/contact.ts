@@ -59,11 +59,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
 
     await transporter.sendMail({
       to: 'vinhviral@gmail.com',
-      from: 'vinhviral1@gmail.com',
+      from: 'einslight.co@gmail.com',
       replyTo: email,
-      subject: `Hello from ${name}`,
+      subject: `${name} đã gửi yêu cầu`,
       text: message,
-      html: `<p>${message.replace(/(?:\r\n|\r|\n)/g, '<br>')}</p>`,
     });
 
     res.status(200).send({ status: 'done', message: 'message has been sent' });
