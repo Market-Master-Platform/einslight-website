@@ -1,5 +1,5 @@
-import CustomBanner from "@/components/CaseStudy/CustomBanner";
 import { Fragment } from "react";
+import CustomBanner from "@/components/CaseStudy/CustomBanner";
 
 interface TechStackItemProps {
   label: string;

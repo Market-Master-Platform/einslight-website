@@ -1,5 +1,6 @@
 import { useDictionary } from "@/context/dictionary-provider";
-import { useState } from "react";
+import { NavbarContext } from "@/context/navbar-provider";
+import { useContext } from "react";
 
 export interface NavItemValues {
   text: string;
@@ -9,11 +10,7 @@ export interface NavItemValues {
 }
 
 const useNavbar = () => {
-  const [isOpenNavbarMenu, setOpenNavbarMenu] = useState<boolean>(false);
-
-  const handleToggleNavbarMenu = () => {
-    setOpenNavbarMenu((currentState) => !currentState);
-  };
+  const context = useContext(NavbarContext);
 
   const dictionary = useDictionary();
 
@@ -24,19 +21,17 @@ const useNavbar = () => {
     },
     {
       text: dictionary.footer.blogs,
-      href: `/en/blogs`,
+      href: `/blogs`,
     },
     {
       text: dictionary.navbar.contact,
-      href: `/en/contact-us`,
+      href: `/message`,
     },
   ];
 
   return {
     navItems,
-    isOpenNavbarMenu,
-    handleToggleNavbarMenu,
-    setOpenNavbarMenu,
+    context,
   };
 };
 

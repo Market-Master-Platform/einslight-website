@@ -11,7 +11,16 @@
         "integration": "Tích hợp",
         "dedicated_teams_and_resources": "Đội ngũ và tài nguyên",
         "support_and_maintenance": "Hỗ trợ & Bảo trì",
-        "system": "Hệ thống"
+        "system": "Hệ thống",
+        "system_implementation_description": "Chuyển đổi hệ thống hỗ trợ để hoạt động một cách hiệu quả.",
+        "integration_description": "Xây dựng hệ thống tích hợp mạnh mẽ cho một môi trường IT hoàn chỉnh.",
+        "dedicated_teams_and_resources_description": "Điền vào những khoảng trống trong nhóm với các chuyên gia có trình độ cao.",
+        "support_and_maintenance_description": "Dịch vụ hỗ trợ và bảo trì phần mềm cụ thể.",
+        "payments": "Thanh toán",
+        "accounting": "Kế toán",
+        "ecommerce": "Thương mại điện tử",
+        "productivity": "Năng suất",
+        "business_intellegience": "Thông tin kinh doanh"
     },
     "footer": {
         "cases": "Các trường hợp",

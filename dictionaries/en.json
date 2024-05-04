@@ -11,7 +11,16 @@
         "integration": "Integration",
         "dedicated_teams_and_resources": "Dedicated teams & resources",
         "support_and_maintenance": "Support & Maintenance",
-        "system": "System"
+        "system": "System",
+        "system_implementation_description": "Adapt system support for efficient operations",
+        "integration_description": "Powerful integration for a complete IT environment",
+        "dedicated_teams_and_resources_description": "Fill gaps in teams with highly qualified professionals",
+        "support_and_maintenance_description": "Software maintenance and support specific services",
+        "payments": "Payments",
+        "accounting": "Accounting",
+        "ecommerce": "Ecommerce",
+        "productivity": "Productivity",
+        "business_intellegience": "Business Intellegence"
     },
     "footer": {
         "cases": "Cases",

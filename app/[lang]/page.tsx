@@ -1,8 +1,8 @@
 "use client";
 
-import CustomImage from "@/components/CustomImage";
+import CustomImage from "@/components/Common/CustomImage";
+import CustomLink from "@/components/Common/CustomLink";
 import { useDictionary } from "@/context/dictionary-provider";
-import Link from "next/link";
 
 const specializations = [
   {
@@ -80,7 +80,7 @@ const Article: React.FC<ArticleProps> = ({
 }) => (
   <article className="flex gap-5 max-md:flex-col max-md:gap-0 ">
     <div className="flex flex-col w-full max-md:ml-0 max-md:w-full ">
-      <Link href={href} className="relative">
+      <CustomLink href={href} className="relative">
         <CustomImage
           src={image}
           alt={title}
@@ -91,7 +91,7 @@ const Article: React.FC<ArticleProps> = ({
             Read case {">"}
           </span>
         </div>
-      </Link>
+      </CustomLink>
       <div className="flex gap-5 w-full font-semibold max-w-[1242px] max-md:flex-wrap max-md:max-w-full h-full">
         <TextBlock
           title={title}

@@ -1,28 +1,28 @@
 "use client";
 
-import { FC, Fragment, ReactNode, useState } from "react";
+import { FC, Fragment, ReactNode, useContext } from "react";
 import Navbar from "./Navbar";
 import Footer from "../Footer/Footer";
+import { Locale } from "@/i18n.config";
+import { NavbarContext } from "@/context/navbar-provider";
 
 interface NavbarLayoutProps {
   children: ReactNode;
+  params: { lang: Locale };
 }
 
-const NavbarLayout: FC<NavbarLayoutProps> = ({ children }) => {
-  const [isActiveNavbar, setIsActiveNavbar] = useState<boolean>(false);
-
-  const handleToggleActiveNavbar = () => {
-    setIsActiveNavbar((current) => !current);
-  };
+const NavbarLayout: FC<NavbarLayoutProps> = ({ children, params }) => {
+  const context = useContext(NavbarContext);
 
   return (
     <>
       <Navbar
-        handleToggleActiveNavbar={handleToggleActiveNavbar}
-        isActiveNavbar={isActiveNavbar}
+        handleToggleActiveNavbar={() => context?.handleToggleActiveNavbar()}
+        isActiveNavbar={context?.isActiveNavbar || false}
+        lang={params.lang}
       />
 
-      {!isActiveNavbar && (
+      {!context?.isActiveNavbar && (
         <Fragment>
           {children}
 

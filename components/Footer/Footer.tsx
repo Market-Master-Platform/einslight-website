@@ -1,15 +1,20 @@
 "use client";
 
 import * as React from "react";
-import CustomImage from "../CustomImage";
+import CustomImage from "../Common/CustomImage";
 import { useDictionary } from "@/context/dictionary-provider";
-import { usePathname } from 'next/navigation'
+import CustomLink from "../Common/CustomLink";
 interface LinkItemProps {
   children: React.ReactNode;
+  href: string;
 }
 
-const LinkItem: React.FC<LinkItemProps> = ({ children }) => {
-  return <div className="mt-6 md:mt-7">{children}</div>;
+const LinkItem: React.FC<LinkItemProps> = ({ children, href }) => {
+  return (
+    <CustomLink href={href} className="mt-6 md:mt-7">
+      {children}
+    </CustomLink>
+  );
 };
 
 interface FooterLinkSectionProps {
@@ -34,31 +39,31 @@ function Footer() {
   const dictionary = useDictionary();
 
   const companyLinks = [
-    { label: dictionary.common.our_offering },
-    { label: dictionary.footer.cases },
-    { label: dictionary.common.contact_us },
+    { label: dictionary.common.our_offering, href: "/" },
+    { label: dictionary.footer.cases, href: "/" },
+    { label: dictionary.common.contact_us, href: "/message" },
   ];
 
   const resourceLinks = [
-    { label: dictionary.footer.blogs },
-    { label: dictionary.footer.privacy_and_policy },
-    { label: dictionary.footer.terms_condition },
-    { label: dictionary.footer.cookies_settings },
+    { label: dictionary.footer.blogs, href: "/blogs" },
+    { label: dictionary.footer.privacy_and_policy, href: "/" },
+    { label: dictionary.footer.terms_condition, href: "/" },
+    { label: dictionary.footer.cookies_settings, href: "/" },
   ];
 
   return (
     <div className="flex flex-col items-center p-20 bg-zinc-900 max-md:px-5">
-      {pathname?.includes("message") ? null : 
-        <div className="flex gap-5 mt-6 w-full font-semibold max-w-[1247px] max-md:flex-wrap max-md:max-w-full">
-          <div className="flex-auto my-auto text-3xl leading-10 text-white">
-            {dictionary.footer.how_can_we_help}
-          </div>
-          <div className="justify-center items-center px-16 py-6 text-xl leading-6 text-center text-white bg-blue-500 max-md:px-5">
-            {dictionary.footer.send_message}
-          </div>
+      <div className="flex gap-5 mt-6 w-full font-semibold max-w-[1247px] max-md:flex-wrap max-md:max-w-full">
+        <div className="flex-auto my-auto text-3xl leading-10 text-white">
+          {dictionary.footer.how_can_we_help}
         </div>
-    }
-      
+        <CustomLink
+          href="/message"
+          className="justify-center items-center px-16 py-6 text-xl leading-6 text-center text-white bg-blue-500 max-md:px-5"
+        >
+          {dictionary.footer.send_message}
+        </CustomLink>
+      </div>
       <div className="shrink-0 mt-20 max-w-full h-0.5 bg-neutral-800 w-[1247px] max-md:mt-10" />
       <div className="flex gap-5 max-md:gap-20 justify-between mt-32 w-full font-medium text-gray-400 max-w-[1247px] max-md:flex-col max-md:mt-10 max-md:max-w-full">
         <div className="flex flex-col mt-1.5 max-md:max-w-full">
@@ -81,12 +86,16 @@ function Footer() {
         <div className="flex max-md max-md:flex-col gap-5 max-md:gap-10 justify-between self-start text-xl leading-6">
           <FooterLinkSection title={dictionary.footer.company}>
             {companyLinks.map((link, index) => (
-              <LinkItem key={index}>{link.label}</LinkItem>
+              <LinkItem href={link?.href} key={index}>
+                {link.label}
+              </LinkItem>
             ))}
           </FooterLinkSection>
           <FooterLinkSection title={dictionary.footer.resources}>
             {resourceLinks.map((link, index) => (
-              <LinkItem key={index}>{link.label}</LinkItem>
+              <LinkItem href={link?.href} key={index}>
+                {link.label}
+              </LinkItem>
             ))}
           </FooterLinkSection>
         </div>

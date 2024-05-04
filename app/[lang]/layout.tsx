@@ -1,5 +1,6 @@
 import NavbarLayout from "@/components/Navbar/NavbarLayout";
 import DictionaryProvider from "@/context/dictionary-provider";
+import NavbarProvider from "@/context/navbar-provider";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 
@@ -14,7 +15,9 @@ export default async function MainLayout({
 
   return (
     <DictionaryProvider dictionary={dictionary}>
-      <NavbarLayout>{children}</NavbarLayout>
+      <NavbarProvider>
+        <NavbarLayout params={params}>{children}</NavbarLayout>
+      </NavbarProvider>
     </DictionaryProvider>
   );
 }
