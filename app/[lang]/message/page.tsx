@@ -1,14 +1,13 @@
+"use client";
+
 import * as React from "react";
+import axios from 'axios';
 
 interface ContactCheckIconProps {
   icon: string;
   id: number;
   text: string;
 }
-
-// interface ContactButtonIdProps {
-//   id: string;
-// }
 
 const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({
   icon,
@@ -129,7 +128,69 @@ const contactCardsData = [
   },
 ];
 
+
+const sendEmail = async (
+  name: string,
+  message: string,
+  phone: string,
+  email: string,
+  company: string,
+) => {
+  return axios({
+    method: 'post',
+    url: '/api/contact',
+    data: {
+      email: email,
+      name: name,
+      phone: phone,
+      company: company,
+      message: message,
+    },
+  });
+};
+
+const useContactForm = () => {
+  const [values, setValues] = React.useState({
+    email: '',
+    name: '',
+    phone: '',
+    company: '',
+    message: '',
+  });
+
+  const handleChange = (e: any) => {
+    setValues(prevState => {
+      return {
+        ...prevState,
+        [e.target.id]: e.target.value,
+      };
+    });
+  };
+
+  return {values, handleChange};
+};
+
 const ContactPage: React.FC = () => {
+  const {values, handleChange} = useContactForm();
+  const [responseMessage, setResponseMessage] = React.useState(
+      {isSuccessful: false, message: ''});
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    try {
+      const req = await sendEmail(values.email, values.name, values.message, values.phone, values.company);
+      if (req.status === 250) {
+        setResponseMessage(
+            {isSuccessful: true, message: 'Thank you for your message.'});
+      }
+    } catch (e) {
+      console.log(e);
+      setResponseMessage({
+        isSuccessful: false,
+        message: 'Oops something went wrong. Please try again.',
+      });
+    }
+  };
   return (
     <div className="flex flex-col">
       <header className="flex flex-col items-center p-20 w-full bg-zinc-900 max-md:px-5 max-md:max-w-full">
@@ -178,7 +239,7 @@ const ContactPage: React.FC = () => {
             Contact us if you have any questions about our company or products.
             We will try to provide an answer within a few days.
           </p>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="justify-center items-start p-6 mt-14 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:mt-10 max-md:max-w-full">
               <label htmlFor="name" className="sr-only">
                 Your Name
@@ -188,6 +249,7 @@ const ContactPage: React.FC = () => {
                 id="name"
                 placeholder="Your Name"
                 className="w-full bg-transparent focus:outline-none"
+                onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-7 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:max-w-full">
@@ -199,6 +261,7 @@ const ContactPage: React.FC = () => {
                 id="email"
                 placeholder="Email Address"
                 className="w-full bg-transparent focus:outline-none"
+                onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-7 mt-11 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:mt-10 max-md:max-w-full">
@@ -210,6 +273,7 @@ const ContactPage: React.FC = () => {
                 id="phone"
                 placeholder="Contact Number"
                 className="w-full bg-transparent focus:outline-none"
+                onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-6 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:max-w-full">
@@ -221,6 +285,7 @@ const ContactPage: React.FC = () => {
                 id="company"
                 placeholder="Company Name"
                 className="w-full bg-transparent focus:outline-none"
+                onChange={handleChange}
               />
             </div>
             <div className="items-start px-6 pt-7 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:pb-10 max-md:max-w-full">
@@ -231,6 +296,7 @@ const ContactPage: React.FC = () => {
                 id="message"
                 placeholder="How can we help?"
                 className="w-full bg-transparent focus:outline-none pb-48"
+                onChange={handleChange}
               ></textarea>
             </div>
             <div className="flex gap-5 justify-between mt-10 w-full max-md:flex-wrap max-md:max-w-full">

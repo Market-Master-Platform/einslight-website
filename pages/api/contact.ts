@@ -4,8 +4,9 @@ import nodemailer from 'nodemailer';
 type Fields = {
   name: string;
   message: string;
-  mobile: string;
+  phone: string;
   email: string;
+  company: string;
 };
 
 type Response = {
@@ -29,7 +30,7 @@ const transporter = nodemailer.createTransport({
 //};
 
 const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
-  const { name, email, message } = req.body as Fields;
+  const { name, email, message, phone, company } = req.body as Fields;
 
   if (req.method !== 'POST') {
     return res.status(404).send({ status: 'fail', error: 'Begone.' });
@@ -46,6 +47,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
 
     if (!message || !message.trim()) {
       throw new Error('Please provide a valid email message.');
+    }
+
+    if (!phone || !phone.trim()) {
+      throw new Error('Please provide a valid phone.');
+    }
+
+    if (!company || !company.trim()) {
+      throw new Error('Please provide a valid company name.');
     }
 
     await transporter.sendMail({
