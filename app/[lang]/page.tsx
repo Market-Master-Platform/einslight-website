@@ -173,9 +173,11 @@ export default function Home() {
                   <p className="mt-4 max-md:max-w-full">
                     {dictionary.homepage.our_team_develops_apps}
                   </p>
-                  <button className="justify-center px-14 py-7 mt-8 font-bold text-white bg-blue-500 leading-[178%] rounded-[41px] max-md:px-5">
-                    {dictionary.common.contact_us}
-                  </button>
+                  <Link href="/en/message">
+                    <button className="justify-center px-14 py-7 mt-8 font-bold text-white bg-blue-500 leading-[178%] rounded-[41px] max-md:px-5">
+                      {dictionary.common.contact_us}
+                    </button>
+                  </Link>
                   <img
                     src="/static/images/home/arrow-down-icon.svg"
                     alt="Arrow down"
