@@ -1,49 +1,57 @@
 {
-    "common": {
-        "our_offering": "Dịch vụ của chúng tôi",
-        "contact_us": "Liên hệ chúng tôi"    
-    },
-    "navbar": {
-        "customer_cases": "Dự án của khách hàng",
-        "contact": "Liên hệ",
-        "service_offering": "Dịch vụ cung cấp",
-        "system_implementation": "Triển khai hệ thống",
-        "integration": "Tích hợp",
-        "dedicated_teams_and_resources": "Đội ngũ và tài nguyên",
-        "support_and_maintenance": "Hỗ trợ & Bảo trì",
-        "system": "Hệ thống"
-    },
-    "footer": {
-        "cases": "Các trường hợp",
-        "blogs": "Blog",
-        "privacy_and_policy": "Quyền riêng tư và Chính sách",
-        "terms_condition": "Điều kiện và Điều khoản",
-        "cookies_settings": "Thiết lập Cookie",
-        "how_can_we_help": "Xin chào, chúng tôi có thể giúp gì cho bạn?",
-        "send_message": "Gửi tin nhắn",
-        "company": "Về công ty",
-        "resources": "Tài nguyên"
-    },
-    "homepage": {
-        "great_people_application_description": "Đang tìm kiếm các nhà phát triển tài năng và tự động tiến bộ.",
-        "igoterra_description": "Ghi lại các quan sát về động vật hoang dã bằng bất kỳ thiết bị nào.",
-        "timeedit_description": "Một hệ thống giáo dục tốt cần phải có phần mềm tốt.",
-        "chromaway_description": "Hiểu rõ về công nghệ blockchain",
-        "appsport_description": "Appspotr, công cụ xây dựng ứng dụng ít mã lệnh hàng đầu",
-        "efacademy_description": "Ứng dụng di động cho học sinh trường nội trú",
-        "read_case": "Read case",
-        "full_service_tech_partner": "Đối tác công nghệ cung cấp dịch vụ toàn diện",
-        "software_development_for_brands": "Phát triển phần mềm cho các thương hiệu muốn đạt được kết quả cao hơn",
-        "our_team_develops_apps": "Đội của chúng tôi phát triển các ứng dụng, thương mại điện tử, web, và các ứng dụng tùy chỉnh với phần mềm hàng đầu trong ngành",
-        "specialized_in": "Chuyên môn trong",
-        "create_frictionless_workflows": "Xây dựng quy trình làm việc không gây cản trở",
-        "there_is_no_way_around": "Không thể phủ nhận rằng cả nhân viên và khách hàng đều mong đợi một trải nghiệm số hóa tập trung vào người dùng. Chúng tôi giúp đỡ các khách hàng đã quyết định biến cơ hội số hóa thành ưu tiên chính và lợi thế cạnh tranh của họ.",
-        "our_portfolio_which_we_are_happy": "Danh mục sản phẩm của chúng tôi, mà chúng tôi rất vui lòng giới thiệu cho bạn."
-    },
-    "blogs": {
-
-    },
-    "case_study": {
-
-    }
+  "common": {
+    "our_offering": "Dịch vụ của chúng tôi",
+    "contact_us": "Liên hệ chúng tôi"
+  },
+  "navbar": {
+    "customer_cases": "Dự án của khách hàng",
+    "contact": "Liên hệ",
+    "service_offering": "Dịch vụ cung cấp",
+    "system_implementation": "Triển khai hệ thống",
+    "integration": "Tích hợp",
+    "dedicated_teams_and_resources": "Đội ngũ và tài nguyên",
+    "support_and_maintenance": "Hỗ trợ & Bảo trì",
+    "system_implementation_description": "Hỗ trợ hệ thống thích ứng để vận hành hiệu quả",
+    "integration_description": "Tích hợp mạnh mẽ cho một môi trường CNTT hoàn chỉnh",
+    "dedicated_teams_and_resources_description": "Xoá bỏ khoảng cách trong đội với các chuyên gia có trình độ cao",
+    "support_and_maintenance_description": "Bảo trì phần mềm và hỗ trợ các dịch vụ cụ thể",
+    "system": "Hệ thống",
+    "crm": "Quản lý quan hệ khách hàng",
+    "erp": "Hoạch định tài nguyên doanh nghiệp",
+    "mobile": "Di động",
+    "payments": "Thanh toán",
+    "accounting": "Kế toán",
+    "productivity": "Năng suất",
+    "bi": "Kinh doanh thông minh",
+    "ecommerce": "Thương mại điện tử"
+  },
+  "footer": {
+    "cases": "Các trường hợp",
+    "blogs": "Blog",
+    "privacy_and_policy": "Quyền riêng tư và Chính sách",
+    "terms_condition": "Điều kiện và Điều khoản",
+    "cookies_settings": "Thiết lập Cookie",
+    "how_can_we_help": "Xin chào, chúng tôi có thể giúp gì cho bạn?",
+    "send_message": "Gửi tin nhắn",
+    "company": "Về công ty",
+    "resources": "Tài nguyên"
+  },
+  "homepage": {
+    "great_people_application_description": "Đang tìm kiếm các nhà phát triển tài năng và tự động tiến bộ.",
+    "igoterra_description": "Ghi lại các quan sát về động vật hoang dã bằng bất kỳ thiết bị nào.",
+    "timeedit_description": "Một hệ thống giáo dục tốt cần phải có phần mềm tốt.",
+    "chromaway_description": "Hiểu rõ về công nghệ blockchain",
+    "appsport_description": "Appspotr, công cụ xây dựng ứng dụng ít mã lệnh hàng đầu",
+    "efacademy_description": "Ứng dụng di động cho học sinh trường nội trú",
+    "read_case": "Read case",
+    "full_service_tech_partner": "Đối tác công nghệ cung cấp dịch vụ toàn diện",
+    "software_development_for_brands": "Phát triển phần mềm cho các thương hiệu muốn đạt được kết quả cao hơn",
+    "our_team_develops_apps": "Đội của chúng tôi phát triển các ứng dụng, thương mại điện tử, web, và các ứng dụng tùy chỉnh với phần mềm hàng đầu trong ngành",
+    "specialized_in": "Chuyên môn trong",
+    "create_frictionless_workflows": "Xây dựng quy trình làm việc không gây cản trở",
+    "there_is_no_way_around": "Không thể phủ nhận rằng cả nhân viên và khách hàng đều mong đợi một trải nghiệm số hóa tập trung vào người dùng. Chúng tôi giúp đỡ các khách hàng đã quyết định biến cơ hội số hóa thành ưu tiên chính và lợi thế cạnh tranh của họ.",
+    "our_portfolio_which_we_are_happy": "Danh mục sản phẩm của chúng tôi, mà chúng tôi rất vui lòng giới thiệu cho bạn."
+  },
+  "blogs": {},
+  "case_study": {}
 }

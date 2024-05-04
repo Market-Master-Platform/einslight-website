@@ -28,60 +28,60 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
       <div className="max-md:text-lg text-2xl font-bold leading-7 text-neutral-50">
         {title}
       </div>
-      <div className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500">
+      <div className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500">
         {description}
       </div>
     </div>
   </div>
 );
 
-const serviceItems: ServiceItemProps[] = [
-  {
-    imageSrc: "/static/images/navbar/crm.svg",
-    title: "CRM",
-    description: "Hubsot",
-  },
-  {
-    imageSrc: "/static/images/navbar/erp.svg",
-    title: "ERP",
-    description: "SAP - Visma",
-  },
-  {
-    imageSrc: "/static/images/navbar/mobile.svg",
-    title: "Mobile",
-    description: "iOS - Android - Firebase",
-  },
-  {
-    imageSrc: "/static/images/navbar/payments.svg",
-    title: "Payments",
-    description: "Klarna - Stripe - Ayden",
-  },
-  {
-    imageSrc: "/static/images/navbar/accounting.svg",
-    title: "Accounting",
-    description: "Fortnox",
-  },
-  {
-    imageSrc: "/static/images/navbar/productivity.svg",
-    title: "Productivity",
-    description: "Office 365 - Google Apps",
-  },
-  {
-    imageSrc: "/static/images/navbar/bi.svg",
-    title: "Business Intellegience",
-    description: "Power BI - Qlik",
-  },
-  {
-    imageSrc: "/static/images/navbar/ecommerce.svg",
-    title: "Ecommerce",
-    description: "Power BI - Qlik",
-  },
-];
-
 const ServiceOffering: FC<ServiceOfferingProps> = ({
   handleToggleServiceOffering,
 }) => {
   const dictionary = useDictionary();
+
+  const serviceItems: ServiceItemProps[] = [
+    {
+      imageSrc: "/static/images/navbar/crm.svg",
+      title: dictionary.navbar.crm,
+      description: "Hubsot",
+    },
+    {
+      imageSrc: "/static/images/navbar/erp.svg",
+      title: dictionary.navbar.erp,
+      description: "SAP - Visma",
+    },
+    {
+      imageSrc: "/static/images/navbar/mobile.svg",
+      title: dictionary.navbar.mobile,
+      description: "iOS - Android - Firebase",
+    },
+    {
+      imageSrc: "/static/images/navbar/payments.svg",
+      title: dictionary.navbar.payments,
+      description: "Klarna - Stripe - Ayden",
+    },
+    {
+      imageSrc: "/static/images/navbar/accounting.svg",
+      title: dictionary.navbar.accounting,
+      description: "Fortnox",
+    },
+    {
+      imageSrc: "/static/images/navbar/productivity.svg",
+      title: dictionary.navbar.productivity,
+      description: "Office 365 - Google Apps",
+    },
+    {
+      imageSrc: "/static/images/navbar/bi.svg",
+      title: dictionary.navbar.bi,
+      description: "Power BI - Qlik",
+    },
+    {
+      imageSrc: "/static/images/navbar/ecommerce.svg",
+      title: dictionary.navbar.ecommerce,
+      description: "Power BI - Qlik",
+    },
+  ];
 
   return (
     <div className="flex max-md:flex-col md:flex-wrap justify-center bg-neutral-800 h-full md:pt-20">
@@ -115,8 +115,8 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       <h2 className="max-md:max-w-full">
                         {dictionary.navbar.system_implementation}
                       </h2>
-                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                        {dictionary.navbar.system_implementation_description}
                       </p>
                     </div>
                   </div>
@@ -134,8 +134,8 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       <h2 className="max-md:max-w-full">
                         {dictionary.navbar.integration}
                       </h2>
-                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                        {dictionary.navbar.integration_description}
                       </p>
                     </div>
                   </div>
@@ -153,8 +153,11 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       <h2 className="max-md:max-w-full">
                         {dictionary.navbar.dedicated_teams_and_resources}
                       </h2>
-                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                        {
+                          dictionary.navbar
+                            .dedicated_teams_and_resources_description
+                        }
                       </p>
                     </div>
                   </div>
@@ -172,8 +175,8 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       <h2 className="max-md:max-w-full">
                         {dictionary.navbar.support_and_maintenance}
                       </h2>
-                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                        {dictionary.navbar.support_and_maintenance_description}
                       </p>
                     </div>
                   </div>
