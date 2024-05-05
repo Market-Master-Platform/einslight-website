@@ -52,6 +52,15 @@ const Navbar: React.FC<NavbarProps> = ({
     context?.setOpenNavbarMenu(false);
   };
 
+  // initialize default language in local storage
+  React.useEffect(() => {
+    const _currentLang = localStorage.getItem("lang");
+
+    if (!_currentLang) {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
+
   return (
     <React.Fragment>
       <div className="fixed w-full top-0 z-[51]">
