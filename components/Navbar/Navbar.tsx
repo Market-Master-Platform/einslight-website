@@ -1,11 +1,10 @@
 import * as React from "react";
-import CustomImage from "../CustomImage";
 import useNavbar, { NAVITEMS_TYPES } from "./useNavbar";
 import ServiceOffering from "./ServiceOffering";
 import NavbarMenu from "./NavbarMenu";
 import NavItem from "./NavItem";
-import { Locale } from "@/i18n.config";
 import CustomLink from "../Common/CustomLink";
+import CustomImage from "../Common/CustomImage";
 
 interface HamburgerProps {
   isActive: boolean;
@@ -15,7 +14,6 @@ interface HamburgerProps {
 interface NavbarProps {
   handleToggleActiveNavbar: () => void;
   isActiveNavbar: boolean;
-  lang: Locale;
 }
 
 const CustomHamburgerIcon: React.FC<HamburgerProps> = ({
@@ -46,7 +44,6 @@ const CustomHamburgerIcon: React.FC<HamburgerProps> = ({
 const Navbar: React.FC<NavbarProps> = ({
   handleToggleActiveNavbar,
   isActiveNavbar,
-  lang,
 }) => {
   const { navItems, context } = useNavbar();
 
@@ -54,15 +51,6 @@ const Navbar: React.FC<NavbarProps> = ({
     handleToggleActiveNavbar();
     context?.setOpenNavbarMenu(false);
   };
-
-  // initialize default language in local storage
-  React.useEffect(() => {
-    const _currentLang = localStorage.getItem("lang");
-
-    if (!_currentLang) {
-      localStorage.setItem("lang", "en");
-    }
-  }, []);
 
   return (
     <React.Fragment>
@@ -118,6 +106,8 @@ const Navbar: React.FC<NavbarProps> = ({
               <NavItem
                 href={item?.href}
                 key={index}
+                type={item?.type}
+                lang={item?.lang}
                 onClick={() => {
                   if (item?.type === NAVITEMS_TYPES.SERVICEOFFERING) {
                     handleToggleServiceOffering();

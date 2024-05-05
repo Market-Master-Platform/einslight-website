@@ -26,11 +26,11 @@ const NavItem: React.FC<NavItemProps> = ({
 }) => {
   const renderLanguageIcon = () => {
     if (lang === "en") {
-      return <Flag country="US" />;
+      return <Flag country="VN" />;
     }
 
     if (lang === "vi") {
-      return <Flag country="VN" />;
+      return <Flag country="US" />;
     }
   };
 
@@ -52,12 +52,12 @@ const NavItem: React.FC<NavItemProps> = ({
     if (type === NAVITEMS_TYPES.LANGUAGE) {
       return (
         <Link href={href || ""}>
-          <div onClick={onClick}>{children}</div>
+          <div onClick={onClick}>{renderLanguageIcon()}</div>
         </Link>
       );
     }
 
-    return <Link href={href || ""}>{children}</Link>;
+    return <CustomLink href={href || ""}>{children}</CustomLink>;
   };
 
   const renderByTypeForDesktop = () => {
@@ -95,7 +95,7 @@ const NavItem: React.FC<NavItemProps> = ({
       );
     }
 
-    return <Link href={href || ""}>{children}</Link>;
+    return <CustomLink href={href || ""}>{children}</CustomLink>;
   };
 
   return (

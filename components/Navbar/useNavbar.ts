@@ -1,5 +1,5 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useDictionary } from "@/context/dictionary-provider";
 import { useState, useEffect } from "react";
 import { NavbarContext } from "@/context/navbar-provider";
@@ -21,7 +21,7 @@ export interface NavItemValues {
 const useNavbar = () => {
   const context = useContext(NavbarContext);
   const pathname = usePathname();
-  const [isOpenNavbarMenu, setOpenNavbarMenu] = useState<boolean>(false);
+  const router = useRouter();
   const [langPathname, setLangPathname] = useState<string>("");
   const [currentLang, setCurrentLang] = useState<string>("en");
 
@@ -32,10 +32,6 @@ const useNavbar = () => {
     }
 
     localStorage.setItem("lang", "en");
-  };
-
-  const handleToggleNavbarMenu = () => {
-    setOpenNavbarMenu((currentState) => !currentState);
   };
 
   const dictionary = useDictionary();
@@ -64,18 +60,27 @@ const useNavbar = () => {
   useEffect(() => {
     const lang = localStorage.getItem("lang");
 
-    if (!lang) return;
+    if (!pathname) return;
 
-    setCurrentLang(lang);
     let splittedPathname: string[] = pathname.split("/");
     splittedPathname[1] = lang === "en" ? "vi" : "en";
 
+    if (!lang) {
+      setCurrentLang("en");
+      router.push(splittedPathname.join("/"));
+      localStorage.setItem("lang", "en");
+      return;
+    }
+
+    setCurrentLang(lang);
     setLangPathname(splittedPathname.join("/"));
   }, [pathname]);
 
   return {
     navItems,
     context,
+    currentLang,
+    langPathname,
   };
 };
 
