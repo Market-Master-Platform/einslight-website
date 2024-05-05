@@ -1,6 +1,6 @@
 import * as React from "react";
-import CustomImage from "../Common/CustomImage";
-import useNavbar from "./useNavbar";
+import CustomImage from "../CustomImage";
+import useNavbar, { NAVITEMS_TYPES } from "./useNavbar";
 import ServiceOffering from "./ServiceOffering";
 import NavbarMenu from "./NavbarMenu";
 import NavItem from "./NavItem";
@@ -55,6 +55,15 @@ const Navbar: React.FC<NavbarProps> = ({
     context?.setOpenNavbarMenu(false);
   };
 
+  // initialize default language in local storage
+  React.useEffect(() => {
+    const _currentLang = localStorage.getItem("lang");
+
+    if (!_currentLang) {
+      localStorage.setItem("lang", "en");
+    }
+  }, []);
+
   return (
     <React.Fragment>
       <div className="fixed w-full top-0 z-[51]">
@@ -81,15 +90,15 @@ const Navbar: React.FC<NavbarProps> = ({
               <NavItem
                 href={item?.href}
                 key={index}
-                hasSubItems={item?.hasSubItems}
-                forLang={item.forLang}
+                type={item?.type}
+                lang={item?.lang}
                 onClick={() => {
-                  if (item?.hasSubItems) {
+                  if (item?.type === NAVITEMS_TYPES.SERVICEOFFERING) {
                     handleToggleServiceOffering();
+                    return;
                   }
-                  if (item.onClick) {
-                    item.onClick();
-                  }
+
+                  item?.onClick && item?.onClick();
                 }}
                 isOpenServiceOffering={isActiveNavbar}
               >
@@ -109,15 +118,13 @@ const Navbar: React.FC<NavbarProps> = ({
               <NavItem
                 href={item?.href}
                 key={index}
-                hasSubItems={item?.hasSubItems}
-                forLang={item.forLang}
                 onClick={() => {
-                  if (item?.hasSubItems) {
+                  if (item?.type === NAVITEMS_TYPES.SERVICEOFFERING) {
                     handleToggleServiceOffering();
+                    return;
                   }
-                  if (item.onClick) {
-                    item.onClick();
-                  }
+
+                  item?.onClick && item?.onClick();
                 }}
                 isOpenServiceOffering={isActiveNavbar}
               >
