@@ -4,6 +4,7 @@ import * as React from "react";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useDictionary } from "@/context/dictionary-provider";
 
 
 interface ContactCheckIconProps {
@@ -41,7 +42,7 @@ const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={process.env.MAP_LOCATION_LINK}
+            href="https://maps.app.goo.gl/Uza4PeTGBJ3QNTsb9"
           >
             {text}
           </a>
@@ -49,7 +50,7 @@ const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={process.env.MAP_LOCATION_LINK}
+          href="https://maps.app.goo.gl/Uza4PeTGBJ3QNTsb9"
         >
           <img
             src={icon}
@@ -132,14 +133,14 @@ const contactCardsData = [
 ];
 
 
-const sendEmail = async (
+const sendEmail = (
   name: string,
   email: string,
   phone: string,
   company: string,
   message: string,
 ) => {
-  const res = axios({
+  return axios({
     method: 'post',
     url: '/api/contact',
     data: {
@@ -149,42 +150,14 @@ const sendEmail = async (
       company: company,
       message: message,
     },
-  }).catch(function (error) {
-    if (error.response) {
-      console.log(error.response.data);
-      console.log(error.response.status);
-      console.log(error.response.headers);
-      toast.error("Oops something went wrong! That's on us.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false
-      })
-    } else if (error.request) {
-      console.log(error.request);
-      toast.error("Oops something went wrong! That's on us.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false
-      })
-    } else {
-      console.log('Error', error.message);
-      toast.error("Oops something went wrong! That's on us.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false
-      })
-    }
-    console.log(error.config);
-  }).then();
-  return res;
+  });
 };
 
-const useContactForm = () => {
+const ContactPage: React.FC = () => {
+  const dictionary = useDictionary();
   const [ischeck, setIsCheck] = React.useState(false)
-  let checkbox: boolean = ischeck;
   const [isdisabled, setIsDisabled] = React.useState(true)
   const [isempty, setIsEmpty] = React.useState(true);
-  let empty: boolean = isempty;
   const [values, setValues] = React.useState({
     name: '',
     email: '',
@@ -192,54 +165,54 @@ const useContactForm = () => {
     company: '',
     message: '',
   });
-
+  let empty: boolean = isempty;
+  let checkbox: boolean = ischeck;
+  
   const handleChange = async (e: any) => {
     if (e.target.id == 'terms') {
       checkbox = e.target.checked;
       setIsCheck(checkbox)
-    } 
+    }
     setValues(prevState => {
       return {
         ...prevState,
         [e.target.id]: e.target.value,
       };
     });
-    if(e.target.value.trim().length < 1 && e.target.id !== 'terms') { 
+    if (e.target.value.trim().length < 1 && e.target.id !== 'terms') {
       empty = true;
-      setIsEmpty(true) 
-    } else if(e.target.value.trim().length > 1 && e.target.id !== 'terms'){
+      setIsEmpty(true)
+    } else if (e.target.value.trim().length > 1 && e.target.id !== 'terms') {
       empty = false;
       setIsEmpty(false)
     }
 
     if (checkbox === false) {
-      setIsDisabled(true) 
+      setIsDisabled(true)
     } else if (checkbox === true && empty === true) {
       setIsDisabled(true)
     } else {
       setIsDisabled(false)
     }
-    
+
   };
-
-  return {values, handleChange, isdisabled };
-};
-
-const ContactPage: React.FC = () => {
-  const {values, handleChange, isdisabled} = useContactForm();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
+      setIsDisabled(true);
       const req = await sendEmail(values.name, values.email, values.phone, values.company, values.message);
-      if (req) toast.success("We got your info and will contact as soon as possible.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false
-      })
+      setIsDisabled(false);
+      console.log(req);
+      if (req) {
+        toast.success(dictionary.message.notification_success, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false
+        });
+      }
     } catch (e) {
-      console.log(e);
-      toast.error("Oops something went wrong! That's on us.", {
+      toast.error(dictionary.message.notification_error, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false
@@ -259,7 +232,7 @@ const ContactPage: React.FC = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={process.env.MAP_LOCATION_LINK}
+          href="https://maps.app.goo.gl/Uza4PeTGBJ3QNTsb9"
         >
           <img
             src="/static/images/message/map.png"
@@ -374,7 +347,7 @@ const ContactPage: React.FC = () => {
                 Submit
               </button>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
           </form>
         </div>
       </section>

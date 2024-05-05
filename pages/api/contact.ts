@@ -16,18 +16,12 @@ type Response = {
 };
 
 const transporter = nodemailer.createTransport({
-  service: 'hotmail',
+  service: 'gmail',
   auth: {
     user: process.env.NEXT_PUBLIC_EMAIL_ADDRESS,
     pass: process.env.NEXT_PUBLIC_PASSWORD,
   },
 });
-
-//export const config = {
-//  api: {
-//    bodyParser: false,
-//  },
-//};
 
 const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
   const { name, email, message, phone, company } = req.body as Fields;
@@ -58,18 +52,17 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Response>) => {
     }
 
     await transporter.sendMail({
-      to: 'vinhviral@gmail.com',
+      to: email,
       from: 'einslight.co@gmail.com',
       replyTo: email,
-      subject: `
-      ${name} đã gửi yêu cầu
-      Email: ${email}
-      Số điện thoại: ${phone}
-      Tên công ty: ${company}
-      Lời nhắn: ${message}`,
-      text: message,
+      subject: `${name} đã gửi lời nhắn từ website einslight.com`,
+      text: `
+Email: ${email}
+Số điện thoại: ${phone}
+Tên công ty: ${company}
+Lời nhắn: ${message}
+      `,
     });
-
     res.status(200).send({ status: 'done', message: 'message has been sent' });
   } catch (error) {
     res.status(500).send({ status: 'fail', error: `${error}` });
