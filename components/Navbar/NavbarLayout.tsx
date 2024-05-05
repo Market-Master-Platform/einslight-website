@@ -8,6 +8,7 @@ import { NavbarContext } from "@/context/navbar-provider";
 
 interface NavbarLayoutProps {
   children: ReactNode;
+  params: { lang: Locale };
 }
 
 const NavbarLayout: FC<NavbarLayoutProps> = ({ children }) => {
