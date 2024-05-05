@@ -45,5 +45,10 @@
     },
     "case_study": {
 
+    },
+
+    "message": {
+        "notification_success": "Chúng tôi đã nhận thông tin của bạn và sẽ liên hệ lại bạn sớm nhất có thể.",
+        "notification_error": "Hệ thống đang gặp sự cố. Hãy liên lạc với chúng tôi qua số điện thoại. Xin cảm ơn!"
     }
 }

@@ -1,14 +1,17 @@
+"use client";
+
 import * as React from "react";
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useDictionary } from "@/context/dictionary-provider";
+
 
 interface ContactCheckIconProps {
   icon: string;
   id: number;
   text: string;
 }
-
-// interface ContactButtonIdProps {
-//   id: string;
-// }
 
 const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({
   icon,
@@ -39,7 +42,7 @@ const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={process.env.MAP_LOCATION_LINK}
+            href="https://maps.app.goo.gl/Uza4PeTGBJ3QNTsb9"
           >
             {text}
           </a>
@@ -47,7 +50,7 @@ const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={process.env.MAP_LOCATION_LINK}
+          href="https://maps.app.goo.gl/Uza4PeTGBJ3QNTsb9"
         >
           <img
             src={icon}
@@ -129,7 +132,93 @@ const contactCardsData = [
   },
 ];
 
+
+const sendEmail = (
+  name: string,
+  email: string,
+  phone: string,
+  company: string,
+  message: string,
+) => {
+  return axios({
+    method: 'post',
+    url: '/api/contact',
+    data: {
+      email: email,
+      name: name,
+      phone: phone,
+      company: company,
+      message: message,
+    },
+  });
+};
+
 const ContactPage: React.FC = () => {
+  const dictionary = useDictionary();
+  const [ischeck, setIsCheck] = React.useState(false)
+  const [isdisabled, setIsDisabled] = React.useState(true)
+  const [isempty, setIsEmpty] = React.useState(true);
+  const [values, setValues] = React.useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: '',
+  });
+  let empty: boolean = isempty;
+  let checkbox: boolean = ischeck;
+  
+  const handleChange = async (e: any) => {
+    if (e.target.id == 'terms') {
+      checkbox = e.target.checked;
+      setIsCheck(checkbox)
+    }
+    setValues(prevState => {
+      return {
+        ...prevState,
+        [e.target.id]: e.target.value,
+      };
+    });
+    if (e.target.value.trim().length < 1 && e.target.id !== 'terms') {
+      empty = true;
+      setIsEmpty(true)
+    } else if (e.target.value.trim().length > 1 && e.target.id !== 'terms') {
+      empty = false;
+      setIsEmpty(false)
+    }
+
+    if (checkbox === false) {
+      setIsDisabled(true)
+    } else if (checkbox === true && empty === true) {
+      setIsDisabled(true)
+    } else {
+      setIsDisabled(false)
+    }
+
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    try {
+      setIsDisabled(true);
+      const req = await sendEmail(values.name, values.email, values.phone, values.company, values.message);
+      setIsDisabled(false);
+      console.log(req);
+      if (req) {
+        toast.success(dictionary.message.notification_success, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false
+        });
+      }
+    } catch (e) {
+      toast.error(dictionary.message.notification_error, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false
+      })
+    }
+  };
   return (
     <div className="flex flex-col">
       <header className="flex flex-col items-center p-20 w-full bg-zinc-900 max-md:px-5 max-md:max-w-full">
@@ -143,7 +232,7 @@ const ContactPage: React.FC = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={process.env.MAP_LOCATION_LINK}
+          href="https://maps.app.goo.gl/Uza4PeTGBJ3QNTsb9"
         >
           <img
             src="/static/images/message/map.png"
@@ -178,7 +267,7 @@ const ContactPage: React.FC = () => {
             Contact us if you have any questions about our company or products.
             We will try to provide an answer within a few days.
           </p>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="justify-center items-start p-6 mt-14 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:mt-10 max-md:max-w-full">
               <label htmlFor="name" className="sr-only">
                 Your Name
@@ -188,6 +277,7 @@ const ContactPage: React.FC = () => {
                 id="name"
                 placeholder="Your Name"
                 className="w-full bg-transparent focus:outline-none"
+                onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-7 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:max-w-full">
@@ -199,6 +289,7 @@ const ContactPage: React.FC = () => {
                 id="email"
                 placeholder="Email Address"
                 className="w-full bg-transparent focus:outline-none"
+                onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-7 mt-11 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:mt-10 max-md:max-w-full">
@@ -210,6 +301,7 @@ const ContactPage: React.FC = () => {
                 id="phone"
                 placeholder="Contact Number"
                 className="w-full bg-transparent focus:outline-none"
+                onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-6 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:max-w-full">
@@ -221,6 +313,7 @@ const ContactPage: React.FC = () => {
                 id="company"
                 placeholder="Company Name"
                 className="w-full bg-transparent focus:outline-none"
+                onChange={handleChange}
               />
             </div>
             <div className="items-start px-6 pt-7 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:pb-10 max-md:max-w-full">
@@ -231,6 +324,7 @@ const ContactPage: React.FC = () => {
                 id="message"
                 placeholder="How can we help?"
                 className="w-full bg-transparent focus:outline-none pb-48"
+                onChange={handleChange}
               ></textarea>
             </div>
             <div className="flex gap-5 justify-between mt-10 w-full max-md:flex-wrap max-md:max-w-full">
@@ -239,6 +333,7 @@ const ContactPage: React.FC = () => {
                   type="checkbox"
                   id="terms"
                   className="shrink-0 aspect-[1.03] fill-blue-500 w-[34px]"
+                  onChange={handleChange}
                 />
                 <label htmlFor="terms" className="flex-auto my-auto">
                   I agree to the Terms & Conditions
@@ -246,11 +341,13 @@ const ContactPage: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="justify-center items-center px-16 py-7 font-semibold text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5"
+                className="justify-center items-center px-16 py-7 font-semibold text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 disabled:bg-gray-300"
+                disabled={isdisabled}
               >
                 Submit
               </button>
             </div>
+            <ToastContainer />
           </form>
         </div>
       </section>
