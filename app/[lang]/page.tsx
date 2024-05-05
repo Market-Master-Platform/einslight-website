@@ -122,37 +122,37 @@ export default function Home() {
       title: "Great People Application",
       description: dictionary.homepage.great_people_application_description,
       image: "/static/images/home/great-people-application.png",
-      href: "/en/case-study/chromaway",
+      href: "/case-study/chromaway",
     },
     {
       title: "iGoterra",
       description: dictionary.homepage.igoterra_description,
       image: "/static/images/home/igoterra.png",
-      href: "/en/case-study/igoterra",
+      href: "/case-study/igoterra",
     },
     {
       title: "TimeEdit",
       description: dictionary.homepage["timeedit_description"],
       image: "/static/images/home/timeedit.png",
-      href: "/en/case-study/time-edit",
+      href: "/case-study/time-edit",
     },
     {
       title: "ChromaWay",
       description: dictionary.homepage.chromaway_description,
       image: "/static/images/home/chromaway.png",
-      href: "/en/case-study/chromaway",
+      href: "/case-study/chromaway",
     },
     {
       title: "AppSpotr",
       description: dictionary.homepage.appsport_description,
       image: "/static/images/home/appspotr.png",
-      href: "/en/case-study/app-sport",
+      href: "/case-study/app-sport",
     },
     {
       title: "EF Academy",
       description: dictionary.homepage.efacademy_description,
       image: "/static/images/home/ef-academy.png",
-      href: "/en/case-study/ef-academy",
+      href: "/case-study/ef-academy",
     },
   ];
 

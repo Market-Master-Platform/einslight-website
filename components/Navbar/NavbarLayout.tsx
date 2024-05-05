@@ -8,10 +8,9 @@ import { NavbarContext } from "@/context/navbar-provider";
 
 interface NavbarLayoutProps {
   children: ReactNode;
-  params: { lang: Locale };
 }
 
-const NavbarLayout: FC<NavbarLayoutProps> = ({ children, params }) => {
+const NavbarLayout: FC<NavbarLayoutProps> = ({ children }) => {
   const context = useContext(NavbarContext);
 
   return (
@@ -19,7 +18,6 @@ const NavbarLayout: FC<NavbarLayoutProps> = ({ children, params }) => {
       <Navbar
         handleToggleActiveNavbar={() => context?.handleToggleActiveNavbar()}
         isActiveNavbar={context?.isActiveNavbar || false}
-        lang={params.lang}
       />
 
       {!context?.isActiveNavbar && (

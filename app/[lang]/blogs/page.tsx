@@ -1,84 +1,7 @@
+"use client";
+
 import CustomLink from "@/components/Common/CustomLink";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import Link from "next/link";
-
-interface CategoryItemProps {
-  text: string;
-  isActive?: boolean;
-}
-
-const CategoryItem: React.FC<CategoryItemProps> = ({ text, isActive }) => {
-  return (
-    <>
-      {isActive ? (
-        <div className="self-stretch py-2 px-3 rounded-full bg-[#377DFF] text-white cursor-pointer">
-          {text}
-        </div>
-      ) : (
-        <div className="self-stretch py-2 px-3 rounded-full cursor-pointer">
-          {text}
-        </div>
-      )}
-    </>
-  );
-};
-
-const blogPosts = [
-  {
-    date: "11th May",
-    title: "How to start earning",
-    description:
-      "The right priorities help us in the direction of our potential which is why it is important for earnings.",
-    imageUrl: "/static/images/blogs/how-to-start-earning.png",
-    altText: "How to start earning",
-    href: "/blogs/1",
-  },
-  {
-    date: "14th May",
-    title: "Color palette",
-    description:
-      "Each of us has a different favorite and not so much color so it is worth starting with it.",
-    imageUrl: "/static/images/blogs/color-palette.png",
-    altText: "Color palette",
-    href: "/blogs/1",
-  },
-  {
-    date: "11th May",
-    title: "How to start earning",
-    description:
-      "The right priorities help us in the direction of our potential which is why it is important for earnings.",
-    imageUrl: "/static/images/blogs/how-to-start-earning-2.png",
-    altText: "How to start earning",
-    href: "/blogs/1",
-  },
-  // {
-  //   date: "11th May",
-  //   title: "How to start earning",
-  //   description:
-  //     "The right priorities help us in the direction of our potential which is why it is important for earnings.",
-  //   imageUrl:
-  //     "https://cdn.builder.io/api/v1/image/assets/TEMP/e0d7c6c2f32205f1dd00d03603ad8ab7f5450fa36869346f769cf7fc89bf9352?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
-  //   altText: "How to start earning",
-  // },
-  // {
-  //   date: "10th May",
-  //   title: "Designing startup",
-  //   description:
-  //     "The main task of a startup is not to be like others. This requires good money and an idea.",
-  //   imageUrl:
-  //     "https://cdn.builder.io/api/v1/image/assets/TEMP/81defd0cf7582dbdf2119a428f653ebebf36c111023fd0634317b61ab0dee098?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
-  //   altText: "Designing startup",
-  // },
-  // {
-  //   date: "10th May",
-  //   title: "Designing startup",
-  //   description:
-  //     "The main task of a startup is not to be like others. This requires good money and an idea.",
-  //   imageUrl:
-  //     "https://cdn.builder.io/api/v1/image/assets/TEMP/73101070848350ae22dcd0f9e296381b597d38126d2191e444b224e24a76ca86?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&",
-  //   altText: "Designing startup",
-  // },
-];
 
 interface BlogPostProps {
   date: string;
@@ -132,68 +55,6 @@ const BlogPost: React.FC<BlogPostProps> = ({
   );
 };
 
-interface PaginationProps {
-  currentPage: number;
-  totalPages: number;
-}
-
-// const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
-//   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-
-//   return (
-//     <nav className="flex gap-2.5 self-center mt-16 text-2xl font-semibold leading-7 text-gray-400 whitespace-nowrap max-md:mt-10">
-//       <img
-//         loading="lazy"
-//         src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8df532a8de2f1d562a86b2480ea727bb93422cc8828c45cfef72c24c95ae7f6?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-//         alt=""
-//         className="shrink-0 aspect-square w-[50px]"
-//       />
-//       {pages.map((page) => (
-//         <div
-//           key={page}
-//           className={`justify-center items-center px-5 rounded-2xl h-[50px] w-[50px] ${
-//             page === currentPage
-//               ? "text-white bg-blue-500"
-//               : "border-2 border-solid bg-neutral-800 border-zinc-800"
-//           }`}
-//         >
-//           {page}
-//         </div>
-//       ))}
-//       <img
-//         loading="lazy"
-//         src="https://cdn.builder.io/api/v1/image/assets/TEMP/6d5f07230d8f0271ab3008d449c5f32e827c0515082e7e8c9d8c1df8fa218f45?apiKey=a3bb7501d3434046a1fb8bf6567e2d30&"
-//         alt=""
-//         className="shrink-0 aspect-square w-[50px]"
-//       />
-//     </nav>
-//   );
-// };
-
-const articles = [
-  {
-    title: "Forging your path",
-    category: "Business",
-    date: "29th May",
-    image: "/static/images/blogs/forging-your-path.png",
-    href: "/en/blogs/1",
-  },
-  {
-    title: "Basics of a proper UI",
-    category: "Design",
-    date: "25th May",
-    image: "/static/images/blogs/basics-of-a-proper-ui.png",
-    href: "/en/blogs/1",
-  },
-  {
-    title: "Planning for change",
-    category: "Finance",
-    date: "15th May",
-    image: "/static/images/blogs/planning-for-change.png",
-    href: "/en/blogs/1",
-  },
-];
-
 interface ArticleProps {
   title: string;
   category: string;
@@ -238,17 +99,60 @@ const Image: React.FC<ImageProps> = ({ src, alt, className }) => (
 );
 
 const Blogs = () => {
-  const categories = [
-    "All Categories",
-    "Mobile App",
-    "Website",
-    "Desktop App",
-    "UI/UX",
-    "Website",
-    "Desktop App",
-    "UI/UX",
-    "UI/UX",
+  const articles = [
+    {
+      title: "Forging your path",
+      category: "Business",
+      date: "29th May",
+      image: "/static/images/blogs/forging-your-path.png",
+      href: "/blogs/1",
+    },
+    {
+      title: "Basics of a proper UI",
+      category: "Design",
+      date: "25th May",
+      image: "/static/images/blogs/basics-of-a-proper-ui.png",
+      href: "/blogs/1",
+    },
+    {
+      title: "Planning for change",
+      category: "Finance",
+      date: "15th May",
+      image: "/static/images/blogs/planning-for-change.png",
+      href: "/blogs/1",
+    },
   ];
+
+  const blogPosts = [
+    {
+      date: "11th May",
+      title: "How to start earning",
+      description:
+        "The right priorities help us in the direction of our potential which is why it is important for earnings.",
+      imageUrl: "/static/images/blogs/how-to-start-earning.png",
+      altText: "How to start earning",
+      href: "/blogs/1",
+    },
+    {
+      date: "14th May",
+      title: "Color palette",
+      description:
+        "Each of us has a different favorite and not so much color so it is worth starting with it.",
+      imageUrl: "/static/images/blogs/color-palette.png",
+      altText: "Color palette",
+      href: "/blogs/1",
+    },
+    {
+      date: "11th May",
+      title: "How to start earning",
+      description:
+        "The right priorities help us in the direction of our potential which is why it is important for earnings.",
+      imageUrl: "/static/images/blogs/how-to-start-earning-2.png",
+      altText: "How to start earning",
+      href: "/blogs/1",
+    },
+  ];
+
   return (
     <main className="bg-[#12141D]">
       <section className="flex justify-center items-center px-16 py-20 w-full text-center bg-neutral-800 max-md:px-5 max-md:max-w-full">

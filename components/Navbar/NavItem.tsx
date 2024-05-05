@@ -1,28 +1,42 @@
+"use client";
 import Link from "next/link";
 import CustomImage from "../Common/CustomImage";
 import ServiceOffering from "./ServiceOffering";
 import CustomLink from "../Common/CustomLink";
+import { NAVITEMS_TYPES } from "./useNavbar";
+import Flag from "react-flagkit";
 
 interface NavItemProps {
   children: React.ReactNode;
   className?: string;
   href?: string;
-  hasSubItems?: boolean;
   onClick?: () => void;
   isOpenServiceOffering?: boolean;
+  type?: string;
+  lang?: string;
 }
 
 const NavItem: React.FC<NavItemProps> = ({
   children,
   href,
-  hasSubItems,
   onClick,
   isOpenServiceOffering,
-}) => (
-  <div className="flex items-center max-md:justify-start max-md:px-6 max-md:text-2xl justify-center py-2.5 leading-[178%] cursor-pointer select-none">
-    {/* For mobile */}
-    <div className="max-md:block hidden">
-      {hasSubItems ? (
+  type,
+  lang,
+}) => {
+  const renderLanguageIcon = () => {
+    if (lang === "en") {
+      return <Flag country="VN" />;
+    }
+
+    if (lang === "vi") {
+      return <Flag country="US" />;
+    }
+  };
+
+  const renderByTypeForMobile = () => {
+    if (type === NAVITEMS_TYPES.SERVICEOFFERING) {
+      return (
         <div className="relative flex flex-col" onClick={onClick}>
           <div className="flex items-center">
             <div>{children}</div>
@@ -32,14 +46,23 @@ const NavItem: React.FC<NavItemProps> = ({
             </div>
           </div>
         </div>
-      ) : (
-        <CustomLink href={href || ""}>{children}</CustomLink>
-      )}
-    </div>
+      );
+    }
 
-    {/* For desktop */}
-    <div className="max-md:hidden block">
-      {hasSubItems ? (
+    if (type === NAVITEMS_TYPES.LANGUAGE) {
+      return (
+        <Link href={href || ""}>
+          <div onClick={onClick}>{renderLanguageIcon()}</div>
+        </Link>
+      );
+    }
+
+    return <CustomLink href={href || ""}>{children}</CustomLink>;
+  };
+
+  const renderByTypeForDesktop = () => {
+    if (type === NAVITEMS_TYPES.SERVICEOFFERING) {
+      return (
         <div className="relative flex flex-col" onClick={onClick}>
           <div className="flex items-center">
             <div>{children}</div>
@@ -61,11 +84,29 @@ const NavItem: React.FC<NavItemProps> = ({
             </div>
           )}
         </div>
-      ) : (
-        <CustomLink href={href || ""}>{children}</CustomLink>
-      )}
+      );
+    }
+
+    if (type === NAVITEMS_TYPES.LANGUAGE) {
+      return (
+        <Link href={href || ""}>
+          <div onClick={onClick}>{renderLanguageIcon()}</div>
+        </Link>
+      );
+    }
+
+    return <CustomLink href={href || ""}>{children}</CustomLink>;
+  };
+
+  return (
+    <div className="flex items-center max-md:justify-start max-md:px-6 max-md:text-2xl justify-center py-2.5 leading-[178%] cursor-pointer select-none">
+      {/* For mobile */}
+      <div className="max-md:block hidden">{renderByTypeForMobile()}</div>
+
+      {/* For desktop */}
+      <div className="max-md:hidden block">{renderByTypeForDesktop()}</div>
     </div>
-  </div>
-);
+  );
+};
 
 export default NavItem;
