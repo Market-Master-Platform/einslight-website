@@ -1,5 +1,3 @@
-import CustomBanner from "@/components/CaseStudy/CustomBanner";
-
 interface ArticleCardProps {
   imageUrl: string;
   date: string;

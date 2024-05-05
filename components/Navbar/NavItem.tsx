@@ -1,6 +1,7 @@
 import Link from "next/link";
-import CustomImage from "../CustomImage";
+import CustomImage from "../Common/CustomImage";
 import ServiceOffering from "./ServiceOffering";
+import CustomLink from "../Common/CustomLink";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -32,7 +33,7 @@ const NavItem: React.FC<NavItemProps> = ({
           </div>
         </div>
       ) : (
-        <Link href={href || ""}>{children}</Link>
+        <CustomLink href={href || ""}>{children}</CustomLink>
       )}
     </div>
 
@@ -61,7 +62,7 @@ const NavItem: React.FC<NavItemProps> = ({
           )}
         </div>
       ) : (
-        <Link href={href || ""}>{children}</Link>
+        <CustomLink href={href || ""}>{children}</CustomLink>
       )}
     </div>
   </div>
