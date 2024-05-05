@@ -1,7 +1,10 @@
-// "use client";
+"use client";
+import { useEffect } from "react";
 import { redirect } from "next/navigation";
 
 export default function RootPage() {
-  // localStorage.setItem("lang", "en");
+  useEffect(() => {
+    localStorage.setItem("lang", "en");
+  }, []);
   redirect("/en");
 }

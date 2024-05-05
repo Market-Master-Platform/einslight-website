@@ -13,13 +13,13 @@ export interface NavItemValues {
 
 const useNavbar = () => {
   const [isOpenNavbarMenu, setOpenNavbarMenu] = useState<boolean>(false);
-  // const [currentLang, setCurrentLang] = useState<string | null>("");
+  const [currentLang, setCurrentLang] = useState<string | null>("");
   const [langPathname, setLangPathname] = useState<string>("");
   const pathname: string = usePathname();
 
   useEffect(() => {
-    // const lang: string | null = localStorage.getItem("lang");
-    // setCurrentLang(lang);
+    const lang: string | null = localStorage.getItem("lang");
+    setCurrentLang(lang);
     let splittedPathname: string[] = pathname.split("/");
     if (splittedPathname[1] === "en") {
       splittedPathname[1] = "vi";
@@ -51,6 +51,15 @@ const useNavbar = () => {
     },
     {
       text: "EN/VI",
+      forLang: true,
+      onClick: () => {
+        if (currentLang === "en") {
+          localStorage.setItem("lang", "vi");
+        } else {
+          localStorage.setItem("lang", "en");
+        }
+        console.log("currentLang: ", currentLang);
+      },
       href: langPathname,
     },
   ];
