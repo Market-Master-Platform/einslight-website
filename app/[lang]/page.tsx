@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import CustomImage from "@/components/Common/CustomImage";
 import CustomLink from "@/components/Common/CustomLink";
 import { useDictionary } from "@/context/dictionary-provider";
@@ -105,6 +106,16 @@ const Article: React.FC<ArticleProps> = ({
 
 export default function Home() {
   const dictionary = useDictionary();
+  const workflowRef = useRef<null | HTMLDivElement>(null);
+
+  const scrollDown = () => {
+    if (workflowRef && workflowRef.current) {
+      workflowRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   const articles = [
     {
@@ -162,16 +173,19 @@ export default function Home() {
                   <p className="mt-4 max-md:max-w-full">
                     {dictionary.homepage.our_team_develops_apps}
                   </p>
-                  <a href="en/message">
+                  <CustomLink href="/message">
                     <button className="justify-center px-14 py-7 mt-8 font-bold text-white bg-blue-500 leading-[178%] rounded-[41px] max-md:px-5">
                       {dictionary.common.contact_us}
                     </button>
-                  </a>
-                  <CustomImage
-                    src="/static/images/home/arrow-down-icon.svg"
-                    alt="Arrow down"
-                    className="mt-12 w-9 aspect-square"
-                  />
+                  </CustomLink>
+                  <span onClick={scrollDown}>
+                    <CustomImage
+                      src="/static/images/home/arrow-down-icon.svg"
+                      alt="Arrow down"
+                      className="mt-12 w-9 aspect-square cursor-pointer"
+                      loading="lazy"
+                    />
+                  </span>
                 </div>
                 <div className="mt-8 text-sm leading-4 text-center text-white">
                   {dictionary.homepage.specialized_in}
@@ -190,7 +204,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <section className="flex flex-col items-center px-16 pt-20 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full">
+        <section
+          ref={workflowRef}
+          className="flex flex-col items-center px-16 pt-20 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full"
+        >
           <div className="z-50 justify-center mb-0 w-full max-w-[1230px] max-md:max-w-full">
             <div className="flex gap-5 max-md:flex-col max-md:gap-0">
               <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">

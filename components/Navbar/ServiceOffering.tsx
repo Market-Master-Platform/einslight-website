@@ -34,7 +34,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
       >
         {title}
       </CustomLink>
-      <div className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500">
+      <div className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500">
         {description}
       </div>
     </div>
@@ -49,19 +49,19 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
   const serviceItems: ServiceItemProps[] = [
     {
       imageSrc: "/static/images/navbar/crm.svg",
-      title: "CRM",
+      title: dictionary.navbar.crm,
       description: "Hubsot",
       href: "/",
     },
     {
       imageSrc: "/static/images/navbar/erp.svg",
-      title: "ERP",
+      title: dictionary.navbar.erp,
       description: "SAP - Visma",
       href: "/",
     },
     {
       imageSrc: "/static/images/navbar/mobile.svg",
-      title: "Mobile",
+      title: dictionary.navbar.mobile,
       description: "iOS - Android - Firebase",
       href: "/",
     },
@@ -73,7 +73,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
     },
     {
       imageSrc: "/static/images/navbar/accounting.svg",
-      title: dictionary.navbar.payments,
+      title: dictionary.navbar.accounting,
       description: "Fortnox",
       href: "/",
     },
@@ -85,7 +85,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
     },
     {
       imageSrc: "/static/images/navbar/bi.svg",
-      title: dictionary.navbar.business_intellegience,
+      title: dictionary.navbar.bi,
       description: "Power BI - Qlik",
       href: "/",
     },
@@ -129,7 +129,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       <CustomLink href="/" className="max-md:max-w-full">
                         {dictionary.navbar.system_implementation}
                       </CustomLink>
-                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                      <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         {dictionary.navbar.system_implementation_description}
                       </p>
                     </div>
@@ -148,7 +148,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       <CustomLink href="/" className="max-md:max-w-full">
                         {dictionary.navbar.integration}
                       </CustomLink>
-                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                      <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         {dictionary.navbar.integration_description}
                       </p>
                     </div>
@@ -167,7 +167,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       <CustomLink href="/" className="max-md:max-w-full">
                         {dictionary.navbar.dedicated_teams_and_resources}
                       </CustomLink>
-                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                      <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         {
                           dictionary.navbar
                             .dedicated_teams_and_resources_description
@@ -189,7 +189,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       <CustomLink href="/" className="max-md:max-w-full">
                         {dictionary.navbar.support_and_maintenance}
                       </CustomLink>
-                      <p className="mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
+                      <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         {dictionary.navbar.support_and_maintenance_description}
                       </p>
                     </div>

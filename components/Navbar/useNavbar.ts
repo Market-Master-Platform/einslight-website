@@ -1,4 +1,7 @@
+"use client";
+import { usePathname } from "next/navigation";
 import { useDictionary } from "@/context/dictionary-provider";
+import { useState, useEffect } from "react";
 import { NavbarContext } from "@/context/navbar-provider";
 import { useContext } from "react";
 
@@ -7,6 +10,7 @@ export interface NavItemValues {
   hasSubItems?: boolean;
   href?: string;
   onClick?: () => void;
+  forLang?: boolean;
 }
 
 const useNavbar = () => {
@@ -26,7 +30,7 @@ const useNavbar = () => {
     {
       text: dictionary.navbar.contact,
       href: `/message`,
-    },
+    }
   ];
 
   return {

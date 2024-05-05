@@ -263,13 +263,13 @@ const Blogs = () => {
         </div>
       </section>
       <nav className="flex gap-x-6 gap-y-1 py-2 px-2 justify-center items-center text-md font-semibold text-gray-400 max-lg:flex-wrap">
-        {categories.map((category, index) => (
+        {/* {categories.map((category, index) => (
           <CategoryItem
             text={category}
             isActive={category === "All Categories"}
             key={index}
           />
-        ))}
+        ))} */}
       </nav>
       <section className="grid grid-cols-10 max-w-screen-xl mx-auto">
         <div className="col-span-6 max-lg:col-span-full p-5">

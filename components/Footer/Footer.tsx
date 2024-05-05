@@ -4,6 +4,8 @@ import * as React from "react";
 import CustomImage from "../Common/CustomImage";
 import { useDictionary } from "@/context/dictionary-provider";
 import CustomLink from "../Common/CustomLink";
+import { usePathname } from 'next/navigation'
+
 interface LinkItemProps {
   children: React.ReactNode;
   href: string;
@@ -53,19 +55,21 @@ function Footer() {
 
   return (
     <div className="flex flex-col items-center p-20 bg-zinc-900 max-md:px-5">
-      <div className="flex gap-5 mt-6 w-full font-semibold max-w-[1247px] max-md:flex-wrap max-md:max-w-full">
-        <div className="flex-auto my-auto text-3xl leading-10 text-white">
-          {dictionary.footer.how_can_we_help}
+      {pathname?.includes("message") ? null :
+        <div className="flex gap-5 mt-6 w-full font-semibold max-w-[1247px] max-md:flex-wrap max-md:max-w-full">
+          <div className="flex-auto my-auto text-3xl leading-10 text-white">
+            {dictionary.footer.how_can_we_help}
+          </div>
+          <CustomLink
+            href="/message"
+            className="justify-center items-center px-16 py-6 text-xl leading-6 text-center text-white bg-blue-500 max-md:px-5"
+          >
+            {dictionary.footer.send_message}
+          </CustomLink>
         </div>
-        <CustomLink
-          href="/message"
-          className="justify-center items-center px-16 py-6 text-xl leading-6 text-center text-white bg-blue-500 max-md:px-5"
-        >
-          {dictionary.footer.send_message}
-        </CustomLink>
-      </div>
+      }
       <div className="shrink-0 mt-20 max-w-full h-0.5 bg-neutral-800 w-[1247px] max-md:mt-10" />
-      <div className="flex gap-5 max-md:gap-20 justify-between mt-32 w-full font-medium text-gray-400 max-w-[1247px] max-md:flex-col max-md:mt-10 max-md:max-w-full">
+      <div className="flex gap-5 max-md:gap-20 justify-between mt-32 w-full font-medium text-gray-400 max-w-[1247px] max-md:flex-col-reverse max-md:mt-10 max-md:max-w-full">
         <div className="flex flex-col mt-1.5 max-md:max-w-full">
           <CustomImage
             src="/static/images/company-logo.svg"

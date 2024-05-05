@@ -1,62 +1,61 @@
 {
-    "common": {
-        "our_offering": "Our offering",
-        "contact_us": "Contact Us"
-    },
-    "navbar": {
-        "customer_cases": "Customer cases",
-        "contact": "Contact",
-        "service_offering": "Service Offering",
-        "system_implementation": "System implementation",
-        "integration": "Integration",
-        "dedicated_teams_and_resources": "Dedicated teams & resources",
-        "support_and_maintenance": "Support & Maintenance",
-        "system": "System",
-        "system_implementation_description": "Adapt system support for efficient operations",
-        "integration_description": "Powerful integration for a complete IT environment",
-        "dedicated_teams_and_resources_description": "Fill gaps in teams with highly qualified professionals",
-        "support_and_maintenance_description": "Software maintenance and support specific services",
-        "payments": "Payments",
-        "accounting": "Accounting",
-        "ecommerce": "Ecommerce",
-        "productivity": "Productivity",
-        "business_intellegience": "Business Intellegence"
-    },
-    "footer": {
-        "cases": "Cases",
-        "blogs": "Blogs",
-        "privacy_and_policy": "Privacy & Policy",
-        "terms_condition": "Terms Condition",
-        "cookies_settings": "Cookies Settings",
-        "how_can_we_help": "Hey, how can we help?",
-        "send_message": "Send message",
-        "company": "Company",
-        "resources": "Resources"
-    },
-    "homepage": {
-        "great_people_application_description": "Searching for talented and self-propelled developers",
-        "igoterra_description": "Record wildlife observations with any device",
-        "timeedit_description": "Great academia requires great software",
-        "chromaway_description": "Making sense of the blockchain",
-        "appsport_description": "Appspotr the leading low-code app-builder",
-        "efacademy_description": "Mobile apps for boarding school students",
-        "read_case": "Read case",
-        "full_service_tech_partner": "Full-service tech partner",
-        "software_development_for_brands": "Software development for brands that want to achieve more.",
-        "our_team_develops_apps": "Our team develops apps, e-com, web and custom applications using best in class software.",
-        "specialized_in": "Specialized in",
-        "create_frictionless_workflows": "Create frictionless workflows",
-        "there_is_no_way_around": "There is no way around the fact that both employees and customers expect a user centric digital experience. We help clients that have decided to make the digital opportunity their main priorty and competitive advantage.",
-        "our_portfolio_which_we_are_happy": "Our portfolio which we are happy to show you"
-    },
-    "blogs": {
-
-    },
-    "case_study": {
-
-    },
-    "message": {
-        "notification_success": "We've got your message. You will be contacted soon. Thank you!",
-        "notification_error": "Something went wrong. Please try contacting us via phone. Thank you!"
-    }
+  "common": {
+    "our_offering": "Our offering",
+    "contact_us": "Contact Us"
+  },
+  "navbar": {
+    "customer_cases": "Customer cases",
+    "contact": "Contact",
+    "service_offering": "Service Offering",
+    "system_implementation": "System implementation",
+    "integration": "Integration",
+    "dedicated_teams_and_resources": "Dedicated teams & resources",
+    "support_and_maintenance": "Support & Maintenance",
+    "system_implementation_description": "Adapt system support for efficient operations",
+    "integration_description": "Powerful integration for a complete IT environment",
+    "dedicated_teams_and_resources_description": "Fill gaps in teams with highly qualified professionals",
+    "support_and_maintenance_description": "Software maintenance and support specific services",
+    "system": "System",
+    "crm": "CRM",
+    "erp": "ERP",
+    "mobile": "Mobile",
+    "payments": "Payments",
+    "accounting": "Accounting",
+    "productivity": "Productivity",
+    "bi": "Business Intelligence",
+    "ecommerce": "Ecommerce"
+  },
+  "footer": {
+    "cases": "Cases",
+    "blogs": "Blogs",
+    "privacy_and_policy": "Privacy & Policy",
+    "terms_condition": "Terms Condition",
+    "cookies_settings": "Cookies Settings",
+    "how_can_we_help": "Hey, how can we help?",
+    "send_message": "Send message",
+    "company": "Company",
+    "resources": "Resources"
+  },
+  "homepage": {
+    "great_people_application_description": "Searching for talented and self-propelled developers",
+    "igoterra_description": "Record wildlife observations with any device",
+    "timeedit_description": "Great academia requires great software",
+    "chromaway_description": "Making sense of the blockchain",
+    "appsport_description": "Appspotr the leading low-code app-builder",
+    "efacademy_description": "Mobile apps for boarding school students",
+    "read_case": "Read case",
+    "full_service_tech_partner": "Full-service tech partner",
+    "software_development_for_brands": "Software development for brands that want to achieve more.",
+    "our_team_develops_apps": "Our team develops apps, e-com, web and custom applications using best in class software.",
+    "specialized_in": "Specialized in",
+    "create_frictionless_workflows": "Create frictionless workflows",
+    "there_is_no_way_around": "There is no way around the fact that both employees and customers expect a user centric digital experience. We help clients that have decided to make the digital opportunity their main priorty and competitive advantage.",
+    "our_portfolio_which_we_are_happy": "Our portfolio which we are happy to show you"
+  },
+  "blogs": {},
+  "case_study": {},
+  "message": {
+      "notification_success": "We've got your message. You will be contacted soon. Thank you!",
+      "notification_error": "Something went wrong. Please try contacting us via phone. Thank you!"
+  }
 }

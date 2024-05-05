@@ -18,7 +18,7 @@ const CustomLink: FC<CustomLinkProps> = ({ href, children, className }) => {
 
   const handleToggleNavbarWhenNavigate = (e: SyntheticEvent) => {
     e.preventDefault();
-    const currentLang = pathname.split("/")[1];
+    const currentLang = pathname!.split("/")[1];
     router.push(`/${currentLang}${href}`);
 
     if (context) {
