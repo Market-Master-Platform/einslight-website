@@ -1,3 +1,4 @@
+import CustomLink from "@/components/Common/CustomLink";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 
@@ -30,7 +31,7 @@ const blogPosts = [
       "The right priorities help us in the direction of our potential which is why it is important for earnings.",
     imageUrl: "/static/images/blogs/how-to-start-earning.png",
     altText: "How to start earning",
-    href: "/en/blogs/1",
+    href: "/blogs/1",
   },
   {
     date: "14th May",
@@ -39,7 +40,7 @@ const blogPosts = [
       "Each of us has a different favorite and not so much color so it is worth starting with it.",
     imageUrl: "/static/images/blogs/color-palette.png",
     altText: "Color palette",
-    href: "/en/blogs/1",
+    href: "/blogs/1",
   },
   {
     date: "11th May",
@@ -48,7 +49,7 @@ const blogPosts = [
       "The right priorities help us in the direction of our potential which is why it is important for earnings.",
     imageUrl: "/static/images/blogs/how-to-start-earning-2.png",
     altText: "How to start earning",
-    href: "/en/blogs/1",
+    href: "/blogs/1",
   },
   // {
   //   date: "11th May",
@@ -118,12 +119,12 @@ const BlogPost: React.FC<BlogPostProps> = ({
             <p className="mt-10 font-medium leading-8 text-gray-400 max-md:mt-10 max-md:max-w-full">
               {description}
             </p>
-            <Link href={href} className="relative">
+            <CustomLink href={href} className="relative">
               <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:flex-wrap max-md:pr-5">
                 <span>Read story</span>
                 <ArrowRightIcon className="h-6 w-6 text-blue-500 shrink-0" />
               </div>
-            </Link>
+            </CustomLink>
           </div>
         </div>
       </div>
@@ -208,7 +209,7 @@ const Article: React.FC<ArticleProps> = ({
   image,
   href,
 }) => (
-  <Link href={href} className="relative">
+  <CustomLink href={href} className="relative">
     <article className="flex mb-7">
       <div>
         <Image src={image} alt={title} className="aspect-square w-28" />
@@ -223,7 +224,7 @@ const Article: React.FC<ArticleProps> = ({
         </div>
       </div>
     </article>
-  </Link>
+  </CustomLink>
 );
 
 interface ImageProps {

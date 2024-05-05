@@ -1,12 +1,11 @@
-"use client";
-
 import * as React from "react";
-import CustomImage from "../CustomImage";
+import CustomImage from "../Common/CustomImage";
 import useNavbar from "./useNavbar";
 import ServiceOffering from "./ServiceOffering";
 import NavbarMenu from "./NavbarMenu";
 import NavItem from "./NavItem";
-import Link from "next/link";
+import { Locale } from "@/i18n.config";
+import CustomLink from "../Common/CustomLink";
 
 interface HamburgerProps {
   isActive: boolean;
@@ -16,6 +15,7 @@ interface HamburgerProps {
 interface NavbarProps {
   handleToggleActiveNavbar: () => void;
   isActiveNavbar: boolean;
+  lang: Locale;
 }
 
 const CustomHamburgerIcon: React.FC<HamburgerProps> = ({
@@ -46,36 +46,32 @@ const CustomHamburgerIcon: React.FC<HamburgerProps> = ({
 const Navbar: React.FC<NavbarProps> = ({
   handleToggleActiveNavbar,
   isActiveNavbar,
+  lang,
 }) => {
-  const {
-    navItems,
-    isOpenNavbarMenu,
-    handleToggleNavbarMenu,
-    setOpenNavbarMenu,
-  } = useNavbar();
+  const { navItems, context } = useNavbar();
 
   const handleToggleServiceOffering = () => {
     handleToggleActiveNavbar();
-    setOpenNavbarMenu(false);
+    context?.setOpenNavbarMenu(false);
   };
 
   return (
     <React.Fragment>
       <div className="fixed w-full top-0 z-[51]">
-        <header className="flex gap-5 justify-between px-10 max-md:px-5 py-3 text-lg font-semibold leading-8 text-white bg-zinc-900">
-          <Link href="/" className="max-md:w-full pt-1">
+        <header className="flex gap-5 justify-between px-10 max-md:px-5 py-3 text-lg font-bold leading-8 text-white bg-zinc-900">
+          <CustomLink href={"/"} className="max-md:w-full pt-1">
             <CustomImage
               src="/static/images/company-logo.svg"
               alt="Company logo"
               className="shrink max-w-full aspect-[4] w-[195px] max-sm:w-[45%]"
             />
-          </Link>
+          </CustomLink>
 
           {/* Navigation for mobile */}
           <div className="md:hidden flex justify-center items-center">
             <CustomHamburgerIcon
-              isActive={isOpenNavbarMenu}
-              toggle={handleToggleNavbarMenu}
+              isActive={context?.isOpenNavbarMenu || false}
+              toggle={() => context?.handleToggleNavbarMenu()}
             />
           </div>
 
@@ -99,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
         {/* Navigation for mobile */}
         <NavbarMenu
-          isActive={isOpenNavbarMenu}
+          isActive={context?.isOpenNavbarMenu || false}
           className="md:hidden bg-[#000] overflow-auto max-h-[600px] text-white"
         >
           <nav className="flex flex-col gap-10 pt-10 pb-6">

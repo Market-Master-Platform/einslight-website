@@ -1,7 +1,9 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { useDictionary } from "@/context/dictionary-provider";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
+import { NavbarContext } from "@/context/navbar-provider";
+import { useContext } from "react";
 
 export interface NavItemValues {
   text: string;
@@ -12,27 +14,7 @@ export interface NavItemValues {
 }
 
 const useNavbar = () => {
-  const [isOpenNavbarMenu, setOpenNavbarMenu] = useState<boolean>(false);
-  // const [currentLang, setCurrentLang] = useState<string | null>("");
-  const [langPathname, setLangPathname] = useState<string>("");
-  const pathname: string = usePathname();
-
-  useEffect(() => {
-    // const lang: string | null = localStorage.getItem("lang");
-    // setCurrentLang(lang);
-    let splittedPathname: string[] = pathname.split("/");
-    if (splittedPathname[1] === "en") {
-      splittedPathname[1] = "vi";
-      setLangPathname(splittedPathname.join("/"));
-    } else {
-      splittedPathname[1] = "en";
-      setLangPathname(splittedPathname.join("/"));
-    }
-  }, []);
-
-  const handleToggleNavbarMenu = () => {
-    setOpenNavbarMenu((currentState) => !currentState);
-  };
+  const context = useContext(NavbarContext);
 
   const dictionary = useDictionary();
 
@@ -43,23 +25,17 @@ const useNavbar = () => {
     },
     {
       text: dictionary.footer.blogs,
-      href: `/en/blogs`,
+      href: `/blogs`,
     },
     {
       text: dictionary.navbar.contact,
-      href: `/en/message`,
-    },
-    {
-      text: "EN/VI",
-      href: langPathname,
-    },
+      href: `/message`,
+    }
   ];
 
   return {
     navItems,
-    isOpenNavbarMenu,
-    handleToggleNavbarMenu,
-    setOpenNavbarMenu,
+    context,
   };
 };
 

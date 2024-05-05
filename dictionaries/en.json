@@ -53,5 +53,9 @@
     "our_portfolio_which_we_are_happy": "Our portfolio which we are happy to show you"
   },
   "blogs": {},
-  "case_study": {}
+  "case_study": {},
+  "message": {
+      "notification_success": "We've got your message. You will be contacted soon. Thank you!",
+      "notification_error": "Something went wrong. Please try contacting us via phone. Thank you!"
+  }
 }

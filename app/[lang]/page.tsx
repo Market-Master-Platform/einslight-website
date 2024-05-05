@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import CustomImage from "@/components/CustomImage";
+import CustomImage from "@/components/Common/CustomImage";
+import CustomLink from "@/components/Common/CustomLink";
 import { useDictionary } from "@/context/dictionary-provider";
-import Link from "next/link";
 
 const specializations = [
   {
@@ -81,7 +81,7 @@ const Article: React.FC<ArticleProps> = ({
 }) => (
   <article className="flex gap-5 max-md:flex-col max-md:gap-0 ">
     <div className="flex flex-col w-full max-md:ml-0 max-md:w-full ">
-      <Link href={href} className="relative">
+      <CustomLink href={href} className="relative">
         <CustomImage
           src={image}
           alt={title}
@@ -92,7 +92,7 @@ const Article: React.FC<ArticleProps> = ({
             Read case {">"}
           </span>
         </div>
-      </Link>
+      </CustomLink>
       <div className="flex gap-5 w-full font-semibold max-w-[1242px] max-md:flex-wrap max-md:max-w-full h-full">
         <TextBlock
           title={title}
@@ -173,18 +173,19 @@ export default function Home() {
                   <p className="mt-4 max-md:max-w-full">
                     {dictionary.homepage.our_team_develops_apps}
                   </p>
-                  <Link href="/en/message">
+                  <CustomLink href="/message">
                     <button className="justify-center px-14 py-7 mt-8 font-bold text-white bg-blue-500 leading-[178%] rounded-[41px] max-md:px-5">
                       {dictionary.common.contact_us}
                     </button>
-                  </Link>
-                  <img
-                    src="/static/images/home/arrow-down-icon.svg"
-                    alt="Arrow down"
-                    className="mt-12 w-9 aspect-square cursor-pointer"
-                    loading="lazy"
-                    onClick={scrollDown}
-                  />
+                  </CustomLink>
+                  <span onClick={scrollDown}>
+                    <CustomImage
+                      src="/static/images/home/arrow-down-icon.svg"
+                      alt="Arrow down"
+                      className="mt-12 w-9 aspect-square cursor-pointer"
+                      loading="lazy"
+                    />
+                  </span>
                 </div>
                 <div className="mt-8 text-sm leading-4 text-center text-white">
                   {dictionary.homepage.specialized_in}

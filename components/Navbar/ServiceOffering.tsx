@@ -1,11 +1,13 @@
 import { useDictionary } from "@/context/dictionary-provider";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { FC } from "react";
+import CustomLink from "../Common/CustomLink";
 
 interface ServiceItemProps {
   imageSrc: string;
   title: string;
   description: string;
+  href: string;
 }
 
 interface ServiceOfferingProps {
@@ -16,6 +18,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
   imageSrc,
   title,
   description,
+  href,
 }) => (
   <div className="flex gap-6">
     <img
@@ -25,9 +28,12 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
       className="shrink-0 self-start w-8 aspect-square"
     />
     <div className="flex flex-col">
-      <div className="max-md:text-lg text-2xl font-bold leading-7 text-neutral-50">
+      <CustomLink
+        href={href}
+        className="max-md:text-lg text-2xl font-bold leading-7 text-neutral-50"
+      >
         {title}
-      </div>
+      </CustomLink>
       <div className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500">
         {description}
       </div>
@@ -45,41 +51,49 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
       imageSrc: "/static/images/navbar/crm.svg",
       title: dictionary.navbar.crm,
       description: "Hubsot",
+      href: "/",
     },
     {
       imageSrc: "/static/images/navbar/erp.svg",
       title: dictionary.navbar.erp,
       description: "SAP - Visma",
+      href: "/",
     },
     {
       imageSrc: "/static/images/navbar/mobile.svg",
       title: dictionary.navbar.mobile,
       description: "iOS - Android - Firebase",
+      href: "/",
     },
     {
       imageSrc: "/static/images/navbar/payments.svg",
       title: dictionary.navbar.payments,
       description: "Klarna - Stripe - Ayden",
+      href: "/",
     },
     {
       imageSrc: "/static/images/navbar/accounting.svg",
       title: dictionary.navbar.accounting,
       description: "Fortnox",
+      href: "/",
     },
     {
       imageSrc: "/static/images/navbar/productivity.svg",
       title: dictionary.navbar.productivity,
       description: "Office 365 - Google Apps",
+      href: "/",
     },
     {
       imageSrc: "/static/images/navbar/bi.svg",
       title: dictionary.navbar.bi,
       description: "Power BI - Qlik",
+      href: "/",
     },
     {
       imageSrc: "/static/images/navbar/ecommerce.svg",
       title: dictionary.navbar.ecommerce,
       description: "Power BI - Qlik",
+      href: "/",
     },
   ];
 
@@ -101,7 +115,7 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
 
             <section className="flex flex-col max-md:ml-0 max-md:w-full">
               <div className="flex grow gap-6 justify-even px-px max-md:flex-wrap max-md:mt-8">
-                <div className="flex flex-col items-center self-start gap-10">
+                <div className="flex flex-col items-start justify-center self-start gap-10">
                   <div className="flex px-px max-md:text-lg text-2xl font-bold leading-7 text-neutral-50 gap-6">
                     <div className="h-full flex items-start">
                       <img
@@ -112,9 +126,9 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       />
                     </div>
                     <div>
-                      <h2 className="max-md:max-w-full">
+                      <CustomLink href="/" className="max-md:max-w-full">
                         {dictionary.navbar.system_implementation}
-                      </h2>
+                      </CustomLink>
                       <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         {dictionary.navbar.system_implementation_description}
                       </p>
@@ -131,9 +145,9 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       />
                     </div>
                     <div>
-                      <h2 className="max-md:max-w-full">
+                      <CustomLink href="/" className="max-md:max-w-full">
                         {dictionary.navbar.integration}
-                      </h2>
+                      </CustomLink>
                       <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         {dictionary.navbar.integration_description}
                       </p>
@@ -150,9 +164,9 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                       />
                     </div>
                     <div>
-                      <h2 className="max-md:max-w-full">
+                      <CustomLink href="/" className="max-md:max-w-full">
                         {dictionary.navbar.dedicated_teams_and_resources}
-                      </h2>
+                      </CustomLink>
                       <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         {
                           dictionary.navbar
@@ -171,10 +185,10 @@ const ServiceOffering: FC<ServiceOfferingProps> = ({
                         className="w-8 aspect-square"
                       />
                     </div>
-                    <div className="">
-                      <h2 className="max-md:max-w-full">
+                    <div>
+                      <CustomLink href="/" className="max-md:max-w-full">
                         {dictionary.navbar.support_and_maintenance}
-                      </h2>
+                      </CustomLink>
                       <p className="font-normal mt-2 max-md:text-sm text-lg leading-6 text-zinc-500 max-md:max-w-full">
                         {dictionary.navbar.support_and_maintenance_description}
                       </p>
