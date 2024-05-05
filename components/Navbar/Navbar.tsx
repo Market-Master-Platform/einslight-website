@@ -82,9 +82,15 @@ const Navbar: React.FC<NavbarProps> = ({
                 href={item?.href}
                 key={index}
                 hasSubItems={item?.hasSubItems}
-                onClick={() =>
-                  item?.hasSubItems && handleToggleServiceOffering()
-                }
+                forLang={item.forLang}
+                onClick={() => {
+                  if (item?.hasSubItems) {
+                    handleToggleServiceOffering();
+                  }
+                  if (item.onClick) {
+                    item.onClick();
+                  }
+                }}
                 isOpenServiceOffering={isActiveNavbar}
               >
                 {item.text}
@@ -104,9 +110,15 @@ const Navbar: React.FC<NavbarProps> = ({
                 href={item?.href}
                 key={index}
                 hasSubItems={item?.hasSubItems}
-                onClick={() =>
-                  item?.hasSubItems && handleToggleServiceOffering()
-                }
+                forLang={item.forLang}
+                onClick={() => {
+                  if (item?.hasSubItems) {
+                    handleToggleServiceOffering();
+                  }
+                  if (item.onClick) {
+                    item.onClick();
+                  }
+                }}
                 isOpenServiceOffering={isActiveNavbar}
               >
                 {item.text}
