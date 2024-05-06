@@ -30,7 +30,7 @@ const NavItem: React.FC<NavItemProps> = ({
     }
 
     if (lang === "vi") {
-      return <Flag country="US" />;
+      return <Flag country="GB" />;
     }
   };
 
