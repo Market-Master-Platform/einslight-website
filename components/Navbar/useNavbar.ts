@@ -1,9 +1,10 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useDictionary } from "@/context/dictionary-provider";
 import { useState, useEffect } from "react";
 import { NavbarContext } from "@/context/navbar-provider";
 import { useContext } from "react";
+
 export const NAVITEMS_TYPES = {
   SERVICEOFFERING: "SERVICEOFFERING",
   LANGUAGE: "LANGUAGE",
@@ -21,17 +22,14 @@ export interface NavItemValues {
 const useNavbar = () => {
   const context = useContext(NavbarContext);
   const pathname = usePathname();
-  const router = useRouter();
-  const [langPathname, setLangPathname] = useState<string>("");
   const [currentLang, setCurrentLang] = useState<string>("vi");
 
   const handleSetLang = () => {
-    if (currentLang === "en") {
-      localStorage.setItem("lang", "vi");
-      return;
-    }
-
-    localStorage.setItem("lang", "en");
+    const lang = currentLang === "en" ? "vi" : "en";
+    setCurrentLang(lang);
+    let splittedPathname: string[] = pathname!.split("/");
+    splittedPathname[1] = lang;
+    window.history.replaceState(null, '', splittedPathname.join("/"));
   };
 
   const dictionary = useDictionary();
@@ -53,36 +51,35 @@ const useNavbar = () => {
       lang: currentLang,
       type: NAVITEMS_TYPES.LANGUAGE,
       onClick: handleSetLang,
-      href: langPathname,
+      href: '',
     },
   ];
 
   useEffect(() => {
-    const lang = localStorage.getItem("lang");
-
     if (!pathname) return;
 
     let splittedPathname: string[] = pathname.split("/");
 
-    if (!lang) {
-      setCurrentLang("vi");
-      splittedPathname[1] = "vi";
-      router.push(splittedPathname.join("/"));
-      localStorage.setItem("lang", "vi");
-      return;
+    let lang = 'vi';
+
+    switch (splittedPathname[1]) {
+      case 'en':
+        lang = 'en';
+        break;
+      case 'vi':
+        lang = 'vi';
+        break;
     }
 
-    splittedPathname[1] = lang === "en" ? "vi" : "en";
-
     setCurrentLang(lang);
-    setLangPathname(splittedPathname.join("/"));
+    splittedPathname[1] = lang;
+    window.history.replaceState(null, '', splittedPathname.join("/"));
   }, [pathname]);
 
   return {
     navItems,
     context,
     currentLang,
-    langPathname,
   };
 };
 
