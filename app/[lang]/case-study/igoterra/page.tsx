@@ -37,44 +37,44 @@ const TextSection: React.FC<TextSectionProps> = ({ title, content }) => (
   </>
 );
 
-const techStackItems: TechStackItemProps[] = [
-  { label: "Tech stack", value: "PHP, Angular, Appcelerator" },
-  { label: "Service", value: "Cloud-based service" },
-  { label: "Location", value: "Sweden" },
-  { label: "Size", value: "<25" },
-  { label: "Website", value: "igoterra.com" },
-];
-
-const textSections: TextSectionProps[] = [
-  {
-    title: "What issues did you have that made you find Einslight?",
-    content:
-      "At first, we used our own employees and Swedish contractors. But in the long run, we needed to complement our workforce with more developers. We required competent and flexible developers. Of course, we were also looking for developers at a reasonable rate, which Einslight could offer. Even though we compared several different options, we found developers quickly with Pangara.",
-  },
-  {
-    title: "Why did you choose Einslight?",
-    content:
-      "Three simple reasons: Good customer support, and the fact that it's a quick and efficient service. Another plus was the platform's interface, which was very simple and easy to use.",
-  },
-  {
-    title: "How has your contact with Einslight been?",
-    content:
-      "We've spoken to our account manager, aside from the actual Einslight talents. Overall, it has worked superbly. Pangara — and its developers — have been very accessible.",
-  },
-  {
-    title: "How has your experience with the developers been?",
-    content:
-      "Excellent. They not only possess very strong competence within their specific skill set, but have great general knowledge of IT. Furthermore, they've been very dedicated and are very quick to help out when needed. As for results, they've generally been of very high quality. Any minor errors we've found have been quickly rectified when noticed.",
-  },
-  {
-    title:
-      "What do you think is the biggest benefit with Einslight developers?",
-    content:
-      "Through the Einslight developers we've saved both time and money. This makes us look at Pangara as a sustainable long-term solution as well.",
-  },
-];
-
 function CaseStudyIGoterra() {
+  const techStackItems: TechStackItemProps[] = [
+    { label: "Tech stack", value: "PHP, Angular, Appcelerator" },
+    { label: "Service", value: "Cloud-based service" },
+    { label: "Location", value: "Sweden" },
+    { label: "Size", value: "<25" },
+    { label: "Website", value: "igoterra.com" },
+  ];
+
+  const textSections: TextSectionProps[] = [
+    {
+      title: "What issues did you have that made you find Einslight?",
+      content:
+        "At first, we used our own employees and Swedish contractors. But in the long run, we needed to complement our workforce with more developers. We required competent and flexible developers. Of course, we were also looking for developers at a reasonable rate, which Einslight could offer. Even though we compared several different options, we found developers quickly with Pangara.",
+    },
+    {
+      title: "Why did you choose Einslight?",
+      content:
+        "Three simple reasons: Good customer support, and the fact that it's a quick and efficient service. Another plus was the platform's interface, which was very simple and easy to use.",
+    },
+    {
+      title: "How has your contact with Einslight been?",
+      content:
+        "We've spoken to our account manager, aside from the actual Einslight talents. Overall, it has worked superbly. Pangara — and its developers — have been very accessible.",
+    },
+    {
+      title: "How has your experience with the developers been?",
+      content:
+        "Excellent. They not only possess very strong competence within their specific skill set, but have great general knowledge of IT. Furthermore, they've been very dedicated and are very quick to help out when needed. As for results, they've generally been of very high quality. Any minor errors we've found have been quickly rectified when noticed.",
+    },
+    {
+      title:
+        "What do you think is the biggest benefit with Einslight developers?",
+      content:
+        "Through the Einslight developers we've saved both time and money. This makes us look at Pangara as a sustainable long-term solution as well.",
+    },
+  ];
+
   return (
     <Fragment>
       <CustomBanner

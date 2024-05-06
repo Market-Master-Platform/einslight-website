@@ -1,6 +1,7 @@
 "use client";
 
 import CustomLink from "@/components/Common/CustomLink";
+import { useDictionary } from "@/context/dictionary-provider";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 interface BlogPostProps {
@@ -20,6 +21,8 @@ const BlogPost: React.FC<BlogPostProps> = ({
   altText,
   href,
 }) => {
+  const dictionary = useDictionary();
+
   return (
     <article className="rounded-sm border-2 border-solid shadow-2xl bg-neutral-800 border-zinc-800 mb-10 max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col max-md:gap-0">
@@ -44,7 +47,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
             </p>
             <CustomLink href={href} className="relative">
               <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:flex-wrap max-md:pr-5">
-                <span>Read story</span>
+                <span>{dictionary.blogs.read_story}</span>
                 <ArrowRightIcon className="h-6 w-6 text-blue-500 shrink-0" />
               </div>
             </CustomLink>
@@ -99,24 +102,26 @@ const Image: React.FC<ImageProps> = ({ src, alt, className }) => (
 );
 
 const Blogs = () => {
+  const dictionary = useDictionary();
+
   const articles = [
     {
-      title: "Forging your path",
-      category: "Business",
+      title: dictionary.blogs.forging_your_path,
+      category: dictionary.blogs.business,
       date: "29th May",
       image: "/static/images/blogs/forging-your-path.png",
       href: "/blogs/1",
     },
     {
-      title: "Basics of a proper UI",
-      category: "Design",
+      title: dictionary.blogs.basic_of_proper_ui,
+      category: dictionary.blogs.design,
       date: "25th May",
       image: "/static/images/blogs/basics-of-a-proper-ui.png",
       href: "/blogs/1",
     },
     {
-      title: "Planning for change",
-      category: "Finance",
+      title: dictionary.blogs.planning_for_change,
+      category: dictionary.blogs.finance,
       date: "15th May",
       image: "/static/images/blogs/planning-for-change.png",
       href: "/blogs/1",
@@ -126,16 +131,15 @@ const Blogs = () => {
   const blogPosts = [
     {
       date: "11th May",
-      title: "How to start earning",
-      description:
-        "The right priorities help us in the direction of our potential which is why it is important for earnings.",
+      title: dictionary.blogs.how_to_start_earning,
+      description: dictionary.blogs.right_priortities_help_us,
       imageUrl: "/static/images/blogs/how-to-start-earning.png",
       altText: "How to start earning",
       href: "/blogs/1",
     },
     {
       date: "14th May",
-      title: "Color palette",
+      title: dictionary.blogs.color_palette,
       description:
         "Each of us has a different favorite and not so much color so it is worth starting with it.",
       imageUrl: "/static/images/blogs/color-palette.png",
@@ -144,9 +148,8 @@ const Blogs = () => {
     },
     {
       date: "11th May",
-      title: "How to start earning",
-      description:
-        "The right priorities help us in the direction of our potential which is why it is important for earnings.",
+      title: dictionary.blogs.how_to_start_earning,
+      description: dictionary.blogs.right_priortities_help_us,
       imageUrl: "/static/images/blogs/how-to-start-earning-2.png",
       altText: "How to start earning",
       href: "/blogs/1",
@@ -158,11 +161,10 @@ const Blogs = () => {
       <section className="flex justify-center items-center px-16 py-20 w-full text-center bg-neutral-800 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col mt-11 mb-7 max-w-full w-[778px] max-md:mt-10">
           <h1 className="text-6xl font-extrabold text-white leading-[72px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
-            The news that surrounds us is collected here
+            {dictionary.blogs.the_news_that_surrounds_us}
           </h1>
           <p className="mt-16 text-xl font-medium leading-9 text-gray-400 max-md:mt-10 max-md:max-w-full">
-            Read watch and absorb the content that we publish in our news blog.
-            Also leave comments and communicate with other users.
+            {dictionary.blogs.read_watch_and_absorb_the_content}
           </p>
         </div>
       </section>
@@ -185,16 +187,16 @@ const Blogs = () => {
         <div className="col-span-full lg:col-span-4 p-5">
           <div>
             <h2 className="text-2xl font-semibold leading-7 text-white">
-              Newsletter
+              {dictionary.blogs.newsletter}
             </h2>
             <form>
               <label htmlFor="email" className="sr-only">
-                Email Address
+                {dictionary.blogs.email_address}
               </label>
               <input
                 type="email"
                 id="email"
-                placeholder="Email Address"
+                placeholder={dictionary.blogs.email_address}
                 className="justify-center items-start px-6 py-7 mt-8 w-full text-xl font-medium leading-6 text-gray-400 rounded-sm border-2 border-solid bg-neutral-800 border-zinc-800 max-md:px-5"
                 aria-label="Email Address"
               />
@@ -202,15 +204,15 @@ const Blogs = () => {
                 type="submit"
                 className="justify-center items-center px-16 py-7 mt-5 text-xl font-semibold leading-6 text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 w-full"
               >
-                Subscribe
+                {dictionary.blogs.subscribe}
               </button>
             </form>
             <p className="mt-7 text-lg font-medium leading-5 text-gray-400">
-              {"We'll"} never share your details. See our{" "}
+              {dictionary.blogs.we_will_never_share_your_details}{" "}
             </p>
           </div>
           <div className="text-2xl font-semibold leading-7 text-white whitespace-nowrap mt-20">
-            <h3 className="self-stretch">Popular</h3>
+            <h3 className="self-stretch">{dictionary.blogs.popular}</h3>
             <div className="flex flex-col text-2xl font-semibold leading-7 mt-10">
               {articles.map((article, index) => (
                 <Article key={index} {...article} />

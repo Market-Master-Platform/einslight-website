@@ -53,10 +53,77 @@
     "our_portfolio_which_we_are_happy": "Danh mục sản phẩm của chúng tôi, mà chúng tôi rất vui lòng giới thiệu cho bạn."
   },
   "blogs": {
-    "header_1": "The news that surrounds us is collected here",
-    "header_2": "Read watch and absorb the content that we publish in our news blog. Also leave comments and communicate with other users."
+    "header_1": "Tin tức xung quanh được thu thập ở đây.",
+    "header_2": "Đọc, xem và hấp thụ nội dung mà chúng tôi đăng trên blog tin tức của chúng tôi. Đồng thời để lại nhận xét và giao tiếp với các người dùng khác.",
+    "forging_your_path": "Định hình con đường của bạn.",
+    "business": "Kinh doanh",
+    "basic_of_proper_ui": "Cơ bản của một giao diện người dùng đúng đắn.",
+    "design": "Thiết kế",
+    "planning_for_change": "Lập kế hoạch cho sự thay đổi",
+    "finance": "Tài chính",
+    "how_to_start_earning": "Bắt đầu kiếm tiền như thế nào",
+    "right_priortities_help_us": "Các ưu tiên đúng đắn giúp chúng ta đi theo hướng tiềm năng của mình, đó là lý do tại sao việc kiếm tiền quan trọng.",
+    "color_palette": "Bảng màu",
+    "each_of_us_has_different_favorite": "Mỗi người chúng ta đều có một màu sắc yêu thích khác nhau, và một số màu ít được ưa chuộng hơn nên việc bắt đầu từ đó là đáng giá.",
+    "the_news_that_surrounds_us": "Tin tức xung quanh chúng ta được thu thập ở đây.",
+    "read_watch_and_absorb_the_content": "Đọc, xem và tiếp thu nội dung mà chúng tôi đăng trên blog tin tức của chúng tôi. Đồng thời, để lại nhận xét và giao tiếp với các người dùng khác.",
+    "newsletter": "Thư thông báo",
+    "email_address": "Địa chỉ email",
+    "subscribe": "Đăng ký",
+    "we_will_never_share_your_details": "Chúng tôi sẽ không bao giờ chia sẻ thông tin của bạn. Xem chi tiết tại trang của chúng tôi.",
+    "popular": "Phổ biến",
+    "read_story": "Đọc bài viết"
   },
-  "case_study": {},
+  "case_study": {
+    "tech_stack": "Cấu trúc công nghệ",
+    "service": "Dịch vụ",
+    "location": "Địa điểm",
+    "size": "Kích thước",
+    "website": "Trang web",
+
+    "chromaway": {
+      "dedicated_resource": "Nguyên tài riêng",
+
+      "make_sense_of_blockchain": "Hiểu rõ về blockchain",
+      "builder_of_relational_blockchain_solutions": "Nhà xây dựng các giải pháp blockchain có mối quan hệ",
+      "accelerating_development_cutting_edge": "Đẩy nhanh quá trình phát triển các dịch vụ tiên tiến.",
+      "in_2018_chromaway_started": "Vào năm 2018, ChromaWay bắt đầu hợp tác với ",
+      "einslight_blockchain_and_aws_developers": "lập trình viên Blockchain và AWS của Einslight để đẩy nhanh sự đổi mới của các dịch vụ tiên tiến.",
+      "turning_to": "Đề cập đến",
+      "for_extended_software": "để mở rộng khả năng phát triển phần mềm.",
+      "chromaway_is_an_innovative_blockchain_technology": "ChromaWay là một công ty công nghệ blockchain đầy sáng tạo phát triển với tốc độ cao và được đề cử là một trong 33 startup nóng nhất tại Thụy Điển. Trong năm 2018, ChromaWay đối diện với một thách thức khi họ cần tăng tốc quá trình phát triển nhưng lại có thời gian hạn chế để tìm kiếm và tuyển dụng các nhà phát triển có kỹ năng cụ thể. Sau khi đánh giá các lựa chọn khác nhau, nhóm ChromaWay đã đặt niềm tin vào Pangara cho một thử nghiệm nhỏ đầu tiên mà nhanh chóng phát triển thành một đội ngũ các nhà phát triển tận tụy với kinh nghiệm chủ yếu về công nghệ blockchain và AWS.",
+      "combination_of_soft_hard_skills": "Kết hợp các kỹ năng mềm và kỹ năng kỹ thuật",
+      "henrik_hjelte_founder_and_ceo_chromaway": "Henrik Hjelte, Người sáng lập và Giám đốc điều hành của ChromaWay, cho biết trước khi họ hợp tác với",
+      "he_spend_a_lot_of_time_energy": "anh đã dành rất nhiều thời gian và năng lượng để tìm kiếm các nhà phát triển phù hợp. ChromaWay là một công ty tương đối nhỏ với những khát vọng phát triển lớn, và sự đối tác với",
+      "could_free_up_time": "có thể giải phóng thời gian mà họ trước đó đã dành cho việc tuyển dụng. \"Chúng tôi đã gặp rất nhiều khó khăn trong việc tìm kiếm một sự kết hợp tốt giữa năng lực và tính cách.",
+      "through": "Thông qua",
+      "we_found_world_class": "chúng tôi đã tìm thấy những tài năng hàng đầu thế giới, tôi đã gặp các nhà phát triển có đặc điểm độc đáo thông qua",
+      "i_dont_think_we_could_have_found": "đội ngũ lập trình viên của Einslight. Tôi không nghĩ rằng chúng tôi có thể tìm thấy sự kết hợp này giữa kỹ năng kỹ thuật và kỹ năng mềm ở bất kỳ nơi nào khác nếu không có sự trợ giúp từ Pangara,\" - Henrik Hjelte, CEO của ChromaWay, nhận xét.",
+      "doubling_the_development_capacity": "Gấp đôi khả năng phát triển trong thời gian ngắn.",
+      "after_chromaway_had_evaluated": "Sau khi ChromaWay đã đánh giá một phiên bản thử nghiệm, họ quyết định mở rộng sự phụ thuộc của mình vào",
+      "team_matched_chromaway": "đội ngũ của Einslight đáp ứng các yêu cầu của ChromaWay đối với mạng lưới, và kết quả là, đội ngũ của họ đã được gấp đôi chỉ trong vài tuần. Tương lai của ChromaWay trông rất sáng sủa và thông qua Pangara, họ đã tìm thấy một đối tác công nghệ đáng tin cậy."
+    },
+    "igottera": {
+      "cloud_based_service": "Dịch vụ dựa trên đám mây",
+      "sweden": "Thụy Điển",
+
+      "what_issues_did_you_have_that_made": "Các vấn đề nào đã khiến bạn tìm thấy Einslight?",
+      "we_used_our_own_employees": "Ban đầu, chúng tôi sử dụng nhân viên của chính mình và các nhà thầu Thụy Điển. Nhưng trong dài hạn, chúng tôi cần bổ sung lực lượng lao động của mình với nhiều nhà phát triển hơn. Chúng tôi đòi hỏi các nhà phát triển có năng lực và linh hoạt. Tất nhiên, chúng tôi cũng đang tìm kiếm các nhà phát triển với mức giá hợp lý, mà Einslight có thể cung cấp. Mặc dù chúng tôi đã so sánh nhiều lựa chọn khác nhau, nhưng chúng tôi nhanh chóng tìm thấy các nhà phát triển với Pangara.",
+      "why_did_you_choose": "Tại sao bạn chọn Einslight?",
+      "three_simple_reasons": "Ba lý do đơn giản: Hỗ trợ khách hàng tốt và thực tế là dịch vụ nhanh chóng và hiệu quả. Một điểm cộng khác là giao diện của nền tảng, rất đơn giản và dễ sử dụng.",
+      "how_has_your_contact": "Cuộc liên lạc của bạn với Einslight đã như thế nào?",
+      "we_ve_spoken_to_our_account_manager": "Chúng tôi đã nói chuyện với quản lý tài khoản của chúng tôi, ngoài các nhân tài thực sự của Einslight. Tổng thể, đã hoạt động rất xuất sắc. Pangara - và các nhà phát triển của nó - đã rất dễ tiếp cận.",
+      "how_has_your_experience": "Cuộc trải nghiệm của bạn với các nhà phát triển là như thế nào?",
+      "excellent_they_not_only_possess": "Xuất sắc. Họ không chỉ có năng lực rất mạnh mẽ trong lĩnh vực kỹ năng cụ thể của họ, mà còn có kiến thức tổng quan tốt về Công nghệ Thông tin. Hơn nữa, họ rất tận tụy và nhanh nhẹn để giúp đỡ khi cần. Về kết quả, chúng thường rất chất lượng cao. Bất kỳ lỗi nhỏ nào chúng tôi phát hiện cũng đã được sửa ngay khi nhận thấy.",
+      "what_do_you_think_is_the_best": "Bạn nghĩ rằng lợi ích lớn nhất của các nhà phát triển Einslight là gì?",
+      "though_the_einslight_developers": "Nhờ các nhà phát triển Einslight, chúng tôi đã tiết kiệm được cả thời gian và tiền bạc. Điều này khiến chúng tôi xem xét Pangara như một giải pháp bền vững dài hạn.",
+      "building_the_global_hub": "Xây dựng trung tâm toàn cầu cho các quan sát về động vật hoang dã",
+      "mission_igottera": "Sứ mệnh: trải nghiệm người dùng chất lượng",
+      "igoterra_is_the_wildlife": "iGoTerra là mạng lưới động vật hoang dã để ghi lại, quản lý và chia sẻ tất cả các quan sát, danh sách, hình ảnh và chuyến đi của bạn về động vật hoang dã. Được thành lập tại Thụy Điển vào năm 2012, công ty là một lực lượng toàn cầu của tự nhiên - theo nghĩa bóng - với khách hàng từ khắp nơi trên thế giới.",
+      "igoterra_lets_you_record_your_wildlife": "iGoTerra cho phép bạn ghi lại các quan sát về động vật hoang dã của bạn bằng bất kỳ thiết bị nào, chuẩn bị cho chuyến đi tiếp theo của bạn với các danh sách kiểm tra quốc gia cá nhân và chia sẻ những kỷ niệm về động vật hoang dã của bạn với bạn bè (và theo dõi sự thăng tiến của mình trong các bảng xếp hạng). Nền tảng này cũng được sử dụng rộng rãi bởi các nhà tổ chức du lịch động vật hoang dã và các tổ chức phi lợi nhuận.",
+      "such_a_platform_requires_a_solid_user_experience": "Một nền tảng như vậy đòi hỏi một trải nghiệm người dùng chất lượng và các nhà phát triển tài năng để triển khai. Sau khi tìm kiếm các nhà phát triển địa phương, iGoTerra sau đó đã chuyển sang Pangara để được giúp đỡ kết nối với các nhà phát triển hàng đầu từ xa. Chúng tôi đã nói chuyện với Phó Tổng Giám Đốc & Đối Tác Björn Andersson về trải nghiệm của họ trong việc tìm kiếm những nhà phát triển."
+    }
+  },
   "message": {
     "notification_success": "Chúng tôi đã nhận thông tin của bạn và sẽ liên hệ lại bạn sớm nhất có thể.",
     "notification_error": "Hệ thống đang gặp sự cố. Hãy liên lạc với chúng tôi qua số điện thoại. Xin cảm ơn!",
@@ -69,6 +136,14 @@
     "drop_in_description": "Bạn có thể gặp chúng tôi tại văn phòng của chúng tôi và thảo luận chi tiết về câu hỏi của bạn.",
     "drop_in_action": "Nhận chỉ đường",
     "call_us": "Gọi cho chúng tôi",
-    "call_us_description": "Hãy gọi cho chúng tôi nếu câu hỏi của bạn cần được phản hồi ngay lập tức."
+    "call_us_description": "Hãy gọi cho chúng tôi nếu câu hỏi của bạn cần được phản hồi ngay lập tức.",
+    "your_name": "Tên của bạn",
+    "contact_number": "Số liên lạc",
+    "company_name": "Tên công ty",
+    "how_can_we_help": "Chúng tôi có thể giúp gì được?",
+    "i_agree_terms_conditions": "Tôi đồng ý với các Điều khoản và Điều kiện.",
+    "submit": "Gửi",
+    "leave_a_message": "Để lại lời nhắn",
+    "get_direction": "Lấy hướng dẫn"
   }
 }

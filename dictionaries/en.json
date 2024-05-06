@@ -54,9 +54,76 @@
   },
   "blogs": {
     "header_1": "The news that surrounds us is collected here",
-    "header_2": "Read watch and absorb the content that we publish in our news blog. Also leave comments and communicate with other users."
-  ,
-  "case_study": {},
+    "header_2": "Read watch and absorb the content that we publish in our news blog. Also leave comments and communicate with other users.",
+    "forging_your_path": "Forging your path",
+    "business": "Business",
+    "basic_of_proper_ui": "Basics of a proper UI",
+    "design": "Design",
+    "planning_for_change": "Planning for change",
+    "finance": "Finance",
+    "how_to_start_earning": "How to start earning",
+    "right_priortities_help_us": "The right priorities help us in the direction of our potential which is why it is important for earnings.",
+    "color_palette": "Color palette",
+    "each_of_us_has_different_favorite": "Each of us has a different favorite and not so much color so it is worth starting with it.",
+    "the_news_that_surrounds_us": "The news that surrounds us is collected here",
+    "read_watch_and_absorb_the_content": "Read watch and absorb the content that we publish in our news blog. Also leave comments and communicate with other users.",
+    "newsletter": "Newsletter",
+    "email_address": "Email Address",
+    "subscribe": "Subscribe",
+    "we_will_never_share_your_details": "We'll never share your details. See our",
+    "popular": "Popular",
+    "read_story": "Read story"
+  },
+  "case_study": {
+    "tech_stack": "Tech stack",
+    "service": "Service",
+    "location": "Location",
+    "size": "Size",
+    "website": "Website",
+
+    "chromaway": {
+      "dedicated_resource": "Dedicated resources",
+
+      "make_sense_of_blockchain": "Making sense of the blockchain",
+      "builder_of_relational_blockchain_solutions": "builder of relational blockchain solutions",
+      "accelerating_development_cutting_edge": "Accelerating development of cutting edge services",
+      "in_2018_chromaway_started": "In 2018 ChromaWay started working with",
+      "einslight_blockchain_and_aws_developers": "'s Blockchain and AWS developers to accelerate their innovation of cutting edge services.",
+      "turning_to": "Turning to",
+      "for_extended_software": "for extended software development capacity",
+      "chromaway_is_an_innovative_blockchain_technology": "ChromaWay is an innovative blockchain technology company that grows at high speed and is nominated as one of the 33 hottest start-ups in Sweden. During 2018 ChromaWay faced a challenge as they needed to speed up their development but had limited time to search for and source experienced developers with very specific skills. After having evaluated different options, the ChromaWay-team have put their trust in Pangara for first a small pilot that quickly has grown into a team of dedicated developers with experience of primarily blockchain technology and AWS.",
+      "combination_of_soft_hard_skills": "Combination of soft and hard skills",
+      "henrik_hjelte_founder_and_ceo_chromaway": "Henrik Hjelte, Founder and CEO of ChromaWay, tells us that before they worked with",
+      "he_spend_a_lot_of_time_energy": "he spend a lot of time and energy trying to find suitable developers. ChromaWay is a relatively small company with great growth ambitions, and the partnership with",
+      "could_free_up_time": "could free up time that they had previously spent on recruitment. \"We have had a really hard time finding a good combination of competence and personality.",
+      "through": "Through",
+      "we_found_world_class": "we found world-class talents, I have met developers that are unique through",
+      "i_dont_think_we_could_have_found": "'s developer team. I don't think we could have found this combination of hard and soft skills elsewhere on our own\" – Henrik Hjelte, CEO of ChromaWay, comments.",
+      "doubling_the_development_capacity": "Doubling the development capacity in short time",
+      "after_chromaway_had_evaluated": "After ChromaWay had evaluated a pilot they decided to extend their dependency on",
+      "team_matched_chromaway": "'s team matched ChromaWay specifications towards the network, and consequently, their team was doubled in a matter of weeks. The future for ChromaWay looks bright and through Pangara they have found a reliable tech-partner."
+    },
+    "igottera": {
+      "cloud_based_service": "Cloud-based service",
+      "sweden": "Sweden",
+
+      "what_issues_did_you_have_that_made": "What issues did you have that made you find Einslight?",
+      "we_used_our_own_employees": "At first, we used our own employees and Swedish contractors. But in the long run, we needed to complement our workforce with more developers. We required competent and flexible developers. Of course, we were also looking for developers at a reasonable rate, which Einslight could offer. Even though we compared several different options, we found developers quickly with Pangara.",
+      "why_did_you_choose": "Why did you choose Einslight?",
+      "three_simple_reasons": "Three simple reasons: Good customer support, and the fact that it's a quick and efficient service. Another plus was the platform's interface, which was very simple and easy to use.",
+      "how_has_your_contact": "How has your contact with Einslight been?",
+      "we_ve_spoken_to_our_account_manager": "We've spoken to our account manager, aside from the actual Einslight talents. Overall, it has worked superbly. Pangara — and its developers — have been very accessible.",
+      "how_has_your_experience": "How has your experience with the developers been?",
+      "excellent_they_not_only_possess": "Excellent. They not only possess very strong competence within their specific skill set, but have great general knowledge of IT. Furthermore, they've been very dedicated and are very quick to help out when needed. As for results, they've generally been of very high quality. Any minor errors we've found have been quickly rectified when noticed.",
+      "what_do_you_think_is_the_best": "What do you think is the biggest benefit with Einslight developers?",
+      "though_the_einslight_developers": "Through the Einslight developers we've saved both time and money. This makes us look at Pangara as a sustainable long-term solution as well.",
+      "building_the_global_hub": "Building the global hub for wildlife observations",
+      "mission_igottera": "Mission: solid user-experience",
+      "igoterra_is_the_wildlife": "iGoTerra is the wildlife network to record, manage and share all your wildlife observations, lists, photos and trips. Founded in Sweden in 2012, the company is a global force of nature — figuratively — with customers from all over the world.",
+      "igoterra_lets_you_record_your_wildlife": "iGoTerra lets you record your wildlife observations with any device, prepare for your next trip with personalised country checklists, and share your wildlife memories with your friends (and watch yourself rise in the ranks). The platform is also used extensively by commercial wildlife tour operators and NGOs.",
+      "such_a_platform_requires_a_solid_user_experience": "Such a platform requires a solid user-experience and talented developers to implement it. After searching for local developers, iGoTerra then turned to Pangara for help to connect them with remote top developers. We spoke to Vice President & Partner Björn Andersson about their experience with finding developers."
+    }
+  },
   "message": {
     "notification_success": "We've got your message. You will be contacted soon. Thank you!",
     "notification_error": "Something went wrong. Please try contacting us via phone. Thank you!",
@@ -69,6 +136,14 @@
     "drop_in_description": "You can meet us at our office and discuss the details of your question.",
     "drop_in_action": "Get directions",
     "call_us": "Call us",
-    "call_us_description": "Call us if your question requires an immediate response."
+    "call_us_description": "Call us if your question requires an immediate response.",
+    "your_name": "Your name",
+    "contact_number": "Contact Number",
+    "company_name": "Company Name",
+    "how_can_we_help": "How can we help?",
+    "i_agree_terms_conditions": "I agree to the Terms & Conditions",
+    "submit": "Submit",
+    "leave_a_message": "Leave a message",
+    "get_direction": "Get directions"
   }
 }

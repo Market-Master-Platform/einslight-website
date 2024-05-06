@@ -1,11 +1,10 @@
 "use client";
 
 import * as React from "react";
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useDictionary } from "@/context/dictionary-provider";
-
 
 interface ContactCheckIconProps {
   icon: string;
@@ -103,46 +102,16 @@ const ContactCard: React.FC<ContactCardProps> = ({
   );
 };
 
-const contactCardsData = [
-  {
-    id: 1,
-    imageSrc: "/static/images/message/chat-with-us.svg",
-    title: "Chat with us",
-    description:
-      "Ask us a question by email and we will respond within a few days.",
-    ctaText: "Leave a message",
-    ctaIcon: "/static/images/message/arrow-right-icon.svg",
-  },
-  {
-    id: 2,
-    imageSrc: "/static/images/message/drop-in.svg",
-    title: "Drop in",
-    description:
-      "You can meet us at our office and discuss the details of your question.",
-    ctaText: "Get directions",
-    ctaIcon: "/static/images/message/arrow-right-icon.svg",
-  },
-  {
-    id: 3,
-    imageSrc: "/static/images/message/call-us.svg",
-    title: "Call us",
-    description: "Call us if your question requires an immediate response.",
-    ctaText: "0707704358",
-    ctaIcon: "",
-  },
-];
-
-
 const sendEmail = (
   name: string,
   email: string,
   phone: string,
   company: string,
-  message: string,
+  message: string
 ) => {
   return axios({
-    method: 'post',
-    url: '/api/contact',
+    method: "post",
+    url: "/api/contact",
     data: {
       email: email,
       name: name,
@@ -155,79 +124,110 @@ const sendEmail = (
 
 const ContactPage: React.FC = () => {
   const dictionary = useDictionary();
-  const [ischeck, setIsCheck] = React.useState(false)
-  const [isdisabled, setIsDisabled] = React.useState(true)
+  const [ischeck, setIsCheck] = React.useState(false);
+  const [isdisabled, setIsDisabled] = React.useState(true);
   const [isempty, setIsEmpty] = React.useState(true);
   const [values, setValues] = React.useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
   });
   let empty: boolean = isempty;
   let checkbox: boolean = ischeck;
-  
+
+  const contactCardsData = [
+    {
+      id: 1,
+      imageSrc: "/static/images/message/chat-with-us.svg",
+      title: dictionary.message.chat_with_us,
+      description: dictionary.message.chat_with_us_description,
+      ctaText: dictionary.message.leave_a_message,
+      ctaIcon: "/static/images/message/arrow-right-icon.svg",
+    },
+    {
+      id: 2,
+      imageSrc: "/static/images/message/drop-in.svg",
+      title: dictionary.message.drop_in,
+      description: dictionary.message.drop_in_description,
+      ctaText: dictionary.message.get_direction,
+      ctaIcon: "/static/images/message/arrow-right-icon.svg",
+    },
+    {
+      id: 3,
+      imageSrc: "/static/images/message/call-us.svg",
+      title: dictionary.message.call_us,
+      description: dictionary.message.call_us_description,
+      ctaText: "0707704358",
+      ctaIcon: "",
+    },
+  ];
+
   const handleChange = async (e: any) => {
-    if (e.target.id == 'terms') {
+    if (e.target.id == "terms") {
       checkbox = e.target.checked;
-      setIsCheck(checkbox)
+      setIsCheck(checkbox);
     }
-    setValues(prevState => {
+    setValues((prevState) => {
       return {
         ...prevState,
         [e.target.id]: e.target.value,
       };
     });
-    if (e.target.value.trim().length < 1 && e.target.id !== 'terms') {
+    if (e.target.value.trim().length < 1 && e.target.id !== "terms") {
       empty = true;
-      setIsEmpty(true)
-    } else if (e.target.value.trim().length > 1 && e.target.id !== 'terms') {
+      setIsEmpty(true);
+    } else if (e.target.value.trim().length > 1 && e.target.id !== "terms") {
       empty = false;
-      setIsEmpty(false)
+      setIsEmpty(false);
     }
 
     if (checkbox === false) {
-      setIsDisabled(true)
+      setIsDisabled(true);
     } else if (checkbox === true && empty === true) {
-      setIsDisabled(true)
+      setIsDisabled(true);
     } else {
-      setIsDisabled(false)
+      setIsDisabled(false);
     }
-
   };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
       setIsDisabled(true);
-      const req = await sendEmail(values.name, values.email, values.phone, values.company, values.message);
+      const req = await sendEmail(
+        values.name,
+        values.email,
+        values.phone,
+        values.company,
+        values.message
+      );
       setIsDisabled(false);
       console.log(req);
       if (req) {
         toast.success(dictionary.message.notification_success, {
           position: "top-right",
           autoClose: 5000,
-          hideProgressBar: false
+          hideProgressBar: false,
         });
       }
     } catch (e) {
       toast.error(dictionary.message.notification_error, {
         position: "top-right",
         autoClose: 5000,
-        hideProgressBar: false
-      })
+        hideProgressBar: false,
+      });
     }
   };
   return (
     <div className="flex flex-col">
       <header className="flex flex-col items-center p-20 w-full bg-zinc-900 max-md:px-5 max-md:max-w-full">
         <h1 className="mt-6 text-6xl font-bold text-white leading-[73.2px] max-md:max-w-full max-md:text-4xl">
-          {"We're"} here to help
+          {dictionary.message.header_1}
         </h1>
         <p className="mt-12 text-xl font-medium leading-9 text-center text-gray-400 w-[805px] max-md:mt-10 max-md:max-w-full">
-          Contact us if you have any questions about our company or products. We
-          will try to provide an answer within a few days.
+          {dictionary.message.header_2}
         </p>
         <a
           target="_blank"
@@ -261,68 +261,67 @@ const ContactPage: React.FC = () => {
       >
         <div className="flex flex-col mt-12 max-w-full w-[817px] max-md:mt-10">
           <h2 className="self-center text-5xl font-bold text-white leading-[58.08px] max-md:text-4xl">
-            Leave a message
+            {dictionary.message.chat_with_us_action}
           </h2>
           <p className="mx-7 mt-10 font-medium leading-9 text-center text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-            Contact us if you have any questions about our company or products.
-            We will try to provide an answer within a few days.
+            {dictionary.message.header_2}
           </p>
           <form onSubmit={handleSubmit}>
             <div className="justify-center items-start p-6 mt-14 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:mt-10 max-md:max-w-full">
               <label htmlFor="name" className="sr-only">
-                Your Name
+                {dictionary.message.your_name}
               </label>
               <input
                 type="text"
                 id="name"
-                placeholder="Your Name"
+                placeholder={dictionary.message.your_name}
                 className="w-full bg-transparent focus:outline-none"
                 onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-7 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:max-w-full">
               <label htmlFor="email" className="sr-only">
-                Email Address
+                {dictionary.blogs.email_address}
               </label>
               <input
                 type="email"
                 id="email"
-                placeholder="Email Address"
+                placeholder={dictionary.blogs.email_address}
                 className="w-full bg-transparent focus:outline-none"
                 onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-7 mt-11 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:mt-10 max-md:max-w-full">
               <label htmlFor="phone" className="sr-only">
-                Contact Number
+                {dictionary.message.contact_number}
               </label>
               <input
                 type="tel"
                 id="phone"
-                placeholder="Contact Number"
+                placeholder={dictionary.message.contact_number}
                 className="w-full bg-transparent focus:outline-none"
                 onChange={handleChange}
               />
             </div>
             <div className="justify-center items-start px-6 py-6 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:max-w-full">
               <label htmlFor="company" className="sr-only">
-                Company Name
+                {dictionary.message.company_name}
               </label>
               <input
                 type="text"
                 id="company"
-                placeholder="Company Name"
+                placeholder={dictionary.message.company_name}
                 className="w-full bg-transparent focus:outline-none"
                 onChange={handleChange}
               />
             </div>
             <div className="items-start px-6 pt-7 mt-10 font-medium text-gray-400 rounded-sm border-2 border-solid bg-zinc-800 border-zinc-700 max-md:px-5 max-md:pb-10 max-md:max-w-full">
               <label htmlFor="message" className="sr-only">
-                How can we help?
+                {dictionary.message.how_can_we_help}
               </label>
               <textarea
                 id="message"
-                placeholder="How can we help?"
+                placeholder={dictionary.message.how_can_we_help}
                 className="w-full bg-transparent focus:outline-none pb-48"
                 onChange={handleChange}
               ></textarea>
@@ -336,7 +335,7 @@ const ContactPage: React.FC = () => {
                   onChange={handleChange}
                 />
                 <label htmlFor="terms" className="flex-auto my-auto">
-                  I agree to the Terms & Conditions
+                  {dictionary.message.i_agree_terms_conditions}
                 </label>
               </div>
               <button
@@ -344,7 +343,7 @@ const ContactPage: React.FC = () => {
                 className="justify-center items-center px-16 py-7 font-semibold text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 disabled:bg-gray-300"
                 disabled={isdisabled}
               >
-                Submit
+                {dictionary.message.submit}
               </button>
             </div>
             <ToastContainer />
