@@ -23,7 +23,7 @@ const useNavbar = () => {
   const pathname = usePathname();
   const router = useRouter();
   const [langPathname, setLangPathname] = useState<string>("");
-  const [currentLang, setCurrentLang] = useState<string>("en");
+  const [currentLang, setCurrentLang] = useState<string>("vi");
 
   const handleSetLang = () => {
     if (currentLang === "en") {
@@ -63,14 +63,16 @@ const useNavbar = () => {
     if (!pathname) return;
 
     let splittedPathname: string[] = pathname.split("/");
-    splittedPathname[1] = lang === "en" ? "vi" : "en";
 
     if (!lang) {
-      setCurrentLang("en");
+      setCurrentLang("vi");
+      splittedPathname[1] = "vi";
       router.push(splittedPathname.join("/"));
-      localStorage.setItem("lang", "en");
+      localStorage.setItem("lang", "vi");
       return;
     }
+
+    splittedPathname[1] = lang === "en" ? "vi" : "en";
 
     setCurrentLang(lang);
     setLangPathname(splittedPathname.join("/"));
