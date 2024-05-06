@@ -52,10 +52,23 @@
     "there_is_no_way_around": "There is no way around the fact that both employees and customers expect a user centric digital experience. We help clients that have decided to make the digital opportunity their main priorty and competitive advantage.",
     "our_portfolio_which_we_are_happy": "Our portfolio which we are happy to show you"
   },
-  "blogs": {},
+  "blogs": {
+    "header_1": "The news that surrounds us is collected here",
+    "header_2": "Read watch and absorb the content that we publish in our news blog. Also leave comments and communicate with other users."
+  ,
   "case_study": {},
   "message": {
-      "notification_success": "We've got your message. You will be contacted soon. Thank you!",
-      "notification_error": "Something went wrong. Please try contacting us via phone. Thank you!"
+    "notification_success": "We've got your message. You will be contacted soon. Thank you!",
+    "notification_error": "Something went wrong. Please try contacting us via phone. Thank you!",
+    "header_1": "We're here to help",
+    "header_2": "Contact us if you have any questions about our company or products. We will try to provide an answer within a few days.",
+    "chat_with_us": "Chat with us",
+    "chat_with_us_description": "Ask us a question by email and we will respond within a few days.",
+    "chat_with_us_action": "Leave a message",
+    "drop_in": "Drop in",
+    "drop_in_description": "You can meet us at our office and discuss the details of your question.",
+    "drop_in_action": "Get directions",
+    "call_us": "Call us",
+    "call_us_description": "Call us if your question requires an immediate response."
   }
 }
