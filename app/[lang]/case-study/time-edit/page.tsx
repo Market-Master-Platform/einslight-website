@@ -1,4 +1,7 @@
+"use client";
+
 import CustomBanner from "@/components/CaseStudy/CustomBanner";
+import { useDictionary } from "@/context/dictionary-provider";
 import { Fragment } from "react";
 
 interface TechStackItemProps {
@@ -21,21 +24,29 @@ const TechStackItem: React.FC<TechStackItemProps> = ({ label, value }) => (
   </div>
 );
 
-const techStackData = [
-  { label: "Tech stack", value: "ReactJS, NodeJS, MongoDB" },
-  { label: "Service", value: "SAAS" },
-  { label: "Location", value: "Sweden" },
-  { label: "Size", value: "11-50" },
-  { label: "Website", value: "timeedit.com" },
-];
-
 function CaseStudyTimeEdit() {
+  const dictionary = useDictionary();
+
+  const techStackData = [
+    {
+      label: dictionary.case_study.tech_stack,
+      value: "ReactJS, NodeJS, MongoDB",
+    },
+    { label: dictionary.case_study.service, value: "SAAS" },
+    {
+      label: dictionary.case_study.location,
+      value: dictionary.case_study.igottera.sweden,
+    },
+    { label: dictionary.case_study.size, value: "11-50" },
+    { label: dictionary.case_study.website, value: "timeedit.com" },
+  ];
+
   return (
     <Fragment>
       <CustomBanner
         imgSrc="/static/images/case-study/timeedit.png"
-        title="Great academia requires great software"
-        description="TimeEdit - the leading provider of administrative academic software solutions"
+        title={dictionary.case_study.time_edit.great_academia}
+        description={dictionary.case_study.time_edit.timeedit_the_leading}
       />
 
       <div className="flex justify-even p-14 bg-zinc-900 max-md:px-5 max-md:pt-0">
@@ -55,56 +66,47 @@ function CaseStudyTimeEdit() {
             <article className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-4xl font-semibold leading-10 text-white max-md:max-w-full">
-                  Scaling effortlessly with a trusted tech-parnter{" "}
+                  {dictionary.case_study.time_edit.scaling_effortless}{" "}
                 </h1>
                 <p className="mt-7 text-xl font-medium leading-9 text-gray-400 max-md:max-w-full">
-                  In early 2018, TimeEdit faced further expansion and growth.
-                  With an existing tech team with six developers, they needed to
-                  find additional talents. They were was faced with two choices:
-                  to hire new developers in Sweden or look at remote options.
+                  {dictionary.case_study.time_edit.in_early_2018_time_edit}
                   <br />
                   <br />
-                  TimeEdit had two main required skills of those they were
-                  looking for: seniority and motivation. Their experience was
-                  that the combination of seniority and motivation is difficult
-                  to find in Sweden why they contacted{" "}
+                  {dictionary.case_study.time_edit.time_edit_had_two_main}{" "}
                   <span className="font-bold">Einslight</span>.
                 </p>
               </div>
 
               <section>
                 <h2 className="mt-11 text-3xl font-semibold leading-8 text-white max-md:mt-10">
-                  Solutions
+                  {dictionary.case_study.time_edit.solutions}
                 </h2>
                 <p className="self-end mt-8 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                  <span className="font-bold">Einslight</span> offered the
-                  combination that TimeEdit was looking for.
+                  <span className="font-bold">Einslight</span>{" "}
+                  {dictionary.case_study.time_edit.offered_the_combination}
                   <br />
                   <br />
-                  TimeEdit started with 2 FLEX developers over nine months
-                  (25h/w) and now TimeEdit is working effectivity and
-                  successfully with a team of 5 full-time developers, all of
-                  whom are located at{" "}
-                  <span className="font-bold">Einslight</span>'s office in
-                  central Saigon, as part of the{" "}
-                  <span className="font-bold">Einslight</span> Community.
+                  {
+                    dictionary.case_study.time_edit.timeedit_started_with_2_flex
+                  }{" "}
+                  <span className="font-bold">Einslight </span>
+                  {
+                    dictionary.case_study.time_edit.office_in_central_saigon
+                  }{" "}
+                  <span className="font-bold">Einslight</span>{" "}
+                  {dictionary.case_study.time_edit.community}.
                   <br />
                   <br />
-                  <span className="font-bold">Einslight</span> headhunted every
-                  individual team member including a team leader to build a team
-                  that could work closely together. It took 4 weeks to find the
-                  Talents and the developers were able to start in 2-8 weeks.
+                  <span className="font-bold">Einslight</span>{" "}
+                  {dictionary.case_study.time_edit.headhunted_every_individual}
                 </p>
               </section>
               <section>
                 <h2 className="mt-12 text-3xl font-semibold leading-8 text-white max-md:mt-10">
-                  Results
+                  {dictionary.case_study.time_edit.results}
                 </h2>
                 <p className="self-end mt-8 mr-20 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                  The excellence in <span className="font-bold">Einslight</span>
-                  's team together with their internal tech team enabled rapid
-                  development and continued growth. As TimeEdit expands quickly,
-                  they are in the greatest need of a well-functioning tech team.
+                  {dictionary.case_study.time_edit.the_excellence_in_einslight}
                 </p>
               </section>
             </article>

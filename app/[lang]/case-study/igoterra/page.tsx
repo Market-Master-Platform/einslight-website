@@ -1,4 +1,7 @@
+"use client";
+
 import CustomBanner from "@/components/CaseStudy/CustomBanner";
+import { useDictionary } from "@/context/dictionary-provider";
 import { Fragment } from "react";
 
 interface TechStackItemProps {
@@ -38,40 +41,46 @@ const TextSection: React.FC<TextSectionProps> = ({ title, content }) => (
 );
 
 function CaseStudyIGoterra() {
+  const dictionary = useDictionary();
+
   const techStackItems: TechStackItemProps[] = [
-    { label: "Tech stack", value: "PHP, Angular, Appcelerator" },
-    { label: "Service", value: "Cloud-based service" },
-    { label: "Location", value: "Sweden" },
-    { label: "Size", value: "<25" },
-    { label: "Website", value: "igoterra.com" },
+    {
+      label: dictionary.case_study.tech_stack,
+      value: "PHP, Angular, Appcelerator",
+    },
+    {
+      label: dictionary.case_study.service,
+      value: dictionary.case_study.igottera.cloud_based_service,
+    },
+    {
+      label: dictionary.case_study.location,
+      value: dictionary.case_study.igottera.sweden,
+    },
+    { label: dictionary.case_study.size, value: "<25" },
+    { label: dictionary.case_study.website, value: "igoterra.com" },
   ];
 
   const textSections: TextSectionProps[] = [
     {
-      title: "What issues did you have that made you find Einslight?",
-      content:
-        "At first, we used our own employees and Swedish contractors. But in the long run, we needed to complement our workforce with more developers. We required competent and flexible developers. Of course, we were also looking for developers at a reasonable rate, which Einslight could offer. Even though we compared several different options, we found developers quickly with Pangara.",
+      title: dictionary.case_study.igottera.what_issues_did_you_have_that_made,
+      content: dictionary.case_study.igottera.we_used_our_own_employees,
     },
     {
-      title: "Why did you choose Einslight?",
-      content:
-        "Three simple reasons: Good customer support, and the fact that it's a quick and efficient service. Another plus was the platform's interface, which was very simple and easy to use.",
+      title: dictionary.case_study.igottera.why_did_you_choose,
+      content: dictionary.case_study.igottera.three_simple_reasons,
     },
     {
-      title: "How has your contact with Einslight been?",
+      title: dictionary.case_study.igottera.how_has_your_contact,
       content:
-        "We've spoken to our account manager, aside from the actual Einslight talents. Overall, it has worked superbly. Pangara — and its developers — have been very accessible.",
+        dictionary.case_study.igottera.we_ve_spoken_to_our_account_manager,
     },
     {
-      title: "How has your experience with the developers been?",
-      content:
-        "Excellent. They not only possess very strong competence within their specific skill set, but have great general knowledge of IT. Furthermore, they've been very dedicated and are very quick to help out when needed. As for results, they've generally been of very high quality. Any minor errors we've found have been quickly rectified when noticed.",
+      title: dictionary.case_study.igottera.how_has_your_experience,
+      content: dictionary.case_study.igottera.excellent_they_not_only_possess,
     },
     {
-      title:
-        "What do you think is the biggest benefit with Einslight developers?",
-      content:
-        "Through the Einslight developers we've saved both time and money. This makes us look at Pangara as a sustainable long-term solution as well.",
+      title: dictionary.case_study.igottera.what_do_you_think_is_the_best,
+      content: dictionary.case_study.igottera.though_the_einslight_developers,
     },
   ];
 
@@ -79,7 +88,7 @@ function CaseStudyIGoterra() {
     <Fragment>
       <CustomBanner
         imgSrc="/static/images/case-study/igoterra.png"
-        title="Building the global hub for wildlife observations"
+        title={dictionary.case_study.igottera.building_the_global_hub}
         description="iGoterra"
       />
 
@@ -100,30 +109,22 @@ function CaseStudyIGoterra() {
             <article className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-4xl font-semibold leading-10 text-white max-md:max-w-full">
-                  Mission: solid user-experience
+                  {dictionary.case_study.igottera.mission_igottera}
                 </h1>
                 <div className="mt-7 text-xl font-medium leading-9 text-gray-400 max-md:max-w-full">
-                  iGoTerra is the wildlife network to record, manage and share
-                  all your wildlife observations, lists, photos and trips.
-                  Founded in Sweden in 2012, the company is a global force of
-                  nature — figuratively — with customers from all over the
-                  world.
+                  {dictionary.case_study.igottera.igoterra_is_the_wildlife}
                   <br />
                   <br />
-                  iGoTerra lets you record your wildlife observations with any
-                  device, prepare for your next trip with personalised country
-                  checklists, and share your wildlife memories with your friends
-                  (and watch yourself rise in the ranks). The platform is also
-                  used extensively by commercial wildlife tour operators and
-                  NGOs.
+                  {
+                    dictionary.case_study.igottera
+                      .igoterra_lets_you_record_your_wildlife
+                  }
                   <br />
                   <br />
-                  Such a platform requires a solid user-experience and talented
-                  developers to implement it. After searching for local
-                  developers, iGoTerra then turned to Pangara for help to
-                  connect them with remote top developers. We spoke to Vice
-                  President & Partner Björn Andersson about their experience
-                  with finding developers.
+                  {
+                    dictionary.case_study.igottera
+                      .such_a_platform_requires_a_solid_user_experience
+                  }
                   <br />
                 </div>
               </div>

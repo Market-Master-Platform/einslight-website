@@ -1,4 +1,7 @@
+"use client";
+
 import CustomBanner from "@/components/CaseStudy/CustomBanner";
+import { useDictionary } from "@/context/dictionary-provider";
 import { Fragment } from "react";
 
 interface TechStackItemProps {
@@ -29,21 +32,32 @@ const HighlightedText: React.FC<HighlightedTextProps> = ({ text }) => (
   <span className="font-bold">{text}</span>
 );
 
-const techStackItems = [
-  { label: "Tech stack", value: "Mobile application" },
-  { label: "Service", value: "App Builder Software" },
-  { label: "Location", value: "Sweden" },
-  { label: "Size", value: "10 – 50" },
-  { label: "Website", value: "appspotr.com" },
-];
-
 function CaseStudyAppSport() {
+  const dictionary = useDictionary();
+
+  const techStackItems = [
+    {
+      label: dictionary.case_study.tech_stack,
+      value: dictionary.case_study.app_sport.mobile_app,
+    },
+    {
+      label: dictionary.case_study.service,
+      value: dictionary.case_study.app_sport.app_builder_software,
+    },
+    {
+      label: dictionary.case_study.location,
+      value: dictionary.case_study.igottera.sweden,
+    },
+    { label: dictionary.case_study.size, value: "10 – 50" },
+    { label: dictionary.case_study.website, value: "appspotr.com" },
+  ];
+
   return (
     <Fragment>
       <CustomBanner
         imgSrc="/static/images/case-study/appspotr.png"
-        title="Great academia requires great software"
-        description="TimeEdit - the leading provider of administrative academic software solutions"
+        title={dictionary.case_study.time_edit.great_academia}
+        description={dictionary.case_study.time_edit.timeedit_the_leading}
       />
 
       <div className="flex justify-even p-14 bg-zinc-900 max-md:px-5 max-md:pt-0">
@@ -63,91 +77,63 @@ function CaseStudyAppSport() {
             <article className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
               <header className="flex flex-col grow font-semibold text-white max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-4xl leading-10 max-md:max-w-full">
-                  Appspotr the leading low-code app-builder
+                  {
+                    dictionary.case_study.app_sport
+                      .appsport_the_leading_low_code
+                  }
                 </h1>
                 <p className="mt-7 text-xl font-medium leading-9 text-gray-400 max-md:max-w-full">
-                  AppSpotr is an online service that offers users the ability to
-                  create and maintain beautiful native phone and tablet apps for
-                  free.
+                  {dictionary.case_study.app_sport.appsport_is_an_online}
                   <br />
                   <br />
-                  Pontus Backlund, CTO at AppSpotr, faced a massive challenge in
-                  2018, filling headcounts for tech-related roles turned out to
-                  be a massive painpoint. The company had been looking to expand
-                  their development team for about six months, to no avail, when
-                  they encountered <HighlightedText text="Einslight" />.
-                  Backlund came across <HighlightedText text="Einslight" /> by a
-                  colleague's referral and just like that, the outsourcing
-                  process began. Backlund provided an overview of expectations
-                  and requirements of what he looked for in candidates looking
-                  to join his team.
+                  {dictionary.case_study.app_sport.pontus_backlund}{" "}
+                  <HighlightedText text="Einslight" />.{" "}
+                  {dictionary.case_study.app_sport.backlund_came_across}{" "}
+                  <HighlightedText text="Einslight" />{" "}
+                  {dictionary.case_study.app_sport.by_a_colleagues}
                   <br />
                   <br />
-                  Next, he was presented with a selection of handpicked
-                  developers that matched his needs to expand his development
-                  team. Lastly, <HighlightedText text="Einslight" /> took care
-                  of all the admin details and let them get to work. Here's
-                  Backlund's experience in his own words.
+                  {dictionary.case_study.app_sport.next_he_was_presented}{" "}
+                  <HighlightedText text="Einslight" />{" "}
+                  {dictionary.case_study.app_sport.took_care_of_all_the_admin}
                   <br />
                 </p>
                 <h2 className="mt-9 text-3xl leading-9 max-md:max-w-full">
-                  How Did You Solve Your Development Needs Before Einslight
+                  {dictionary.case_study.app_sport.how_did_you_solve_your_dev}
                 </h2>
               </header>
 
               <p className="mt-7 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                Things moved at a much slower pace before we started working
-                with Pangara. Most of the time, we waited patiently, and used
-                contractors to a certain degree but there was always a delay.
-                Unfortunately, it wasn't a sustainable solution and we really
-                needed something much more long-term in order for us to move
-                forward. We discussed solutions with a few offshore contracting
-                companies, but nothing seemed to meet our specific needs.
+                {dictionary.case_study.app_sport.things_moved_at_a_much}
                 <br />
               </p>
               <h2 className="mt-11 mr-8 text-3xl font-semibold leading-9 text-white w-[739px] max-md:mt-10 max-md:mr-2.5 max-md:max-w-full">
-                What Was Your Experience Working With Einslight like?
+                {dictionary.case_study.app_sport.what_was_your_experience}
               </h2>
               <p className="mt-8 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                From start to finish, the experience has been great and we'd
-                happily recommend Pangara to others. Our main contact has been
-                with Filip Bengtsson and he has been a strong resource for us
-                along the way making sure the transition went smoothly while
-                also providing us with positive feedback and guidance.
+                {dictionary.case_study.app_sport.from_start_to_finish}
               </p>
               <h2 className="mt-10 mr-8 text-3xl font-semibold leading-8 text-white max-md:mt-10 max-md:mr-2.5 max-md:max-w-full">
-                How Was Your Experience with Einslight's Developers?
+                {dictionary.case_study.app_sport.how_was_your_experience}
               </h2>
               <p className="mt-7 mr-8 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                Our developers worked out very well for us. We've had to set
-                fairly high standards when it comes to proactive work and the
-                ability to solve abstract problems without much input — which
-                can be tough — but it has worked out very well. In addition, as
-                far as communication goes, we never had any issues. All of the
-                developers speak English extremely well. Overall, the results
-                have definitely exceeded our expectations.
+                {dictionary.case_study.app_sport.our_developers_worked_out}
               </p>
               <h2 className="mt-10 mr-32 text-3xl font-semibold leading-9 text-white w-[739px] max-md:mr-2.5 max-md:max-w-full">
-                What Would You Say Is the Biggest Benefit with Einslight's
-                Developers?
+                {dictionary.case_study.app_sport.what_would_you_say}
               </h2>
               <p className="mt-7 mr-7 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                The absolutely biggest benefit is having{" "}
-                <HighlightedText text="Einslight" /> as a resource to find these
-                qualified developers. It's extremely tough in Scandinavia, and
-                we've spent a very long time looking for expert developers and
-                have come up with no results countless times.
+                {dictionary.case_study.app_sport.the_absolutely_biggest_benefit}{" "}
+                <HighlightedText text="Einslight" />{" "}
+                {dictionary.case_study.app_sport.as_a_resource_to_find}
               </p>
               <h2 className="mt-12 mr-28 text-3xl font-semibold leading-8 text-white max-md:mt-10 max-md:mr-2.5 max-md:max-w-full">
-                How Has Einslight Helped You Reach Your Goals?
+                {dictionary.case_study.app_sport.how_has_einslight_helped}
               </h2>
               <p className="mt-7 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                Our current Pangara developers have been assisting with our
-                maintenance and core functions. This has given our other team
-                members more time to focus on implementing new features as well
-                as helping the company continue to move forward towards our
-                goals. With <HighlightedText text="Einslight" />, not only have
-                we saved a great deal of time but also money.
+                {dictionary.case_study.app_sport.our_current_einslight}{" "}
+                <HighlightedText text="Einslight" />,{" "}
+                {dictionary.case_study.app_sport.not_only_have_we_saved}
               </p>
             </article>
           </div>

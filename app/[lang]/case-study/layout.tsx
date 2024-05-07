@@ -1,3 +1,7 @@
+"use client";
+
+import { useDictionary } from "@/context/dictionary-provider";
+
 interface ArticleCardProps {
   imageUrl: string;
   date: string;
@@ -11,6 +15,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   title,
   description,
 }) => {
+  const dictionary = useDictionary();
+
   return (
     <div className="flex flex-col grow pb-12 w-full text-lg font-semibold rounded-2xl border-2 border-solid bg-neutral-800 border-zinc-800 max-md:mt-8">
       <img src={imageUrl} alt={title} className="w-full aspect-[1.32]" />
@@ -23,7 +29,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           {description}
         </p>
         <div className="flex gap-4 mt-10 text-xl leading-6 text-blue-500 max-md:pr-5">
-          <div className="flex-auto">Read story</div>
+          <div className="flex-auto">{dictionary.blogs.read_story}</div>
           <img
             src="/static/images/message/arrow-right-icon.svg"
             alt=""
@@ -40,27 +46,26 @@ export default function CaseStudyLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const dictionary = useDictionary();
+
   const articles: ArticleCardProps[] = [
     {
       imageUrl: "/static/images/suggests/planning-for-change-1.png",
       date: "15th May",
-      title: "Planning for change",
-      description:
-        "When planning changes the main thing is to consider your investment as well as what you will get in the end.",
+      title: dictionary.blogs.planning_for_change,
+      description: dictionary.case_study.planning_for_change_description,
     },
     {
       imageUrl: "/static/images/suggests/planning-for-change-2.png",
       date: "15th May",
-      title: "Planning for change",
-      description:
-        "When planning changes the main thing is to consider your investment as well as what you will get in the end.",
+      title: dictionary.blogs.planning_for_change,
+      description: dictionary.case_study.planning_for_change_description,
     },
     {
       imageUrl: "/static/images/suggests/color-palette.png",
       date: "12th May",
-      title: "Color palette",
-      description:
-        "Each of us has a different favorite and not so much color so it is worth starting with it.",
+      title: dictionary.blogs.color_palette,
+      description: dictionary.blogs.each_of_us_has_different_favorite,
     },
   ];
 
@@ -70,7 +75,7 @@ export default function CaseStudyLayout({
 
       <section className="flex flex-col items-center p-20 bg-neutral-800 max-md:px-5">
         <h2 className="mt-9 text-6xl font-bold text-center text-white leading-[73px] w-[817px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
-          You may be interested in these articles
+          {dictionary.case_study.you_may_be_interested}
         </h2>
         <div className="mt-20 w-full max-w-[1240px] max-md:mt-10 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">

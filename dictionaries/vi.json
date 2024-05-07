@@ -80,6 +80,8 @@
     "location": "Địa điểm",
     "size": "Kích thước",
     "website": "Trang web",
+    "planning_for_change_description": "Khi lập kế hoạch thay đổi, điều quan trọng là phải xem xét đầu tư của bạn cũng như những gì bạn sẽ nhận được ở cuối cùng.",
+    "you_may_be_interested": "Bạn có thể quan tâm đến những bài viết này.",
 
     "chromaway": {
       "dedicated_resource": "Nguyên tài riêng",
@@ -91,37 +93,79 @@
       "einslight_blockchain_and_aws_developers": "lập trình viên Blockchain và AWS của Einslight để đẩy nhanh sự đổi mới của các dịch vụ tiên tiến.",
       "turning_to": "Đề cập đến",
       "for_extended_software": "để mở rộng khả năng phát triển phần mềm.",
-      "chromaway_is_an_innovative_blockchain_technology": "ChromaWay là một công ty công nghệ blockchain đầy sáng tạo phát triển với tốc độ cao và được đề cử là một trong 33 startup nóng nhất tại Thụy Điển. Trong năm 2018, ChromaWay đối diện với một thách thức khi họ cần tăng tốc quá trình phát triển nhưng lại có thời gian hạn chế để tìm kiếm và tuyển dụng các nhà phát triển có kỹ năng cụ thể. Sau khi đánh giá các lựa chọn khác nhau, nhóm ChromaWay đã đặt niềm tin vào Pangara cho một thử nghiệm nhỏ đầu tiên mà nhanh chóng phát triển thành một đội ngũ các nhà phát triển tận tụy với kinh nghiệm chủ yếu về công nghệ blockchain và AWS.",
+      "chromaway_is_an_innovative_blockchain_technology": "ChromaWay là một công ty công nghệ blockchain đầy sáng tạo phát triển với tốc độ cao và được đề cử là một trong 33 startup nóng nhất tại Thụy Điển. Trong năm 2018, ChromaWay đối diện với một thách thức khi họ cần tăng tốc quá trình phát triển nhưng lại có thời gian hạn chế để tìm kiếm và tuyển dụng các nhà phát triển có kỹ năng cụ thể. Sau khi đánh giá các lựa chọn khác nhau, nhóm ChromaWay đã đặt niềm tin vào Einslight cho một thử nghiệm nhỏ đầu tiên mà nhanh chóng phát triển thành một đội ngũ các nhà phát triển tận tụy với kinh nghiệm chủ yếu về công nghệ blockchain và AWS.",
       "combination_of_soft_hard_skills": "Kết hợp các kỹ năng mềm và kỹ năng kỹ thuật",
       "henrik_hjelte_founder_and_ceo_chromaway": "Henrik Hjelte, Người sáng lập và Giám đốc điều hành của ChromaWay, cho biết trước khi họ hợp tác với",
       "he_spend_a_lot_of_time_energy": "anh đã dành rất nhiều thời gian và năng lượng để tìm kiếm các nhà phát triển phù hợp. ChromaWay là một công ty tương đối nhỏ với những khát vọng phát triển lớn, và sự đối tác với",
       "could_free_up_time": "có thể giải phóng thời gian mà họ trước đó đã dành cho việc tuyển dụng. \"Chúng tôi đã gặp rất nhiều khó khăn trong việc tìm kiếm một sự kết hợp tốt giữa năng lực và tính cách.",
       "through": "Thông qua",
       "we_found_world_class": "chúng tôi đã tìm thấy những tài năng hàng đầu thế giới, tôi đã gặp các nhà phát triển có đặc điểm độc đáo thông qua",
-      "i_dont_think_we_could_have_found": "đội ngũ lập trình viên của Einslight. Tôi không nghĩ rằng chúng tôi có thể tìm thấy sự kết hợp này giữa kỹ năng kỹ thuật và kỹ năng mềm ở bất kỳ nơi nào khác nếu không có sự trợ giúp từ Pangara,\" - Henrik Hjelte, CEO của ChromaWay, nhận xét.",
+      "i_dont_think_we_could_have_found": "đội ngũ lập trình viên của Einslight. Tôi không nghĩ rằng chúng tôi có thể tìm thấy sự kết hợp này giữa kỹ năng kỹ thuật và kỹ năng mềm ở bất kỳ nơi nào khác nếu không có sự trợ giúp từ Einslight,\" - Henrik Hjelte, CEO của ChromaWay, nhận xét.",
+      "i_dont_think_we_could_have_found_quote": "đội ngũ lập trình viên của Einslight. Tôi không nghĩ rằng chúng tôi có thể tìm thấy sự kết hợp này giữa kỹ năng kỹ thuật và kỹ năng mềm ở bất kỳ nơi nào khác nếu không có sự trợ giúp từ Einslight",
       "doubling_the_development_capacity": "Gấp đôi khả năng phát triển trong thời gian ngắn.",
       "after_chromaway_had_evaluated": "Sau khi ChromaWay đã đánh giá một phiên bản thử nghiệm, họ quyết định mở rộng sự phụ thuộc của mình vào",
-      "team_matched_chromaway": "đội ngũ của Einslight đáp ứng các yêu cầu của ChromaWay đối với mạng lưới, và kết quả là, đội ngũ của họ đã được gấp đôi chỉ trong vài tuần. Tương lai của ChromaWay trông rất sáng sủa và thông qua Pangara, họ đã tìm thấy một đối tác công nghệ đáng tin cậy."
+      "team_matched_chromaway": "đội ngũ của Einslight đáp ứng các yêu cầu của ChromaWay đối với mạng lưới, và kết quả là, đội ngũ của họ đã được gấp đôi chỉ trong vài tuần. Tương lai của ChromaWay trông rất sáng sủa và thông qua Einslight, họ đã tìm thấy một đối tác công nghệ đáng tin cậy."
     },
     "igottera": {
       "cloud_based_service": "Dịch vụ dựa trên đám mây",
       "sweden": "Thụy Điển",
 
       "what_issues_did_you_have_that_made": "Các vấn đề nào đã khiến bạn tìm thấy Einslight?",
-      "we_used_our_own_employees": "Ban đầu, chúng tôi sử dụng nhân viên của chính mình và các nhà thầu Thụy Điển. Nhưng trong dài hạn, chúng tôi cần bổ sung lực lượng lao động của mình với nhiều nhà phát triển hơn. Chúng tôi đòi hỏi các nhà phát triển có năng lực và linh hoạt. Tất nhiên, chúng tôi cũng đang tìm kiếm các nhà phát triển với mức giá hợp lý, mà Einslight có thể cung cấp. Mặc dù chúng tôi đã so sánh nhiều lựa chọn khác nhau, nhưng chúng tôi nhanh chóng tìm thấy các nhà phát triển với Pangara.",
+      "we_used_our_own_employees": "Ban đầu, chúng tôi sử dụng nhân viên của chính mình và các nhà thầu Thụy Điển. Nhưng trong dài hạn, chúng tôi cần bổ sung lực lượng lao động của mình với nhiều nhà phát triển hơn. Chúng tôi đòi hỏi các nhà phát triển có năng lực và linh hoạt. Tất nhiên, chúng tôi cũng đang tìm kiếm các nhà phát triển với mức giá hợp lý, mà Einslight có thể cung cấp. Mặc dù chúng tôi đã so sánh nhiều lựa chọn khác nhau, nhưng chúng tôi nhanh chóng tìm thấy các nhà phát triển với Einslight.",
       "why_did_you_choose": "Tại sao bạn chọn Einslight?",
       "three_simple_reasons": "Ba lý do đơn giản: Hỗ trợ khách hàng tốt và thực tế là dịch vụ nhanh chóng và hiệu quả. Một điểm cộng khác là giao diện của nền tảng, rất đơn giản và dễ sử dụng.",
       "how_has_your_contact": "Cuộc liên lạc của bạn với Einslight đã như thế nào?",
-      "we_ve_spoken_to_our_account_manager": "Chúng tôi đã nói chuyện với quản lý tài khoản của chúng tôi, ngoài các nhân tài thực sự của Einslight. Tổng thể, đã hoạt động rất xuất sắc. Pangara - và các nhà phát triển của nó - đã rất dễ tiếp cận.",
+      "we_ve_spoken_to_our_account_manager": "Chúng tôi đã nói chuyện với quản lý tài khoản của chúng tôi, ngoài các nhân tài thực sự của Einslight. Tổng thể, đã hoạt động rất xuất sắc. Einslight - và các nhà phát triển của nó - đã rất dễ tiếp cận.",
       "how_has_your_experience": "Cuộc trải nghiệm của bạn với các nhà phát triển là như thế nào?",
       "excellent_they_not_only_possess": "Xuất sắc. Họ không chỉ có năng lực rất mạnh mẽ trong lĩnh vực kỹ năng cụ thể của họ, mà còn có kiến thức tổng quan tốt về Công nghệ Thông tin. Hơn nữa, họ rất tận tụy và nhanh nhẹn để giúp đỡ khi cần. Về kết quả, chúng thường rất chất lượng cao. Bất kỳ lỗi nhỏ nào chúng tôi phát hiện cũng đã được sửa ngay khi nhận thấy.",
       "what_do_you_think_is_the_best": "Bạn nghĩ rằng lợi ích lớn nhất của các nhà phát triển Einslight là gì?",
-      "though_the_einslight_developers": "Nhờ các nhà phát triển Einslight, chúng tôi đã tiết kiệm được cả thời gian và tiền bạc. Điều này khiến chúng tôi xem xét Pangara như một giải pháp bền vững dài hạn.",
+      "though_the_einslight_developers": "Nhờ các nhà phát triển Einslight, chúng tôi đã tiết kiệm được cả thời gian và tiền bạc. Điều này khiến chúng tôi xem xét Einslight như một giải pháp bền vững dài hạn.",
       "building_the_global_hub": "Xây dựng trung tâm toàn cầu cho các quan sát về động vật hoang dã",
       "mission_igottera": "Sứ mệnh: trải nghiệm người dùng chất lượng",
       "igoterra_is_the_wildlife": "iGoTerra là mạng lưới động vật hoang dã để ghi lại, quản lý và chia sẻ tất cả các quan sát, danh sách, hình ảnh và chuyến đi của bạn về động vật hoang dã. Được thành lập tại Thụy Điển vào năm 2012, công ty là một lực lượng toàn cầu của tự nhiên - theo nghĩa bóng - với khách hàng từ khắp nơi trên thế giới.",
       "igoterra_lets_you_record_your_wildlife": "iGoTerra cho phép bạn ghi lại các quan sát về động vật hoang dã của bạn bằng bất kỳ thiết bị nào, chuẩn bị cho chuyến đi tiếp theo của bạn với các danh sách kiểm tra quốc gia cá nhân và chia sẻ những kỷ niệm về động vật hoang dã của bạn với bạn bè (và theo dõi sự thăng tiến của mình trong các bảng xếp hạng). Nền tảng này cũng được sử dụng rộng rãi bởi các nhà tổ chức du lịch động vật hoang dã và các tổ chức phi lợi nhuận.",
-      "such_a_platform_requires_a_solid_user_experience": "Một nền tảng như vậy đòi hỏi một trải nghiệm người dùng chất lượng và các nhà phát triển tài năng để triển khai. Sau khi tìm kiếm các nhà phát triển địa phương, iGoTerra sau đó đã chuyển sang Pangara để được giúp đỡ kết nối với các nhà phát triển hàng đầu từ xa. Chúng tôi đã nói chuyện với Phó Tổng Giám Đốc & Đối Tác Björn Andersson về trải nghiệm của họ trong việc tìm kiếm những nhà phát triển."
+      "such_a_platform_requires_a_solid_user_experience": "Một nền tảng như vậy đòi hỏi một trải nghiệm người dùng chất lượng và các nhà phát triển tài năng để triển khai. Sau khi tìm kiếm các nhà phát triển địa phương, iGoTerra sau đó đã chuyển sang Einslight để được giúp đỡ kết nối với các nhà phát triển hàng đầu từ xa. Chúng tôi đã nói chuyện với Phó Tổng Giám Đốc & Đối Tác Björn Andersson về trải nghiệm của họ trong việc tìm kiếm những nhà phát triển."
+    },
+
+    "time_edit": {
+      "timeedit_the_leading": "TimeEdit - nhà cung cấp hàng đầu các giải pháp phần mềm hành chính học thuật",
+      "great_academia": "Học thuật tốt đẹp đòi hỏi phần mềm xuất sắc.",
+      "scaling_effortless": "Mở rộng một cách dễ dàng với một đối tác công nghệ đáng tin cậy.",
+      "in_early_2018_time_edit": "Vào đầu năm 2018, TimeEdit đối diện với sự mở rộng và phát triển tiếp theo. Với một đội ngũ kỹ thuật hiện có với sáu nhà phát triển, họ cần tìm thêm nhân tài. Họ đối diện với hai lựa chọn: thuê thêm nhà phát triển mới tại Thụy Điển hoặc xem xét các phương án làm việc từ xa.",
+      "time_edit_had_two_main": "TimeEdit có hai kỹ năng chính mà họ đang tìm kiếm: trình độ chuyên môn và động lực. Kinh nghiệm của họ cho thấy việc kết hợp giữa trình độ chuyên môn và động lực khó tìm kiếm ở Thụy Điển nên họ đã liên hệ.",
+      "solutions": "Giải pháp.",
+      "offered_the_combination": "đã đề xuất sự kết hợp mà TimeEdit đang tìm kiếm.",
+      "timeedit_started_with_2_flex": "TimeEdit bắt đầu với 2 nhà phát triển FLEX trong hơn chín tháng (25 giờ/tuần) và bây giờ TimeEdit đang làm việc hiệu quả và thành công với một nhóm gồm 5 nhà phát triển toàn thời gian, tất cả đều đặt tại văn phòng của",
+      "office_in_central_saigon": "ở trung tâm Sài Gòn, như một phần của",
+      "community": "Cộng đồng",
+      "headhunted_every_individual": "Mỗi thành viên trong nhóm đều được săn đuổi chủ động, bao gồm cả một nhà lãnh đạo nhóm, để xây dựng một nhóm có thể làm việc chặt chẽ cùng nhau. Mất 4 tuần để tìm ra các tài năng và các nhà phát triển có thể bắt đầu làm việc trong vòng 2-8 tuần.",
+      "results": "Kết quả",
+      "the_excellence_in_einslight": "Sự xuất sắc trong nhóm của Einslight cùng với nhóm công nghệ nội bộ của họ đã cho phép phát triển nhanh chóng và tiếp tục tăng trưởng. Khi TimeEdit mở rộng nhanh chóng, họ cần một nhóm công nghệ hoạt động tốt nhất."
+    },
+
+    "app_sport": {
+      "mobile_app": "Ứng dụng di động",
+      "app_builder_software": "Phần mềm xây dựng ứng dụng",
+
+      "appsport_the_leading_low_code": "Appspotr - công cụ xây dựng ứng dụng low-code hàng đầu",
+      "appsport_is_an_online": "AppSpotr là một dịch vụ trực tuyến cung cấp cho người dùng khả năng tạo và duy trì các ứng dụng di động và máy tính bảng đẹp mắt một cách miễn phí.",
+      "pontus_backlund": "Pontus Backlund, CTO của AppSpotr, đối mặt với một thách thức lớn vào năm 2018, việc điền vào các vị trí liên quan đến công nghệ đã trở thành một điểm đau lớn. Công ty đã cố gắng mở rộng đội ngũ phát triển của họ trong khoảng sáu tháng, nhưng không có kết quả, khi họ đã gặp",
+      "backlund_came_across": "Backlund đã gặp",
+      "by_a_colleagues": "nhờ một đồng nghiệp giới thiệu và từ đó, quá trình giao việc bắt đầu. Backlund cung cấp một tổng quan về các kỳ vọng và yêu cầu về những gì anh ấy tìm kiếm ở các ứng viên muốn tham gia vào đội của mình.",
+      "next_he_was_presented": "Tiếp theo, anh được giới thiệu với một lựa chọn các nhà phát triển được chọn lọc một cách kỹ lưỡng phù hợp với nhu cầu của mình để mở rộng đội ngũ phát triển. Cuối cùng,",
+      "took_care_of_all_the_admin": "chăm sóc tất cả các chi tiết quản trị và để họ bắt đầu làm việc. Đây là trải nghiệm của Backlund theo lời của chính anh ấy.",
+      "how_did_you_solve_your_dev": "Trước khi sử dụng Einslight, bạn đã giải quyết nhu cầu phát triển của mình như thế nào?",
+      "things_moved_at_a_much": "Mọi việc diễn ra chậm hơn rất nhiều trước khi chúng tôi bắt đầu làm việc với Einslight. Hầu hết thời gian, chúng tôi phải chờ đợi một cách kiên nhẫn và sử dụng các nhà thầu đến một mức độ nhất định nhưng luôn có sự trễ truyền thông. Thật không may, đó không phải là một giải pháp bền vững và chúng tôi thực sự cần một giải pháp lâu dài hơn nhiều để tiến lên phía trước. Chúng tôi đã thảo luận về các giải pháp với một số công ty hợp đồng ngoại vi, nhưng không có gì dường như đáp ứng được nhu cầu cụ thể của chúng tôi.",
+      "what_was_your_experience": "Trải nghiệm của bạn khi làm việc với Einslight như thế nào?",
+      "from_start_to_finish": "Từ đầu đến cuối, trải nghiệm đã rất tuyệt vời và chúng tôi sẽ vui lòng giới thiệu Einslight cho người khác. Người liên hệ chính của chúng tôi là Filip Bengtsson và anh ấy đã là một nguồn tài nguyên mạnh mẽ cho chúng tôi suốt quá trình, đảm bảo việc chuyển giao diễn ra một cách trơn tru và cung cấp cho chúng tôi phản hồi tích cực và hướng dẫn.",
+      "how_was_your_experience": "Trải nghiệm của bạn với các nhà phát triển của Einslight như thế nào?",
+      "our_developers_worked_out": "Những nhà phát triển của chúng tôi đã làm việc rất tốt. Chúng tôi đã phải đặt ra các tiêu chuẩn khá cao đối với công việc chủ động và khả năng giải quyết các vấn đề trừu tượng mà không cần nhiều đầu vào — điều này có thể khá khó khăn — nhưng mọi thứ đã diễn ra rất tốt. Ngoài ra, về mặt giao tiếp, chúng tôi chưa bao giờ gặp vấn đề nào. Tất cả các nhà phát triển đều nói tiếng Anh rất giỏi. Tổng thể, kết quả đã chắc chắn vượt xa mong đợi của chúng tôi.",
+      "what_would_you_say": "Bạn nghĩ rằng Ưu điểm lớn nhất của các nhà phát triển Einslight là gì?",
+      "the_absolutely_biggest_benefit": "Ưu điểm lớn nhất tuyệt đối là có",
+      "as_a_resource_to_find": "là một nguồn tài nguyên để tìm các nhà phát triển có trình độ. Việc này cực kỳ khó khăn ở khu vực Scandinavia, và chúng tôi đã dành rất nhiều thời gian để tìm kiếm các nhà phát triển chuyên nghiệp mà không có kết quả nhiều lần.",
+      "how_has_einslight_helped": "Einslight đã giúp chúng tôi đạt được mục tiêu như thế nào?",
+      "our_current_einslight": "Các nhà phát triển Einslight hiện tại của chúng tôi đã hỗ trợ trong việc bảo trì và các chức năng cốt lõi của chúng tôi. Điều này đã mang lại thêm thời gian cho các thành viên khác của nhóm để tập trung vào việc triển khai các tính năng mới cũng như giúp công ty tiếp tục tiến về phía trước đến với các mục tiêu của chúng tôi.",
+      "not_only_have_we_saved": "không chỉ chúng tôi đã tiết kiệm được rất nhiều thời gian mà còn tiết kiệm được tiền bạc."
     }
   },
   "message": {
