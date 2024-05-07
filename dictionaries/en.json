@@ -50,7 +50,30 @@
     "specialized_in": "Specialized in",
     "create_frictionless_workflows": "Create frictionless workflows",
     "there_is_no_way_around": "There is no way around the fact that both employees and customers expect a user centric digital experience. We help clients that have decided to make the digital opportunity their main priorty and competitive advantage.",
-    "our_portfolio_which_we_are_happy": "Our portfolio which we are happy to show you"
+    "our_portfolio_which_we_are_happy": "Our portfolio which we are happy to show you",
+    "process": {
+      "tradition": "Traditional",
+      "tradition_title": "Traditional business model",
+      "tradition_description": "",
+      "digital_transformation": "Digital transformation",
+      "digital_transformation_title": "",
+      "digital_transformation_description": "",
+      "digital_transformation_definition": "Definition of digital transformation",
+      "digital_transformation_definition_title": "",
+      "digital_transformation_definition_description": "",
+      "digital_transformation_process": "Process of digital transformation",
+      "digital_transformation_process_title": "",
+      "digital_transformation_process_description": "",
+      "digital_transformation_solutions": "Solutions for digital transformation",
+      "digital_transformation_solutions_title": "",
+      "digital_transformation_solutions_description": "",
+      "digital_transformation_benefits": "Benefits of digital transformation",
+      "digital_transformation_benefits_title": "",
+      "digital_transformation_benefits_description": "",
+      "about_us": "About us",
+      "about_us_title": "",
+      "about_us_description": ""
+    }
   },
   "blogs": {
     "header_1": "The news that surrounds us is collected here",

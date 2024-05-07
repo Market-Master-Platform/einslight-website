@@ -50,7 +50,30 @@
     "specialized_in": "Chuyên môn trong",
     "create_frictionless_workflows": "Xây dựng quy trình làm việc không gây cản trở",
     "there_is_no_way_around": "Không thể phủ nhận rằng cả nhân viên và khách hàng đều mong đợi một trải nghiệm số hóa tập trung vào người dùng. Chúng tôi giúp đỡ các khách hàng đã quyết định biến cơ hội số hóa thành ưu tiên chính và lợi thế cạnh tranh của họ.",
-    "our_portfolio_which_we_are_happy": "Danh mục sản phẩm của chúng tôi, mà chúng tôi rất vui lòng giới thiệu cho bạn."
+    "our_portfolio_which_we_are_happy": "Danh mục sản phẩm của chúng tôi, mà chúng tôi rất vui lòng giới thiệu cho bạn.",
+    "process": {
+      "tradition": "Truyền thống",
+      "tradition_title": "Mô hình truyền thống",
+      "tradition_description": "Chúng tôi không chỉ tập trung vào việc phát triển phần mềm, mà còn tập trung vào việc tạo ra giá trị cho khách hàng. Chúng tôi tập trung vào việc tạo ra giá trị cho khách hàng.",
+      "digital_transformation": "Số hóa",
+      "digital_transformation_title": "Số hóa",
+      "digital_transformation_description": "Chúng tôi không chỉ tập trung vào việc phát triển phần mềm, mà còn tập trung vào việc tạo ra giá trị cho khách hàng. Chúng tôi tập trung vào việc tạo ra giá trị cho khách hàng.",
+      "digital_transformation_definition": "Định nghĩa chuyển đổi số",
+      "digital_transformation_definition_title": "Chuyển đổi số",
+      "digital_transformation_definition_description": "Chuyển đổi số trong doanh nghiệp được định nghĩa là “việc tích hợp, áp dụng công nghệ số để nâng cao hiệu quả kinh doanh, hiệu quả quản lý, nâng cao năng lực, sức cạnh tranh của doanh nghiệp và tạo ra các giá trị mới”",
+      "digital_transformation_process": "Lộ trình chuyển đổi số",
+      "digital_transformation_process_title": "Lộ trình chuyển đổi số",
+      "digital_transformation_process_description": "Lộ trình CĐS bao gồm giai đoạn chuẩn bị và 03 giai đoạn để thực hiện chuyển đổi dần từ “doing digital” tới “becoming digital” sang “being digital”",
+      "digital_transformation_solutions": "Giải pháp chuyển đổi số",
+      "digital_transformation_solutions_title": "Giải pháp chuyển đổi số",
+      "digital_transformation_solutions_description": "Doanh nghiệp cần lựa chọn các giải pháp phù hợp với nhu cầu và mục tiêu cụ thể. Có thể kể đến các giải pháp rất như hệ thống quản trị khách hàng (CRM), thanh toán, phân tích dữ liệu, IoT, AR/VR",
+      "digital_transformation_benefits": "Lợi ích của chuyển đổi số",
+      "digital_transformation_benefits_title": "Lợi ích của chuyển đổi số",
+      "digital_transformation_benefits_description": "Chuyển đổi số mang lại lợi ích to lớn cho doanh nghiệp, thể hiện qua việc gia tăng hiệu quả hoạt động, cải thiện trải nghiệm khách hàng, mở rộng cơ hội kinh doanh, nâng cao năng lực cạnh tranh và tạo dựng lợi thế bền vững.",
+      "about_us": "Về chúng tôi",
+      "about_us_title": "Về chúng tôi",
+      "about_us_description": "EINSLIGHT học hỏi công nghệ tân tiến trên thế giới, đáp ứng hài hòa với điều kiện cơ sở hạ tầng và doanh nghiệp Việt Nam để đưa ra giải pháp hiệu quả nhất và thuần Việt."
+    }
   },
   "blogs": {
     "header_1": "Tin tức xung quanh được thu thập ở đây.",

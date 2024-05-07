@@ -1,0 +1,69 @@
+.circle-progress-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.circle-progress-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-progress-inner>* {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.circle-progress-inner li {
+    cursor: pointer;
+}
+
+.circle-progress-inner>*:nth-of-type(8) {
+    transform: translate(-155px, -110px);
+}
+
+.circle-progress-inner .b-process-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-progress-inner .b-process-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-progress-inner .b-process-center-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+}
+
+.circle-progress-inner .b-process-center-content {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .circle-progress-container {
+        display: none !important;
+    }
+}
