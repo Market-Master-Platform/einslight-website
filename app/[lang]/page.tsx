@@ -211,7 +211,7 @@ export default function Home() {
           className="flex flex-col items-center px-16 pt-10 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full overflow-hidden"
         >
           <div className="z-50 justify-center mb-0 w-full max-w-[1230px] max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:pb-20">
+            <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:pb-12">
               <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col self-stretch my-auto text-gray-200 max-md:mt-10 max-md:max-w-full">
                   <h2 className="text-3xl font-bold max-md:max-w-full">
@@ -232,7 +232,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="z-50 justify-center lg:my-32 sm:my-4 py-20 w-full max-w-[1230px] max-md:max-w-full lg:pl-10">
+          <div className="z-50 justify-center md:my-32 w-full max-w-[1230px] max-md:mb-16 max-md:max-w-full lg:pl-10">
             <ProcessMobileContainer />
             <ProcessContainer />
           </div>
