@@ -96,7 +96,28 @@
     "subscribe": "Đăng ký",
     "we_will_never_share_your_details": "Chúng tôi sẽ không bao giờ chia sẻ thông tin của bạn. Xem chi tiết tại trang của chúng tôi.",
     "popular": "Phổ biến",
-    "read_story": "Đọc bài viết"
+    "read_story": "Đọc bài viết",
+
+    "blog_post": {
+      "news": "Thông tin",
+      "who_are_you_again": "Bạn là ai lại lần nữa?",
+      "i_ve_been_working_remotely": "Tôi đã làm việc từ xa được khoảng 3 năm cho các khách hàng từ Hoa Kỳ và châu Âu. Điều này đã giúp tôi tăng thu nhập đáng kể so với khi tôi làm việc như một nhà thiết kế nội bộ tại một công ty nổi tiếng tại Bucharest, Romania. Trong suốt 3 năm đó, tôi đã trải qua những thăng trầm, đã mắc phải những sai lầm và cố gắng học từ chúng. Tôi, bằng cách nào đó, chưa đạt đến đỉnh cao của sự nghiệp thiết kế của mình, nhưng tôi nghĩ rằng tôi đã học được một số điều có thể giúp mọi người ở các vị trí tương tự thành công hơn khi làm việc từ xa.",
+      "remote_is_not_for_everyone": "Làm việc từ xa không phải dành cho mọi người.",
+      "working_remotely_has_a_lot_perks": "Làm việc từ xa mang lại nhiều lợi ích, nhưng cũng đi kèm với những điều mà một số người coi là nhược điểm. Đây không phải là những vấn đề không thể giải quyết, nhưng nếu không được giải quyết, chúng có thể làm áp lực lên bạn.",
+      "working_remotely_can_get_lonely": "Làm việc từ xa có thể khiến bạn cảm thấy cô đơn. Bạn không còn ở trong một văn phòng đông đúc với hàng chục hoặc hàng trăm người. Người làm việc từ xa cũng không cần phải đi làm, điều này có thể khiến họ ở trong nhà suốt cả ngày. Điều này có thể nhanh chóng trở nên buồn bã với những người không thích loại cô đơn này. Bạn có thể dễ dàng khắc phục điều này bằng cách tham gia một không gian làm việc chung hoặc ra ngoài làm việc tại các quán cà phê và những nơi xã hội khác.",
+      "remote_workers_also_need_to_be": "Người làm việc từ xa cũng cần phải là những người tự khởi đầu, có động lực và có trách nhiệm. Thực tế, một người làm việc từ xa là một doanh nghiệp một người. Điều này đi kèm với rất nhiều trách nhiệm. Bạn sẽ tự chịu trách nhiệm với tất cả các thành công và thất bại. Nếu bạn không có đủ tự kiểm soát bản thân, động lực và cam kết, làm việc từ xa có thể không phù hợp với bạn.",
+      "create_your_work_env": "Tạo môi trường làm việc của bạn",
+      "any_remote_worker_needs": "Bất kỳ người làm việc từ xa nào cũng cần một môi trường làm việc phù hợp để có thể sản xuất. Tâm trí liên kết các không gian với các hoạt động khác nhau và thiết lập tâm trạng của bạn tương ứng. Ví dụ, phòng ngủ liên kết với việc ngủ và thư giãn. Đó là lý do tại sao bạn sẽ không làm được nhiều việc nếu bạn dự định lười biếng trên giường với laptop suốt cả ngày.",
+      "einslight_is_a_powerful_tool": "“Einslight là một công cụ mạnh mẽ để thiết kế các trang web đẹp mắt.”",
+      "i_recommend_having_separate_room": "Tôi khuyên bạn nên có một phòng riêng cho văn phòng của mình. Nếu điều đó không khả thi, hãy nghĩ về việc thiết lập một khu vực làm việc trong phòng khách của bạn. Nếu điều đó cũng không khả thi, hãy thiết lập bàn làm việc của bạn trong phòng ngủ, nhưng cân nhắc tách nó ra bằng một loại vách ngăn nào đó. Đối với những người không có không gian, các trung tâm làm việc chung như Mindspace hoặc WeWork là một lựa chọn tốt nhưng sẽ tốn thời gian và tiền bạc.",
+      "setup_business_and_separate": "Thiết lập một doanh nghiệp và một tài khoản ngân hàng riêng biệt.",
+      "this_is_self_explanatory": "Điều này rất dễ hiểu. Bạn cần thiết lập một khung pháp lý để bạn có thể sử dụng để lập hóa đơn cho khách hàng và nhận thanh toán. Đừng sử dụng tài khoản ngân hàng cá nhân của bạn. Điều này sẽ làm cho việc theo dõi thu nhập và chi phí của bạn dễ dàng hơn và đánh giá hiệu suất của bạn theo thời gian.",
+      "this_is_the_one_i_used": "Đây là một trong những công ty mà tôi đã sử dụng nhiều nhất và tôi có trải nghiệm tốt với nó. Đó là một công ty Hoa Kỳ, với khách hàng đến từ mọi quy mô và từ khắp nơi trên thế giới. Trong trải nghiệm của tôi, tôi đã làm việc chủ yếu với các start-up và công ty nhỏ.",
+      "they_re_similar_to_toptal": "Họ tương tự như Toptal nhưng ở quy mô nhỏ hơn. Các dự án của họ chủ yếu từ Đức và đôi khi yêu cầu bạn đi du lịch đến văn phòng của khách hàng để tham gia các buổi hội thảo.",
+      "those_are_options_you": "Đó là những lựa chọn bạn có thể xem xét nhưng tôi không khuyến khích chúng. Chất lượng của các dự án và ngân sách của chúng trung bình là tốt nhất.",
+      "share_this_article": "Chia sẻ bài viết này:",
+      "you_may_interested_these_articles": "Bạn có thể quan tâm đến những bài viết này."
+    }
   },
   "case_study": {
     "tech_stack": "Cấu trúc công nghệ",
@@ -190,6 +211,33 @@
       "how_has_einslight_helped": "Einslight đã giúp chúng tôi đạt được mục tiêu như thế nào?",
       "our_current_einslight": "Các nhà phát triển Einslight hiện tại của chúng tôi đã hỗ trợ trong việc bảo trì và các chức năng cốt lõi của chúng tôi. Điều này đã mang lại thêm thời gian cho các thành viên khác của nhóm để tập trung vào việc triển khai các tính năng mới cũng như giúp công ty tiếp tục tiến về phía trước đến với các mục tiêu của chúng tôi.",
       "not_only_have_we_saved": "không chỉ chúng tôi đã tiết kiệm được rất nhiều thời gian mà còn tiết kiệm được tiền bạc."
+    },
+
+    "ef_academy": {
+      "connecting_students": "Kết nối sinh viên với công nghệ tuyệt vời",
+      "mobile_apps_for_boarding": "Ứng dụng di động cho sinh viên trường bán trú",
+      "we_had_some_great_developers": "Chúng tôi có một số nhà phát triển xuất sắc trong nhà, nhưng không ai có kiến thức về làm việc với ứng dụng di động, điều mà chúng tôi thực sự muốn phát triển, trước tiên cho sinh viên của chúng tôi và sau này là cho cha mẹ của họ.",
+      "what_were_your_goals": "Mục tiêu của dự án này là gì?",
+      "to_provide_customers_with_one": "Để cung cấp cho khách hàng một nguồn thông tin duy nhất, nơi họ có thể dễ dàng cập nhật tất cả thông tin cần thiết về lịch trình, tiến độ, thông tin từ trường học, v.v.",
+      "solution": "GIẢI PHÁP",
+      "how_did_you_select": "Bạn đã chọn nhà cung cấp này như thế nào?",
+      "i_was_recommend": "Tôi được giới thiệu",
+      "as_a_good_option": "như một lựa chọn tốt từ một người bạn thân đã được các nhà phát triển từ",
+      "for_a_longer_period_of_time": "Trong thời gian dài, đặc biệt là chúng tôi tìm kiếm một giá trị tốt đáng giá để cho thấy những gì có thể được thực hiện cho khách hàng mà không cần phải chi trả một chi phí quá lớn.",
+      "describe_the_project_in_detail": "Mô tả dự án một cách chi tiết",
+      "we_had_a_clear_project": "Chúng tôi đã có một kế hoạch dự án rõ ràng cho một MVP và may mắn khi chỉ sau hai cuộc phỏng vấn, chúng tôi đã tìm thấy một nhà phát triển xuất sắc. Chúng tôi đặc biệt tìm kiếm một người có thể làm việc trong React Native để đưa ứng dụng hoạt động cho cả hai hệ điều hành cùng một lúc.",
+      "the_feasibility_for_this": "Khả năng thực hiện cho dự án này cũng đã được thảo luận với nhà phát triển từ những cuộc trò chuyện ban đầu. Anh ấy đưa ra một báo giá rất hợp lý, và anh ấy cũng đã tuân thủ rất tốt (ngoại trừ các nhiệm vụ bổ sung mà chúng tôi thêm vào dự án, tất nhiên). Trong vòng 4 tháng, chúng tôi đã cùng nhau làm việc để có sản phẩm ban đầu sẵn sàng và ra mắt trước khi năm học mới bắt đầu.",
+      "during_the_first_term_of_year": "Trong kỳ học đầu tiên của năm, chúng tôi cũng thực hiện các cập nhật bổ sung dựa trên phản hồi từ nhân viên và sinh viên trong trường. Sau đó, chúng tôi bắt đầu làm việc vào một ứng dụng tương tự cho phụ huynh. Quá trình phát triển này được thực hiện song song với việc phát triển một ứng dụng web mới cho phụ huynh, để chúng tôi có thể đảm bảo cả hai đều phù hợp và hoạt động và trông giống nhau.",
+      "the_einslight_developer_worked_very_well": "Nhà phát triển Einslight đã làm việc rất tốt với các nhà phát triển trong nhóm của chúng tôi để đạt được điều này. Bây giờ, chúng tôi đang chuẩn bị để ra mắt ứng dụng di động cho phụ huynh, điều này sẽ giúp đơn giản hóa công việc hàng ngày cho nhiều nhân viên và cũng cải thiện đáng kể cách phụ huynh có thể cập nhật với giáo dục của con em.",
+      "what_was_the_team_composition": "Đội ngũ bao gồm những ai?",
+      "the_team_consisted": "Đội ngũ bao gồm một chủ sở hữu sản phẩm (tôi), một nhà phát triển web từ phía chúng tôi (người sẽ làm việc trên các API cũng như), và nhà phát triển ứng dụng di động từ",
+      "we_also_got_help": "Chúng tôi cũng nhận được sự giúp đỡ từ một nhà phát triển web trong tổ chức cũng như một nhà phát triển SalesForce để đảm bảo mọi thứ hoạt động.",
+      "result_and_feedback": "KẾT QUẢ & PHẢN HỒI",
+      "can_you_share_any_outcomes": "Bạn có thể chia sẻ bất kỳ kết quả nào từ dự án cho thấy tiến triển hoặc thành công không?",
+      "when_we_first_launched": "Khi chúng tôi ban đầu ra mắt ứng dụng di động cho sinh viên, sinh viên cũng có một ứng dụng web để họ có thể đăng nhập để xem điểm số của mình. Việc sử dụng của ứng dụng web này giảm xuống gần như 0 trong thời gian ngắn khi họ có ứng dụng di động thay thế.",
+      "we_also_had_very_little_issues": "Chúng tôi cũng không gặp nhiều vấn đề hoặc cần ít công việc hỗ trợ do thay đổi này. Các quy trình khác mà trước đây rất thủ công và dựa trên giấy bây giờ có thể được quản lý trực tiếp trong ứng dụng bởi sinh viên.",
+      "how_effective_was_the_workflow": "Tính hiệu quả của quy trình làm việc giữa đội của bạn và đội của họ như thế nào?",
+      "this_worked_very_well": "Điều này đã hoạt động rất tốt. Đội mà chúng tôi làm việc đã rất nhanh nhẹn và hữu ích."
     }
   },
   "message": {

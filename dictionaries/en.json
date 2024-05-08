@@ -96,7 +96,28 @@
     "subscribe": "Subscribe",
     "we_will_never_share_your_details": "We'll never share your details. See our",
     "popular": "Popular",
-    "read_story": "Read story"
+    "read_story": "Read story",
+
+    "blog_post": {
+      "news": "News",
+      "who_are_you_again": "Who are you again?",
+      "i_ve_been_working_remotely": "I’ve been working remotely for ~3 years for clients from the US and Europe. This helped me to significantly increase my income compared to what I was making while working as an in-house designer at a well-known company in Bucharest, Romania. During those 3 years, I’ve gone through highs and lows, I’ve made mistakes, and tried to learn from them. I’m, by no means, at the peak of my design career, but I think I’ve learned some things that will help folks in similar positions be more successful in going remote.",
+      "remote_is_not_for_everyone": "Remote is not for everyone",
+      "working_remotely_has_a_lot_perks": "Working remotely has a lot of perks, but it also comes with some things that some people consider to be drawbacks. These are not unsolvable problems, but they can weigh on you if not addressed.",
+      "working_remotely_can_get_lonely": "Working remotely can get lonely. You’re no longer in a busy officewith tens or hundreds of people. Remote workers also don’t have tocommute to the office, which can end up keeping them in the houseall day. That can quickly become depressing for people that don’tenjoy this kind of solitude. You can easily fix this by joining acoworking space or going out to work in coffee shops and othersocial places.",
+      "remote_workers_also_need_to_be": "Remote workers also need to be self-starters, motivated, andresponsible. In effect, a remote worker is a one-man business. Thatcomes with a lot of responsibility. You’ll own all the wins and allthe losses. If you’re not a person will a fair amount ofself-discipline, drive, and commitment, remote work might not be theright fit for you.",
+      "create_your_work_env": "Create your work environment",
+      "any_remote_worker_needs": "Any remote worker needs a proper work environment to be productive.The mind associates spaces with different activities and sets yourmental state accordingly. For example, the bedroom is associatedwith sleeping and relaxation. That’s why you won’t get much done ifyou plan on lounging on your bed with your laptop all day.",
+      "einslight_is_a_powerful_tool": "“Einslight is a powerful tool for designing beautiful websites”",
+      "i_recommend_having_separate_room": "I recommend having a separate room for your office. If that’s not anoption, think about setting up a work area in your living room. Ifthat’s also not possible, set up your work desk in your bedroom, butconsider separating it with some sort of paravane. For those whodon’t have space, work hubs such as Mindspace or WeWork are a goodalternative but will cost time and money.",
+      "setup_business_and_separate": "Setup a business and a separate bank account",
+      "this_is_self_explanatory": "This is self-explanatory. You need to set up a legal framework thatyou can use to invoice clients and receive payments. Don’t use yourpersonal bank account. It will make it a lot easier to track yourincome and expenses and assess your performance over time",
+      "this_is_the_one_i_used": "This is the one I used the most and I had a good experience withit. It’s a US company, with clients of all sizes and from all overthe world. In my experience, I’ve worked mostly with start-ups andsmall companies.",
+      "they_re_similar_to_toptal": "They’re similar to Toptal but on a smaller scale. Their projectsare mostly from Germany and sometimes require you to travel to thecustomers’ offices for workshops.",
+      "those_are_options_you": "Those are options you can consider but I don’t recommend them. Thequality of the projects and their budgets are average at best.",
+      "share_this_article": "Share this article:",
+      "you_may_interested_these_articles": "You may be interested in these articles"
+    }
   },
   "case_study": {
     "tech_stack": "Tech stack",
@@ -190,6 +211,33 @@
       "how_has_einslight_helped": "How Has Einslight Helped You Reach Your Goals?",
       "our_current_einslight": "Our current Einslight developers have been assisting with our maintenance and core functions. This has given our other team members more time to focus on implementing new features as well as helping the company continue to move forward towards our goals. With",
       "not_only_have_we_saved": "not only have we saved a great deal of time but also money."
+    },
+
+    "ef_academy": {
+      "connecting_students": "Connecting students to great technology",
+      "mobile_apps_for_boarding": "Mobile apps for boarding school students",
+      "we_had_some_great_developers": "We had some great developers in house, but no one that was knowledgeable in working with mobile apps, which we really wanted to develop, first for our student and later for their parents as well.",
+      "what_were_your_goals": "What were your goals for this project?",
+      "to_provide_customers_with_one": "To provide customers with one single source where they could easily keep up to date on all needed information about the schedule, progress, information from the school etc.",
+      "solution": "SOLUTION",
+      "how_did_you_select": "How did you select this vendor?",
+      "i_was_recommend": "I was recommended",
+      "as_a_good_option": "as a good option from a close friend who had been helped by developers from",
+      "for_a_longer_period_of_time": "for a longer period of time. Especially we sought after a good valuefor money to show what could be done for the customers without signing up for too big a cost.",
+      "describe_the_project_in_detail": "Describe the project in detail.",
+      "we_had_a_clear_project": "We had a clear project plan for a MVP, and were lucky to find anexcellent developer within just two interviews. We werespecifically looking for someone who could work in React Native to get the application working for both Operation Systems atonce.",
+      "the_feasibility_for_this": "The feasibility for this was also discussed with the developerin the early talks. He can back with a very reasonable quote,that he also kept to very well (apart from extra tasks that weadded to the project of course). During 4 months we workedtogether to get the initial product ready and launched before the start of the new school year.",
+      "during_the_first_term_of_year": "During the first term of the year we also made additionalupdates based on feedback from the staff and students in theschool. After that we started working on a similar oneapplication for the parents. This development was made alongsidethe development of a new web app for the parents, so that we could make sure they were both aligned and behaved and looked inthe same way.",
+      "the_einslight_developer_worked_very_well": "The Einslight developer worked very well with the developers in our team to achieve this. We are now getting ready to launch also the native application for the parents, which will simplify the day to day work for multiple staff, and also greatly improve how parents can keep up to date with their child's education.",
+      "what_was_the_team_composition": "What was the team composition?",
+      "the_team_consisted": "The team consisted of a Product Owner (me), a web developer on our end (who would work on APIs as well) and the mobile app developer from",
+      "we_also_got_help": "We also got help from another in house web developer as well as oneof our SalesForce developers to make sure it all worked.",
+      "result_and_feedback": "RESULTS & FEEDBACK",
+      "can_you_share_any_outcomes": "Can you share any outcomes from the project that demonstrate progress or success?",
+      "when_we_first_launched": "When we first launched the mobile app for the students the students also had a web application where they could log in tosee their grades. The usage of this fell to almost 0 in very short time when they had the mobile app instead.",
+      "we_also_had_very_little_issues": "We also had very little issues or work needed from support due to this change. Other processes that had been very manual and paper-based now could be managed directly in the app by the students.",
+      "how_effective_was_the_workflow": "How effective was the workflow between your team and theirs?",
+      "this_worked_very_well": "This worked very well. The team we worked with was super responsive and helpful."
     }
   },
   "message": {

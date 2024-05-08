@@ -1,4 +1,7 @@
+"use client";
+
 import CustomBanner from "@/components/CaseStudy/CustomBanner";
+import { useDictionary } from "@/context/dictionary-provider";
 import { Fragment } from "react";
 
 interface TechStackItemProps {
@@ -20,20 +23,25 @@ const TechStackItem: React.FC<TechStackItemProps> = ({ label, value }) => (
   </div>
 );
 
-const techStackData = [
-  { label: "Tech stack", value: "Mobile Apps" },
-  { label: "Service", value: "E-learning" },
-  { label: "Location", value: "Switzerland" },
-  { label: "Size", value: "10000+" },
-  { label: "Website", value: "efacademy.org" },
-];
-
 function CaseStudyEfAcademy() {
+  const dictionary = useDictionary();
+
+  const techStackData = [
+    {
+      label: dictionary.case_study.tech_stack,
+      value: dictionary.case_study.app_sport.mobile_app,
+    },
+    { label: dictionary.case_study.service, value: "E-learning" },
+    { label: dictionary.case_study.location, value: "Switzerland" },
+    { label: dictionary.case_study.size, value: "10000+" },
+    { label: dictionary.case_study.website, value: "efacademy.org" },
+  ];
+
   return (
     <Fragment>
       <CustomBanner
         imgSrc="/static/images/case-study/ef-academy.png"
-        title="Connecting students to great technology"
+        title={dictionary.case_study.ef_academy.connecting_students}
         description="EF Academy"
       />
 
@@ -54,108 +62,92 @@ function CaseStudyEfAcademy() {
             <article className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
               <header className="flex flex-col grow text-3xl font-semibold leading-8 text-white max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-4xl leading-10 max-md:max-w-full">
-                  Mobile apps for boarding school students
+                  {dictionary.case_study.ef_academy.mobile_apps_for_boarding}
                 </h1>
                 <p className="mt-9 text-xl font-medium leading-9 text-gray-400 max-md:max-w-full">
-                  We had some great developers in house, but no one that was
-                  knowledgeable in working with mobile apps, which we really
-                  wanted to develop, first for our student and later for their
-                  parents as well.
+                  {
+                    dictionary.case_study.ef_academy
+                      .we_had_some_great_developers
+                  }
                   <br />
                 </p>
                 <h2 className="mt-11 max-md:mt-10 max-md:max-w-full">
-                  What were your goals for this project?
+                  {dictionary.case_study.ef_academy.what_were_your_goals}
                 </h2>
                 <p className="mt-7 text-xl font-medium leading-9 text-gray-400 max-md:max-w-full">
-                  To provide customers with one single source where they could
-                  easily keep up to date on all needed information about the
-                  schedule, progress, information from the school etc.
+                  {
+                    dictionary.case_study.ef_academy
+                      .to_provide_customers_with_one
+                  }
                 </p>
-                <h2 className="mt-9 max-md:max-w-full">SOLUTION</h2>
+                <h2 className="mt-9 max-md:max-w-full">
+                  {dictionary.case_study.ef_academy.solution}
+                </h2>
                 <h3 className="mt-7 max-md:max-w-full">
-                  How did you select this vendor?
+                  {dictionary.case_study.ef_academy.how_did_you_select}
                 </h3>
               </header>
 
               <p className="self-end mt-7 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                I was recommended <span className="font-bold">Einslight</span>{" "}
-                as a good option from a close friend who had been helped by
-                developers from <span className="font-bold">Einslight</span> for
-                a longer period of time. Especially we sought after a good value
-                for money to show what could be done for the customers without
-                signing up for too big a cost.
+                {dictionary.case_study.ef_academy.i_was_recommend}{" "}
+                <span className="font-bold">Einslight</span>{" "}
+                {dictionary.case_study.ef_academy.as_a_good_option}{" "}
+                <span className="font-bold">Einslight</span>{" "}
+                {dictionary.case_study.ef_academy.for_a_longer_period_of_time}
                 <br />
               </p>
               <h2 className="mt-11 text-3xl font-semibold leading-8 text-white max-md:mt-10">
-                Describe the project in detail.
+                {
+                  dictionary.case_study.ef_academy
+                    .describe_the_project_in_detail
+                }
               </h2>
               <p className="self-end mt-7 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                We had a clear project plan for a MVP, and were lucky to find an
-                excellent developer within just two interviews. We were
-                specifically looking for someone who could work in React Native
-                to get the application working for both Operation Systems at
-                once.
+                {dictionary.case_study.ef_academy.we_had_a_clear_project}
                 <br />
                 <br />
-                The feasibility for this was also discussed with the developer
-                in the early talks. He can back with a very reasonable quote,
-                that he also kept to very well (apart from extra tasks that we
-                added to the project of course). During 4 months we worked
-                together to get the initial product ready and launched before
-                the start of the new school year.
+                {dictionary.case_study.ef_academy.the_feasibility_for_this}
                 <br />
                 <br />
-                During the first term of the year we also made additional
-                updates based on feedback from the staff and students in the
-                school. After that we started working on a similar one
-                application for the parents. This development was made alongside
-                the development of a new web app for the parents, so that we
-                could make sure they were both aligned and behaved and looked in
-                the same way.
+                {dictionary.case_study.ef_academy.during_the_first_term_of_year}
                 <br />
                 <br />
-                The <span className="font-bold">Einslight</span> developer
-                worked very well with the developers in our team to achieve
-                this. We are now getting ready to launch also the native
-                application for the parents, which will simplify the day to day
-                work for multiple staff, and also greatly improve how parents
-                can keep up to date with their child's education.
+                {
+                  dictionary.case_study.ef_academy
+                    .the_einslight_developer_worked_very_well
+                }
               </p>
               <h2 className="mt-11 text-3xl font-semibold leading-8 text-white max-md:mt-10 max-md:max-w-full">
-                What was the team composition?
+                {dictionary.case_study.ef_academy.what_was_the_team_composition}
               </h2>
               <p className="self-end mt-7 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                The team consisted of a Product Owner (me), a web developer on
-                our end (who would work on APIs as well) and the mobile app
-                developer from <span className="font-bold">Einslight</span>. We
-                also got help from another in house web developer as well as one
-                of our SalesForce developers to make sure it all worked.
+                {dictionary.case_study.ef_academy.the_team_consisted}{" "}
+                <span className="font-bold">Einslight</span>.{" "}
+                {dictionary.case_study.ef_academy.we_also_got_help}
               </p>
               <h2 className="mt-10 text-3xl font-semibold leading-8 text-white">
-                RESULTS & FEEDBACK
+                {dictionary.case_study.ef_academy.result_and_feedback}
               </h2>
               <p className="self-end mt-8 text-xl font-medium leading-9 text-gray-400 max-md:mr-2.5 max-md:max-w-full">
-                Can you share any outcomes from the project that demonstrate
-                progress or success?
+                {dictionary.case_study.ef_academy.can_you_share_any_outcomes}
                 <br />
                 <br />
-                When we first launched the mobile app for the students the
-                students also had a web application where they could log in to
-                see their grades. The usage of this fell to almost 0 in very
-                short time when they had the mobile app instead.
+                {dictionary.case_study.ef_academy.when_we_first_launched}
                 <br />
                 <br />
-                We also had very little issues or work needed from support due
-                to this change. Other processes that had been very manual and
-                paper-based now could be managed directly in the app by the
-                students.
+                {
+                  dictionary.case_study.ef_academy
+                    .we_also_had_very_little_issues
+                }
                 <br />
                 <br />
-                How effective was the workflow between your team and theirs?
+                {
+                  dictionary.case_study.ef_academy
+                    .how_effective_was_the_workflow
+                }
                 <br />
                 <br />
-                This worked very well. The team we worked with was super
-                responsive and helpful.
+                {dictionary.case_study.ef_academy.this_worked_very_well}
                 <br />
               </p>
             </article>
