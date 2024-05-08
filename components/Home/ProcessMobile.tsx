@@ -43,30 +43,37 @@ const ProcessMobile = (props: IProcessProps) => {
 
     const contents = [
         {
+            head: dictionary.homepage.process.tradition,
             title: dictionary.homepage.process.tradition_title,
             content: dictionary.homepage.process.tradition_description,
         },
         {
+            head: dictionary.homepage.process.digital_transformation,
             title: dictionary.homepage.process.digital_transformation_title,
             content: dictionary.homepage.process.digital_transformation_description,
         },
         {
+            head: dictionary.homepage.process.digital_transformation_definition,
             title: dictionary.homepage.process.digital_transformation_definition_title,
             content: dictionary.homepage.process.digital_transformation_definition_description,
         },
         {
+            head: dictionary.homepage.process.digital_transformation_process,
             title: dictionary.homepage.process.digital_transformation_process_title,
             content: dictionary.homepage.process.digital_transformation_process_description,
         },
         {
+            head: dictionary.homepage.process.digital_transformation_solutions,
             title: dictionary.homepage.process.digital_transformation_solutions_title,
             content: dictionary.homepage.process.digital_transformation_solutions_description,
         },
         {
+            head: dictionary.homepage.process.digital_transformation_benefits,
             title: dictionary.homepage.process.digital_transformation_benefits_title,
             content: dictionary.homepage.process.digital_transformation_benefits_description,
         },
         {
+            head: dictionary.homepage.process.about_us,
             title: dictionary.homepage.process.about_us_title,
             content: dictionary.homepage.process.about_us_description,
         },
@@ -83,13 +90,13 @@ const ProcessMobile = (props: IProcessProps) => {
     const radius = diameter / 2;
     const innerCircleDiameter = diameter - circleWidth * 2;
     const innerCircleRadius = innerCircleDiameter / 2;
-    const circumference = Math.PI * innerCircleDiameter;
+    const circumference = 640;
     const stepSize = totalSteps === 0 ? 0 : 100 / totalSteps;
 
     const [strokeDashoffset, setStrokeDashoffset] = useState(circumference);
 
     const changeProgress = (finishedPercentage: number) => {
-        setStrokeDashoffset(((100 + finishedPercentage) / 100) * circumference);
+        setStrokeDashoffset(((finishedPercentage) / 100) * circumference);
     };
     const getContentProcess = () => {
         if (flagClicked) {
@@ -114,109 +121,44 @@ const ProcessMobile = (props: IProcessProps) => {
         strokeWidth: `${circleWidth}px`,
     };
 
-    const containerStyle: CSSProperties = {
-        height: `${diameter}px`,
-        width: `${diameter}px`,
-        position: 'relative'
-    };
-
-    const innerCircleStyle = {
-        width: `${diameter / 2 + 60}px`,
-        height: `${diameter / 2 + 60}px`,
-    };
-
     const onSelectedStep = (step: number) => {
         props.onSelectedStep(step);
     }
 
-    const processClassName = 'b-process-flex-row text-white size-16 rounded-full flex justify-center items-center p-6 text-center absolute top-1/2 left-1/2';
-
-    const active = (step: number) => {
-        return flagClicked ? completedSteps >= step : completedSteps > step;
-    }
+    const processClassName = 'b-process-flex-row text-white gap-8 flex items-center';
 
     return (
-        <div className="circle-progress-container-mobile" style={containerStyle}>
-            <ul style={innerCircleStyle} className="circle-progress-inner-mobile flex justify-center items-center absolute top-0 right-0 bottom-0 left-0 z-10">
-                <li
-                    className={(active(1) ? 'bg-einslight-green font-bold' : 'bg-green-700 font-normal') + ' ' + processClassName}
-                    onClick={() => onSelectedStep(2)} style={{ transform: 'rotate(259deg) translate(160px) rotate(-259deg)' }}>2</li>
-                <li
-                    className={(active(0) ? 'bg-einslight-green font-bold' : 'bg-green-700 font-normal') + ' ' + processClassName}
-                    onClick={() => onSelectedStep(1)} style={{ transform: 'rotate(305deg) translate(130px) rotate(-305deg)' }}>1</li>
-                <li
-                    className={(active(6) ? 'bg-einslight-green font-bold' : 'bg-green-700 font-normal') + ' ' + processClassName}
-                    onClick={() => onSelectedStep(7)} style={{ transform: 'rotate(0deg) translate(100px) rotate(0deg)' }}>7</li>
-                <li
-                    className={(active(5) ? 'bg-einslight-green font-bold' : 'bg-green-700 font-normal') + ' ' + processClassName}
-                    onClick={() => onSelectedStep(6)} style={{ transform: 'rotate(75deg) translate(80px) rotate(-75deg)' }}>6</li>
-                <li
-                    className={(active(4) ? 'bg-einslight-green font-bold' : 'bg-green-700 font-normal') + ' ' + processClassName}
-                    onClick={() => onSelectedStep(5)} style={{ transform: 'rotate(140deg) translate(120px) rotate(-140deg)' }}>5</li>
-                <li
-                    className={(active(3) ? 'bg-einslight-green font-bold' : 'bg-green-700 font-normal') + ' ' + processClassName}
-                    onClick={() => onSelectedStep(4)} style={{ transform: 'rotate(180deg) translate(150px) rotate(-180deg)' }}>4</li>
-                <li
-                    className={(active(2) ? 'bg-einslight-green font-bold' : 'bg-green-700 font-normal') + ' ' + processClassName}
-                    onClick={() => onSelectedStep(3)} style={{ transform: 'rotate(218deg) translate(170px) rotate(-218deg)' }}>3</li>
-
-                <li className="b-process-flex-column">
-                    <h1 className="b-process-center-title">{selectedContent.title}</h1>
-                    <span className="b-process-center-content">{
-                        selectedContent.content
-                    }</span>
-                </li>
+        <div className="circle-progress-container-mobile flex items-center relative">
+            <ul className="circle-progress-inner-mobile flex flex-col gap-8 justify-center z-10">
+                {
+                    contents.map((content, index) =>
+                        <li
+                            key={content.head}
+                            className={processClassName}>
+                            <div className="bg-einslight-green font-bold text-white text-center uppercase rounded-full size-32 text-xs flex-0 flex items-center justify-center">
+                                {content.head}
+                            </div>
+                            <div className="flex-1 text-xs">
+                                <h1 className="font-bold uppercase mb-4">{content.title}</h1>
+                                <span className="text-justify">{content.content}</span>
+                            </div>
+                        </li>)
+                }
             </ul>
+
             <svg
-                viewBox="-1 -1 615 615"
-                className="circle-progress-bar"
-                width={diameter}
-                height={diameter}
+                width={128}
+                height={1120}
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{ transform: 'rotate(-130deg)', position: 'relative', left: '-56px', top: '-169px' }}
+                className="absolute left-0"
             >
-                <defs>
-                    <radialGradient
-                        id={`radial-gradient20`}
-                        fx={gradient.fx}
-                        fy={gradient.fy}
-                        cx={gradient.cx}
-                        cy={gradient.cy}
-                        r={gradient.r}
-                    >
-                        <stop offset="50%" stopColor={startColor} />
-                    </radialGradient>
-                </defs>
-                <circle
-                    r={innerCircleRadius}
-                    cx={radius}
-                    cy={radius}
-                    fill={innerColor}
-                    stroke={circleColor}
-                    strokeDasharray={circumference}
-                    strokeDashoffset="0"
-                    strokeLinecap="round"
-                    style={strokeStyle}
-                ></circle>
-                <circle
-                    transform={`rotate(90, ${radius}, ${radius})`}
-                    r={innerCircleRadius}
-                    cx={radius}
-                    cy={radius}
-                    fill={innerColor}
-                    stroke={`url(#radial-gradient20)`}
-                    strokeDasharray={circumference}
-                    strokeDashoffset={circumference}
-                    strokeLinecap="round"
+                <line x1="64" y1="64" x2="64" y2="1060" stroke={startColor} strokeWidth="4"
                     style={{
-                        height: `${diameter}px`,
-                        width: `${diameter}px`,
-                        strokeWidth: `${circleWidth * 4}px`,
                         strokeDashoffset: strokeDashoffset,
-                        transition: `stroke-dashoffset ${animationDuration}ms linear`,
-                    }}
-                ></circle>
+                        transition: `stroke-dashoffset ${animationDuration}ms linear`
+                    }} />
+
             </svg>
         </div >
     );

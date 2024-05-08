@@ -210,7 +210,29 @@ export default function Home() {
           ref={workflowRef}
           className="flex flex-col items-center px-16 pt-20 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full overflow-hidden"
         >
-          <div className="z-50 justify-center lg:my-32 sm:my-4 w-full max-w-[1230px] max-md:max-w-full pl-10">
+          <div className="z-50 justify-center mb-0 w-full max-w-[1230px] max-md:max-w-full">
+            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+              <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                <div className="flex flex-col self-stretch my-auto text-gray-200 max-md:mt-10 max-md:max-w-full">
+                  <h2 className="text-3xl font-bold max-md:max-w-full">
+                    {dictionary.homepage.create_frictionless_workflows}
+                  </h2>
+                  <p className="mt-4 text-lg leading-6 max-md:max-w-full">
+                    {dictionary.homepage.there_is_no_way_around}
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                <CustomImage
+                  loading="lazy"
+                  src="/static/images/home/workflow.svg"
+                  alt="Workflow"
+                  className="grow w-full aspect-[0.85] max-md:mt-5 max-md:max-w-full"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="z-50 justify-center lg:my-32 sm:my-4 py-20 w-full max-w-[1230px] max-md:max-w-full lg:pl-10">
             <ProcessMobileContainer />
             <ProcessContainer />
           </div>
