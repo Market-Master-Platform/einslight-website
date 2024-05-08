@@ -340,7 +340,7 @@ const ContactPage: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="justify-center items-center px-16 py-7 font-semibold text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 disabled:bg-gray-300"
+                className="justify-center items-center px-16 py-7 font-semibold text-white whitespace-nowrap bg-blue-500 rounded-sm max-md:px-5 disabled:bg-gray-300 max-md:w-full"
                 disabled={isdisabled}
               >
                 {dictionary.message.submit}
