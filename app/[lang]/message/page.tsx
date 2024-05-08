@@ -62,7 +62,7 @@ const ContactCheckIcon: React.FC<ContactCheckIconProps> = ({
   } else {
     return (
       <div className="flex gap-5 mt-6 text-xl font-semibold leading-6 text-blue-500">
-        <span className="flex-auto">{text}</span>
+        <span className="flex-auto" dangerouslySetInnerHTML={{ __html: text }}></span>
       </div>
     );
   }
@@ -159,7 +159,7 @@ const ContactPage: React.FC = () => {
       imageSrc: "/static/images/message/call-us.svg",
       title: dictionary.message.call_us,
       description: dictionary.message.call_us_description,
-      ctaText: "0707704358",
+      ctaText: "0918408539<br><br>0888983888",
       ctaIcon: "",
     },
   ];

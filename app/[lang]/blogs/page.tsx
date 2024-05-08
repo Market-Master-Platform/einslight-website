@@ -75,11 +75,11 @@ const Article: React.FC<ArticleProps> = ({
 }) => (
   <CustomLink href={href} className="relative">
     <article className="flex mb-7">
-      <div>
+      <div className="flex-0" style={{width: '112px'}}>
         <Image src={image} alt={title} className="aspect-square w-28" />
       </div>
-      <div className="my-auto ml-5">
-        <h3 className="text-2xl font-semibold leading-7 text-white mb-3">
+      <div className="my-auto ml-5 flex-1 overflow-hidden">
+        <h3 className="text-2xl font-semibold leading-7 text-white mb-3 text-wrap">
           {title}
         </h3>
         <div className="flex gap-5 text-lg leading-5">

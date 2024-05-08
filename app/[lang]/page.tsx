@@ -208,10 +208,10 @@ export default function Home() {
         </div>
         <section
           ref={workflowRef}
-          className="flex flex-col items-center px-16 pt-20 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full overflow-hidden"
+          className="flex flex-col items-center px-16 pt-10 w-full bg-neutral-800 max-md:px-5 max-md:max-w-full overflow-hidden"
         >
           <div className="z-50 justify-center mb-0 w-full max-w-[1230px] max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+            <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:pb-20">
               <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
                 <div className="flex flex-col self-stretch my-auto text-gray-200 max-md:mt-10 max-md:max-w-full">
                   <h2 className="text-3xl font-bold max-md:max-w-full">
@@ -222,7 +222,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:hidden">
                 <CustomImage
                   loading="lazy"
                   src="/static/images/home/workflow.svg"
