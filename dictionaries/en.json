@@ -34,7 +34,8 @@
     "how_can_we_help": "Hey, how can we help?",
     "send_message": "Send message",
     "company": "Company",
-    "resources": "Resources"
+    "resources": "Resources",
+    "address": "1/8A Le Hong Phong street, Ngo Quyen district, Hai Phong city"
   },
   "homepage": {
     "great_people_application_description": "Searching for talented and self-propelled developers",
@@ -54,25 +55,25 @@
     "process": {
       "tradition": "Traditional",
       "tradition_title": "Traditional business model",
-      "tradition_description": "",
-      "digital_transformation": "Digital transformation",
-      "digital_transformation_title": "",
-      "digital_transformation_description": "",
+      "tradition_description": "We not only focus on software development, but also on creating value for customers. We concentrate on delivering value to customers.",
+      "digital_transformation": "Digitization",
+      "digital_transformation_title": "Digitization",
+      "digital_transformation_description": "Convert information from physical form to digital form. Put simply, digitization is the process of transforming information on paper, film, sound... into data stored in bits and bytes in a computer.",
       "digital_transformation_definition": "Definition of digital transformation",
-      "digital_transformation_definition_title": "",
-      "digital_transformation_definition_description": "",
-      "digital_transformation_process": "Process of digital transformation",
-      "digital_transformation_process_title": "",
-      "digital_transformation_process_description": "",
+      "digital_transformation_definition_title": "Digital transformation",
+      "digital_transformation_definition_description": "Business digital transformation integrates digital tech to boost efficiency, management, capabilities, competitiveness, and create new value.",
+      "digital_transformation_process": "Roadmap of digital transformation",
+      "digital_transformation_process_title": "Roadmap of digital transformation",
+      "digital_transformation_process_description": "The roadmap for digital transformation includes a preparation stage and three stages to gradually transition from \"doing digital\" to \"becoming digital\" and finally \"being digital.\"",
       "digital_transformation_solutions": "Solutions for digital transformation",
-      "digital_transformation_solutions_title": "",
-      "digital_transformation_solutions_description": "",
+      "digital_transformation_solutions_title": "Solutions for digital transformation",
+      "digital_transformation_solutions_description": "Businesses must select solutions tailored to their needs and goals, such as CRM systems, payment systems, data analysis tools, IoT, and AR/VR.",
       "digital_transformation_benefits": "Benefits of digital transformation",
-      "digital_transformation_benefits_title": "",
-      "digital_transformation_benefits_description": "",
+      "digital_transformation_benefits_title": "Benefits of digital transformation",
+      "digital_transformation_benefits_description": "Digital transformation brings substantial benefits to businesses, including improved efficiency, enhanced customer experience, expanded opportunities, and sustainable advantages.",
       "about_us": "About us",
-      "about_us_title": "",
-      "about_us_description": ""
+      "about_us_title": "About us",
+      "about_us_description": "EINSLIGHT learns from cutting-edge technology worldwide, harmoniously adapting to the infrastructure and business conditions of Vietnam to provide the most effective and purely Vietnamese solutions."
     }
   },
   "blogs": {

@@ -81,7 +81,7 @@ function Footer() {
             <br />
             einslight.co@gmail.com
             <br />
-            Số 1 lô 8A Lê Hồng Phong, Ngô Quyền, Hải Phòng
+            {dictionary.footer.address}
           </div>
           <div className="mt-48 text-lg leading-5 max-md:mt-10 max-md:max-w-full">
             © 2023 Copyright Einslight.
